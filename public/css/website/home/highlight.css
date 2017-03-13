@@ -1,0 +1,48 @@
+#highlight-wrapper {
+    margin-top: 20px;
+}
+
+#highlight-wrapper .highlight-list .highlight .box {
+    height: 200px;
+    position: relative;
+    width: 100%;
+}
+
+#highlight-wrapper .highlight-list .highlight .box .box-body {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-animation {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-animation .highlight-cover {
+    display: block;
+    min-height: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: block;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+}
+
+#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content a.highlight-link {
+    color: #fff;
+}

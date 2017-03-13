@@ -1,0 +1,64 @@
+@keyframes svg-animate {
+    from {}
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#category-wrapper {
+    position: relative;
+}
+
+#category-wrapper .category-list .category .box {
+    height: 180px;
+}
+
+#category-wrapper .category-list .category .box .box-body {
+    height: 100%;
+}
+
+#category-wrapper .category-list .category .category-animation {
+    height: 100%;
+}
+
+#category-wrapper .category-list .category .category-animation svg {
+    height: 100%;
+    width: 100%;
+}
+
+#category-wrapper .category-list .category .category-animation svg path {
+    fill: none;
+    stroke: #76b1d5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2;
+}
+
+#category-wrapper .category-list .category .category-animation svg.animate path {
+    animation: svg-animate 4s forwards;
+}
+
+#category-wrapper .category-list .category .category-content {
+    height: 100%;
+}
+
+#category-wrapper .category-list .category .category-content a.category-link,
+#category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+#category-wrapper .category-list .category .category-content > a.category-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    
+}
+
+#category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
+    font-size: 10px;
+    text-transform: capitalize;
+}

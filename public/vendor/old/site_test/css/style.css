@@ -1,0 +1,38 @@
+html body .content-centralized {
+  margin: auto;
+  text-align: center;
+}
+
+html body .panel-default {
+  border-radius: 0;
+}
+
+html body .img-auto-responsive {
+	display: block;
+	height: auto;
+	width: 100%
+}
+
+#page-home {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+#page-home .panel {
+	margin-bottom: 0.1em !important;
+	margin-top: 0.1em !important;
+}
+
+#page-home .panel .panel-body {
+	padding: 0;
+}
+
+html body #page-home .ads-middle .panel {
+	/*margin-bottom: 2px;*/
+	margin-top: 3px !important;
+}
+
+.lite-padding[class*="col-"] {
+    padding-left: 0.1em !important;
+    padding-right: 0.1em !important;
+}

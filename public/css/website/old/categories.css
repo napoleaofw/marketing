@@ -1,0 +1,65 @@
+ul.categories {
+    list-style: none;
+    padding: 0;
+}
+
+ul.categories .category .info-box {
+    border: 1px solid #f3f3f3;
+    min-height: 50px;
+}
+
+/*
+Utiliza o keyframe svg-animate
+Anima em 4s cada path
+forwards faz com que a animação termine e matenha o estado final dela (ou seja, o objeto totalmen preenchido)
+remova o ininite para a animação acontecer apenas uma vez */
+svg.animate path {
+    animation: svg-animate 4s forwards;
+}
+
+svg {
+    fill:#0072bb;stroke:#0072bb;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
+    fill-opacity: 0;
+}
+
+/* Função principal da animação, levar o dashoffset até 0. Nesse caso ele vai do dashoffset que foi definido com jQuery até 0. Por isso o from está vazio. */
+@keyframes svg-animate {
+    from {}
+    to {
+        fill-opacity: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+ul.categories .category .info-box-icon {
+    background-color: transparent;
+    color: #0072bb;
+    font-size: 25px;
+    height: 50px;
+    line-height: 50px;
+    padding: 5px;
+    width: 50px;
+}
+
+ul.categories .category .info-box-content {
+    margin-left: 50px;
+}
+
+ul.categories .category a.info-box-text {
+    font-family: "Sansita", "sans-serif";
+}
+
+ul.categories .category .info-box-content a.info-box-description {
+    color: #000;
+    font-size: 10px;
+}
+
+ul.categories .category .info-box-content a.info-box-text,
+ul.categories .category .info-box-content a.info-box-description {
+    color: #5b5b5b;
+}
+
+ul.categories .category .info-box-content a.info-box-text:hover,
+ul.categories .category .info-box-content a.info-box-description:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+body {
+  background-color: #FDFDFD;
+}
+
+body .navbar {
+  border-radius: 0;
+}
+
+.app-primary-color {
+  background-color: #0099EF;  
+}
+
+.page-content {
+  margin-top: .9375rem;
+}
+
+.page-inside {
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+.info-padding {
+  padding-bottom: .9375rem;
+  padding-top: .9375rem;
+}
+
+.border-effect {
+  border: 1px solid #E6E6E6;
+  border-radius: 0;
+  box-shadow: 0px 0.5px 2px 0px #E6E6E6;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.grayscale-lite {
+  -webkit-filter: grayscale(80%);
+  -webkit-transition: 1s ease-in-out;
+  -moz-filter: grayscale(80%); 
+  -moz-transition: 1s ease-in-out;
+  -o-filter: grayscale(80%); 
+  -o-transition: 1s ease-in-out;
+}
+
+.grayscale-lite:hover {
+  -webkit-filter: grayscale(10%);
+  -webkit-transition: 1s ease-in-out;
+  -moz-filter: grayscale(10%);
+  -moz-transition: 1s ease-in-out;
+  -o-filter: grayscale(10%);
+  -o-transition: 1s ease-in-out;
+}
+
+small.ad-type {
+  color: #373a3c;
+}

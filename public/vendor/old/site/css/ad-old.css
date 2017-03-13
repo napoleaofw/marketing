@@ -1,0 +1,97 @@
+#page-ad p {
+  margin-bottom: 0;
+}
+
+#page-ad img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+#page-ad .ad-main p {
+  font-size: 0.9rem;
+}
+
+#page-ad .ad-main img {
+  border: 1px solid #E6E6E6;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0.5px 2px 0px #E6E6E6;
+}
+
+#page-ad .ad-main .ad-title {
+  font-family: Lato, Roboto, sans-serif;
+  font-size: 2rem;
+}
+
+#page-ad .ad-main .ad-address {
+  margin-top: 1rem;
+}
+
+#page-ad .ad-main .ad-hour {
+  font-size: 0.8rem;
+}
+
+#page-ad .ad-main .ad-hour .ad-open {
+  color: #33CC66;
+}
+
+#page-ad .ad-info {
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+  font-size: 0.8rem;
+}
+
+#page-ad .ad-info ul {
+  margin: 0;
+}
+
+#page-ad .ad-info ul li a {
+  color: #0099EF;
+  text-decoration: none;
+}
+
+#page-ad .ad-info ul li a:hover {
+  text-decoration: underline;
+}
+
+#page-ad .ad-info ul li i {
+  font-size: 1rem;
+  text-align: center;
+  width: 1rem;
+}
+
+#page-ad .ad-description {
+  border-bottom: 1px solid #E6E6E6;
+}
+
+#page-ad #links img {
+	border-radius: 0;
+}
+
+#page-ad #links > div div {
+  height: 200px;
+	overflow: hidden;
+}
+
+#page-ad #links img {
+  -webkit-transition: all 500ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 500ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 500ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 500ms ease-in;
+  transform: scale(1);  
+}
+
+#page-ad #links img:hover {
+  -webkit-transition: all 500ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 500ms ease-in;
+  -ms-transform: scale(1.1);   
+  -moz-transition: all 500ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 500ms ease-in;
+  transform: scale(1.1);
+}

@@ -1,0 +1,155 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+}
+
+.image-responsive {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.no-padding-v {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.padding-15 {
+  padding: 15px !important;
+}
+
+.padding-b-10 {
+  padding-bottom: 10px !important;
+}
+
+.padding-t-10 {
+  padding-top: 10px !important;
+}
+
+.padding-h-10 {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+}
+
+/******************/
+/*     website    */
+/******************/
+
+.ad-title,
+.ad-short-description,
+.ad-address {
+  color: #555555;
+  /*color: #6d6c6c;*/
+}
+
+.ad-title {
+  font-size: 3.2rem;
+  margin-top: 0;
+}
+
+.ad-type i {
+  font-size: 1.4rem;
+}
+
+.ad-type {
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.ad-category {
+  color: #0099EF;
+  font-size: 1.4rem;
+}
+
+/******************/
+/* page-ad-search */
+/******************/
+
+#page-ad-search .content > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#page-ad-search .content > ul li > a {
+  display: block;
+  margin-bottom: .5rem;
+  opacity: 1;
+  -webkit-transition: opacity .15s ease-in-out;
+  -moz-transition: opacity .15s ease-in-out;
+  -ms-transition: opacity .15s ease-in-out;
+  -o-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+}
+
+#page-ad-search .content > ul li > a:hover {
+  opacity: .8;
+}
+
+#page-ad-search .ad-short-description i.fa-quote-left,
+#page-ad-search .ad-short-description i.fa-quote-right {
+  color: #000000;
+}
+
+/******************/
+/* page-ad-search */
+/******************/
+
+#page-ad .ad-main .ad-hour .ad-open {
+  color: #33CC66;
+}
+
+#page-ad .ad-info {  
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+  font-size: 1.3rem;
+}
+
+#page-ad .ad-info ul {
+  list-style: none;
+  margin: 0;
+}
