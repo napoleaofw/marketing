@@ -1,0 +1,9 @@
+body {
+    color: #5b5b5b;
+    font-family: "Raleway", "Helvetica", "sans-serif";
+    position: relative;
+}
+
+body.overlay {
+    overflow: hidden;
+}

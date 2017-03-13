@@ -1,7 +1,8 @@
-@extends("website.layout.index")
-@section("ads")
+@extends('website.layout.index')
+@section('ads')
 <div id="ads" class="page-wrapper">
     <div class="container-fluid">
+        @include('header')
         <div class="row">
             <section id="ads-quick-info" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
                 <section class="ads-image-container">

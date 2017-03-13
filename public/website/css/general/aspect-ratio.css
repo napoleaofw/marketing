@@ -1,0 +1,14 @@
+.square:before {
+	content: '';
+	display: block;
+    overflow: hidden;
+	padding-top: 100%;
+}
+
+.square .square-wrapper {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 0;
+}

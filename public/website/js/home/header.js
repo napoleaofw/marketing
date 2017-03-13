@@ -16,7 +16,7 @@ $(document).on("scroll", checkScroll);
 
 /* begin navbar */
 $(document).on("click", "header .navbar-toggle", function() {
-	$("body").toggleClass("overlay-active");
+	$("body").toggleClass("overlay");
 	$navbar = $(this).siblings(".navbar");
 	$navbar.toggleClass("collapse navbar-mobile");
 });
