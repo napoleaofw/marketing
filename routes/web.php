@@ -12,17 +12,13 @@
 */
 
 Route::get('/home', function () {
-    return view('website.layout.home', [
+    return view('website.home', [
         "pagename" => "home"
     ]);
 });
 
 Route::get('/ads', function () {
-    return view('website.layout.ads', [
+    return view('website.ads', [
         "pagename" => "ads"
     ]);
-});
-
-Route::get('/old', function () {
-    return view('website.layout.old.webpage');
 });

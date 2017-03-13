@@ -8,13 +8,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Sansita&amp;subset=latin-ext">
         <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
-        <link rel="stylesheet" href="/css/website/website.css">
-        <link rel="stylesheet" href="/css/website/home/header.css">
-        <link rel="stylesheet" href="/css/website/home/adminlte.css">
-        <link rel="stylesheet" href="/css/website/home/search.css">
-        <link rel="stylesheet" href="/css/website/home/highlight.css">
-        <link rel="stylesheet" href="/css/website/home/category.css">
-        <link rel="stylesheet" href="/css/website/ads/ads.css">
+        <link rel="stylesheet" href="/website/css/adminlte/adminlte.css">
+        <link rel="stylesheet" href="/website/css/general/website.css">
+        <link rel="stylesheet" href="/website/css/home/category.css">
+        <link rel="stylesheet" href="/website/css/home/header.css">
+        <link rel="stylesheet" href="/website/css/home/highlight.css">
+        <link rel="stylesheet" href="/website/css/home/search.css">
+        <link rel="stylesheet" href="/website/css/ads/ads.css">
     </head>
     <body>
         @yield($pagename)
@@ -22,8 +22,8 @@
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>
         <script src="/vendor/typed/js/typed-modified.js"></script>
-        <script src="/js/website/website.js"></script>
-        <script src="/js/website/home/header.js"></script>
-        <script src="/js/website/home/category.js"></script>
+        <script src="/website/js/general/website.js"></script>
+        <script src="/website/js/home/category.js"></script>
+        <script src="/website/js/home/header.js"></script>
     </body>
 </html>
