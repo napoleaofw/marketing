@@ -1,11 +1,15 @@
-.form-control {
-    border-color: #d2d6de;
-    border-radius: 0;
+.form-control,
+.form-control:focus {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     -o-box-shadow: none;
+}
+
+.form-control {
+    border-color: #d2d6de;
+    border-radius: 0;
 }
 
 .form-control:not(select) {
@@ -18,11 +22,6 @@
 
 .form-control:focus {
     border-color:#76b1d5;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
 }
 
 .form-control::-webkit-input-placeholder,
