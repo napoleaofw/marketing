@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Sansita&amp;subset=latin-ext">
         <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
-        <link rel="stylesheet" href="/website/css/adminlte/adminlte.css">
         <link rel="stylesheet" href="/website/css/general/aspect-ratio.css">
         <link rel="stylesheet" href="/website/css/general/document.css">
         <link rel="stylesheet" href="/website/css/general/link.css">
