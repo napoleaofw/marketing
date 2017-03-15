@@ -9,12 +9,23 @@
         <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="/website/css/adminlte/adminlte.css">
-        <link rel="stylesheet" href="/website/css/general/website.css">
+        <link rel="stylesheet" href="/website/css/general/aspect-ratio.css">
+        <link rel="stylesheet" href="/website/css/general/document.css">
+        <link rel="stylesheet" href="/website/css/general/link.css">
+        <link rel="stylesheet" href="/website/css/general/list.css">
+        <link rel="stylesheet" href="/website/css/general/spacing.css">
+        <link rel="stylesheet" href="/website/css/general/title.css">
+        <link rel="stylesheet" href="/website/css/general/keyframe/fade-in-down.css">
+        <link rel="stylesheet" href="/website/css/general/keyframe/svg-stroke-animate.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/box.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/button.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/form-control.css">
         <link rel="stylesheet" href="/website/css/home/category.css">
         <link rel="stylesheet" href="/website/css/home/header.css">
         <link rel="stylesheet" href="/website/css/home/highlight.css">
         <link rel="stylesheet" href="/website/css/home/search.css">
-        <link rel="stylesheet" href="/website/css/ads/ads.css">
+        <link rel="stylesheet" href="/website/css/ads/image.css">
+        <link rel="stylesheet" href="/website/css/ads/information.css">
     </head>
     <body>
         @yield($pagename)
@@ -22,7 +33,7 @@
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>
         <script src="/vendor/typed/js/typed-modified.js"></script>
-        <script src="/website/js/general/website.js"></script>
+        <script src="/website/js/general/visible-effect.js"></script>
         <script src="/website/js/home/category.js"></script>
         <script src="/website/js/home/header.js"></script>
     </body>

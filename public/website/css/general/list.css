@@ -1,0 +1,15 @@
+ul.default-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.nav > li > a {
+    display: inline-block;
+    padding: 0;
+}
+
+ul.nav > li > a:focus,
+ul.nav > li > a:hover {
+     background-color: transparent;
+     text-decoration: underline;
+ }

@@ -1,17 +1,3 @@
-#ads.page-wrapper h1 {
-    font-size: 2.2em;
-    margin: 0;
-}
-
-#ads.page-wrapper h2 {
-    font-size: 1.2em;
-}
-
-#ads.page-wrapper ul {
-    list-style: none;
-    padding: 0;
-}
-
 #ads.page-wrapper .ads-image-container {
     height: 200px;
     overflow: hidden;
@@ -27,11 +13,4 @@
     max-width: 100%;
     min-width: 100%;
     position: relative;
-}
-
-#ads.page-wrapper .quick-info .icon-container {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 25px;
 }

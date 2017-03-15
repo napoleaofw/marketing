@@ -1,64 +1,35 @@
-@keyframes svg-animate {
-    from {}
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-#category-wrapper {
+#home.page-wrapper #category-wrapper {
     position: relative;
 }
 
-#category-wrapper .category-list .category .box {
+#home.page-wrapper #category-wrapper .category-list .category .box,
+#home.page-wrapper #category-wrapper .category-list .category .box .box-body,
+#home.page-wrapper #category-wrapper .category-list .category .category-icon,
+#home.page-wrapper #category-wrapper .category-list .category .category-icon svg,
+#home.page-wrapper #category-wrapper .category-list .category .category-content {
     height: 180px;
 }
 
-#category-wrapper .category-list .category .box .box-body {
-    height: 100%;
-}
-
-#category-wrapper .category-list .category .category-animation {
-    height: 100%;
-}
-
-#category-wrapper .category-list .category .category-animation svg {
-    height: 100%;
+#home.page-wrapper #category-wrapper .category-list .category .category-icon svg {
     width: 100%;
 }
 
-#category-wrapper .category-list .category .category-animation svg path {
-    fill: none;
-    stroke: #76b1d5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
-    stroke-width: 2;
-}
-
-#category-wrapper .category-list .category .category-animation svg.animate path {
-    animation: svg-animate 4s forwards;
-}
-
-#category-wrapper .category-list .category .category-content {
-    height: 100%;
-}
-
-#category-wrapper .category-list .category .category-content a.category-link,
-#category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
+#home.page-wrapper #category-wrapper .category-list .category .category-content a.category-link,
+#home.page-wrapper #category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 100%;
 }
 
-#category-wrapper .category-list .category .category-content > a.category-link {
+#home.page-wrapper #category-wrapper .category-list .category .category-content > a.category-link {
     display: inline-block;
     margin-top: 20px;
     text-transform: uppercase;
-    
 }
 
-#category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
+#home.page-wrapper #category-wrapper .category-list .category .category-content .subcategory-list .subcategory a.subcategory-link {
     font-size: 10px;
+    font-size: 0.83rem;
     text-transform: capitalize;
 }

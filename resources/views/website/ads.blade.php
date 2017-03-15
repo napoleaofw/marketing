@@ -2,89 +2,89 @@
 @section('ads')
 <div id="ads" class="page-wrapper">
     <div class="container-fluid">
-        @include('header')
+        @include('website.layout.header')
         <div class="row">
-            <section id="ads-quick-info" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <section class="ads-image-container">
+            <section id="ads-quick-info" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1">
+                <div class="ads-image-container">
                     <img id="ads-profile-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo1.png">
-                </section>
+                </div>
                 <div class="box">
                     <div class="box-body">
                         <h1 id="ads-name" class="title">nome do estabelecimento</h1>
-                        <section id="ads-presentation" class="quick-info">
+                        <section id="ads-presentation">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-id-card-o"></i></span>
                                 Apresentação
                             </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </section>
-                        <section id="ads-address" class="quick-info">
+                        <section id="ads-address">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-map-marker"></i></span>
                                 Endereço
                             </h2>
                             <p>Avenida Moema, 594, Indianópolis, São Paulo - SP, CEP: 04077-022</p>
                         </section>
-                        <section id="ads-phone" class="quick-info">
+                        <section id="ads-phone">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-phone"></i></span>
                                 Telefone
                             </h2>
-                            <ul>
+                            <ul class="nav">
                                 <li>
-                                    <p>(11) 4329-5652</p>
+                                    <a href="tel:(11)4329-5652">(11) 4329-5652</a>
                                 </li>
                                 <li>
-                                    <p>(11) 4329-5652</p>
+                                    <a href="tel:(11)4329-5652">(11) 4329-5652</a>
                                 </li>
                                 <li>
-                                    <p>(11) 4329-5652</p>
+                                    <a href="tel:(11)4329-5652">(11) 4329-5652</a>
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-website" class="quick-info">
+                        <section id="ads-website">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-globe"></i></span>
                                 Website
                             </h2>
-                            <ul>
+                            <ul class="nav">
                                 <li>
-                                    <p>websitelocal.com.br</p>
+                                    <a href="websitelocal.com.br">websitelocal.com.br</a>
                                 </li>
                                 <li>
-                                    <p>websitelocal.com.br</p>
+                                    <a href="websitelocal.com.br">websitelocal.com.br</a>
                                 </li>
                                 <li>
-                                    <p>websitelocal.com.br</p>
+                                    <a href="websitelocal.com.br">websitelocal.com.br</a>
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-email" class="quick-info">
+                        <section id="ads-email">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-envelope-o"></i></span>
                                 E-mail
                             </h2>
-                            <ul>
+                            <ul class="nav">
                                 <li>
-                                    <p>restaurante@local.com.br</p>
+                                    <a href="mailto:restaurante@local.com.br">restaurante@local.com.br</a>
                                 </li>
                                 <li>
-                                    <p>restaurante@local.com.br</p>
+                                    <a href="mailto:restaurante@local.com.br">restaurante@local.com.br</a>
                                 </li>
                                 <li>
-                                    <p>restaurante@local.com.br</p>
+                                    <a href="mailto:restaurante@local.com.br">restaurante@local.com.br</a>
                                 </li>
                                 <li>
-                                    <p>restaurante@local.com.br</p>
+                                    <a href="mailto:restaurante@local.com.br">restaurante@local.com.br</a>
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-business-hour" class="quick-info">
+                        <section id="ads-business-hour">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-clock-o"></i></span>
                                 Horário de atendimento
                             </h2>
-                            <ul>
+                            <ul class="default-list">
                                 <li>
                                     <p>Dom à Sab 00:00 às 23:45</p>
                                 </li>
@@ -102,7 +102,7 @@
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-map" class="quick-info">
+                        <section id="ads-map">
                             <h2 class="title">
                                 <span class="icon-container"><i class="fa fa-map-o"></i></span>
                                 Mapa
@@ -114,13 +114,13 @@
                     </div>
                 </div>
             </section>
-            <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                <section class="ads-image-container">
+            <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1">
+                <div class="ads-image-container">
                     <img id="ads-cover-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo2.png">
-                </section>
+                </div>
                 <div class="box">
                     <div class="box-body">
-                        <section id="ads-about" class="more-info">
+                        <section id="ads-about">
                             <h2 class="title">Sobre</h2>
                             <p>
                                 <span class="icon-container"><i class="fa fa-quote-left"></i></span>
@@ -128,9 +128,9 @@
                                 <span class="icon-container"><i class="fa fa-quote-right"></i></span>
                             </p>
                         </section>
-                        <section id="ads-payment-methods" class="more-info">
+                        <section id="ads-payment-methods">
                             <h2 class="title">Formas de pagamento</h2>
-                            <ul>
+                            <ul class="default-list">
                                 <li>
                                     <p>Dinheiro</p>
                                 </li>
@@ -145,9 +145,9 @@
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-facilities" class="more-info">
+                        <section id="ads-facilities">
                             <h2 class="title">Serviços oferecidos</h2>
-                            <ul>
+                            <ul class="default-list">
                                 <li>
                                     <p>Alimentos e Bebidas - Alimentos</p>
                                 </li>
@@ -180,9 +180,9 @@
                                 </li>
                             </ul>
                         </section>
-                        <section id="ads-photos" class="more-info">
+                        <section id="ads-photos">
                             <h2 class="title">Fotos</h2>
-                            <ul>
+                            <ul class="default-list">
                                 <li class="col-xs-3 col-sm-2 no-padding">
                                     <a href="#" class="square">
                                         <div class="square-wrapper">

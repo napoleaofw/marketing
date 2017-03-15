@@ -1,14 +1,14 @@
-#highlight-wrapper {
+#home.page-wrapper #highlight-wrapper {
     margin-top: 20px;
 }
 
-#highlight-wrapper .highlight-list .highlight .box {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box {
     height: 200px;
     position: relative;
     width: 100%;
 }
 
-#highlight-wrapper .highlight-list .highlight .box .box-body {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box .box-body {
     display: block;
     height: 100%;
     overflow: hidden;
@@ -18,13 +18,13 @@
     width: 100%;
 }
 
-#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-animation {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box .box-body .highlight-background {
     height: 100%;
     position: absolute;
     width: 100%;
 }
 
-#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-animation .highlight-cover {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box .box-body .highlight-background .highlight-cover {
     display: block;
     min-height: 100%;
     height: auto;
@@ -32,10 +32,11 @@
     min-width: 100%;
 }
 
-#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content {
     background-color: rgba(0, 0, 0, 0.25);
     display: block;
     font-size: 18px;
+    font-size:  1.5rem;
     height: 50px;
     line-height: 50px;
     margin-top: 150px;
@@ -43,6 +44,6 @@
     width: 100%;
 }
 
-#highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content a.highlight-link {
+#home.page-wrapper #highlight-wrapper .highlight-list .highlight .box .box-body .highlight-content a.highlight-link {
     color: #fff;
 }

@@ -1,4 +1,4 @@
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-20px);
@@ -10,7 +10,7 @@
     }
 }
 
-@-moz-keyframes fadeInDown {
+@-moz-keyframes fade-in-down {
     0% {
         opacity: 0;
         -moz-transform: translateY(-20px);
@@ -22,7 +22,7 @@
     }
 }
 
-@-ms-keyframes fadeInDown {
+@-ms-keyframes fade-in-down {
     0% {
         opacity: 0;
         -ms-transform: translateY(-20px);
@@ -34,7 +34,7 @@
     }
 }
 
-@-o-keyframes fadeInDown {
+@-o-keyframes fade-in-down {
     0% {
         opacity: 0;
         -o-transform: translateY(-20px);
@@ -46,7 +46,7 @@
     }
 }
 
-@keyframes fadeInDown {
+@keyframes fade-in-down {
     0% {
         opacity: 0;
         transform: translateY(-20px);
@@ -74,8 +74,8 @@
     -ms-animation-fill-mode: both;
     -o-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation-name: fadeInDown;
-    -moz-animation-name: fadeInDown;
-    -o-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+    -webkit-animation-name: fade-in-down;
+    -moz-animation-name: fade-in-down;
+    -o-animation-name: fade-in-down;
+    animation-name: fade-in-down;
 }

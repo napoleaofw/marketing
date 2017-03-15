@@ -1,8 +1,8 @@
-header {
-    /*background-color: #95C2DE;*/
+#home.page-wrapper header {
     background-color: transparent;
     border-bottom: 1px solid transparent;
     font-size: 16px;
+    font-size: 1.33rem;
     height: 80px;
     position: fixed;
     transition: all 0.5s ease-in-out;
@@ -14,7 +14,7 @@ header {
     z-index: 500;
 }
 
-header.small-header {
+#home.page-wrapper header.small-header {
     background-color: #fff;
     border-color: #f3f3f3;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ header.small-header {
     height: 50px;
 }
 
-header nav {
+#home.page-wrapper header nav {
     background-color: transparent;
     transition: all 5s ease-in-out;
     -webkit-transition: all 5s ease-in-out;
@@ -35,30 +35,31 @@ header nav {
     -o-transition: all 5s ease-in-out;
 }
 
-header nav.navbar-mobile {
+#home.page-wrapper header nav.navbar-mobile {
     background-color: #fff;
     height: 100%;
     position: fixed;
     width: 100%;
 }
 
-header nav.navbar-mobile ul li a {
+#home.page-wrapper header nav.navbar-mobile ul li a {
     color: #76b1d5;
 }
 
-header button.navbar-toggle {
+#home.page-wrapper header button.navbar-toggle {
     color: #fff;
     cursor: pointer;
     font-size: 18px;
+    font-size: 1.5rem;
     padding: 0;
 }
 
-header nav ul li {
+#home.page-wrapper header nav ul li {
     display: inline-block;
     text-align: center;
 }
 
-header nav ul li a {
+#home.page-wrapper header nav ul li a {
     color: #fff;
     display: block;
     line-height: 80px;
@@ -69,7 +70,7 @@ header nav ul li a {
     -o-transition: all 0.5s ease-in-out;
 }
 
-header.small-header nav ul li a {
+#home.page-wrapper header.small-header nav ul li a {
     color: #76b1d5;
     line-height: 50px;
 }

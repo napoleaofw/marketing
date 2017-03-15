@@ -31,10 +31,10 @@
             </nav>
         </header>
         <section id="search-wrapper" class="row">
-            <div id="search-animation"></div>
+            <div id="search-background"></div>
             <div id="search-content">
                 <h1 class="title">frase principal para o website marketing regional<span class="typed"></span></h1>
-                <div class="form col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
                     <form method="post">
                         <div class="col-xs-12 col-sm-5">
                             <input type="text" class="form-control" placeholder="O que você está procurando?">
@@ -54,7 +54,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo1.png">
                             </div>
                             <div class="highlight-content">
@@ -66,7 +66,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo2.png">
                             </div>
                             <div class="highlight-content">
@@ -78,7 +78,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="https://imagesapt.apontador-assets.com/fit-in/320x240/85cc585c72a5444a9925ee56342a125a/masp-14727425838177928.jpg">
                             </div>
                             <div class="highlight-content">
@@ -90,7 +90,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="https://imagesapt.apontador-assets.com/fit-in/320x240/dc7eab874fd54b708440b1baf0dac9dc/hotel-unique-21013344190667287.jpg">
                             </div>
                             <div class="highlight-content">
@@ -102,7 +102,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="https://imagesapt.apontador-assets.com/fit-in/320x240/2307326eef5d4975a350b26bf5a1288f/c40486140d5f2d5f28-3515711645403130.jpg">
                             </div>
                             <div class="highlight-content">
@@ -114,7 +114,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="http://newpoi-assets.apontador.com.br.s3.amazonaws.com/assets/home/images/home_apontador_mais_bg.png">
                             </div>
                             <div class="highlight-content">
@@ -126,7 +126,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="http://newpoi-assets.apontador.com.br.s3.amazonaws.com/assets/home/images/home_topo_bg2.jpg">
                             </div>
                             <div class="highlight-content">
@@ -138,7 +138,7 @@
                 <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                     <div class="box">
                         <div class="box-body">
-                            <div class="highlight-animation">
+                            <div class="highlight-background">
                                 <img class="highlight-cover" src="http://newpoi-assets.apontador.com.br.s3.amazonaws.com/assets/home/images/mobile_bg.jpg">
                             </div>
                             <div class="highlight-content">
@@ -151,10 +151,10 @@
         </section>
         <section id="category-wrapper" class="row">
             <ul class="nav category-list">
-                <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
+                <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="box">
                         <div class="box-body">
-                            <div class="category-animation col-xs-4">
+                            <div class="category-icon col-xs-4">
                                 <div id="category-svg" style="display:none">
                                     <div id="alimentosebebidas"> @include("website.category.alimentosebebidas") </div>
                                     <div id="animais"> @include("website.category.animais") </div>

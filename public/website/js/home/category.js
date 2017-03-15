@@ -746,7 +746,7 @@ $.each(categoryList, function(index, value) {
     $categoryLink.attr("title", category);
     var svgName = removerAcentos(category.toLowerCase()).replace(/\s+/g, "").replace(",", "");
     var $categorySvg = $categorySvgList.find("#"+svgName).html();
-    var $categoryAnimation = $categoryClone.find(".category-animation");
+    var $categoryAnimation = $categoryClone.find(".category-icon");
     $categoryAnimation.html($categorySvg);
     var $subcategoryList = $categoryClone.find(".subcategory-list");
     var $subcategory = $subcategoryList.find(".subcategory");
@@ -772,7 +772,7 @@ $(".category svg path").each(function() {
 
 $(document).ready(function() {
 	setTimeout(function() {
-			$(".category svg").addClass("animate");
+			$(".category svg").addClass("svg-stroke-animate");
 			// $.each($(".category svg"), function() {
 			// 	var $this = $(this)
 			// 	var strokeDashoffset = $this.attr("stroke-dashoffset");

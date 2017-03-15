@@ -1,11 +1,11 @@
-.square:before {
+.aspect-ratio:before {
 	content: '';
 	display: block;
     overflow: hidden;
 	padding-top: 100%;
 }
 
-.square .square-wrapper {
+.aspect-ratio .aspect-ratio-wrapper {
 	bottom: 0;
 	left: 0;
 	right: 0;
