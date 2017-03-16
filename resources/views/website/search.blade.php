@@ -22,13 +22,15 @@
                         <ul class="default-list search-results-list">
                             <li class="search-result">
                                 <a href="#">
+                                    <div class="search-result-image-container">
+                                        <img class="search-result-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo2.png">
+                                        <div class="search-result-background-effect"></div>
+                                    </div>
                                     <div class="box">
                                         <div class="box-body">
-                                            <div class="search-image-container">
-                                                <img id="search-result-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo2.png">
-                                                <div class="search-result-background-effect"></div>
+                                            <div class="search-result-content">
+                                                <h1 id="search-result-name" class="title">nome do estabelecimento</h1>
                                             </div>
-                                            <h1 id="search-result-name" class="title">nome do estabelecimento</h1>
                                         </div>
                                     </div>
                                 </a>
