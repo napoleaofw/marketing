@@ -28,7 +28,7 @@ Route::get('/ads', function () {
 });
 
 Route::get('/ads-advanced', function () {
-    return view('website.ads', [
+    return view('website.ads-advanced', [
         'pagename' => 'ads-advanced'
     ]);
 });
