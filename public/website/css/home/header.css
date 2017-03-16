@@ -1,9 +1,9 @@
 #home.page-wrapper header {
     background-color: transparent;
     border-bottom: 1px solid transparent;
-    font-size: 16px;
-    font-size: 1.33rem;
-    height: 80px;
+    font-size: 14px;
+    font-size: 1.17rem;
+    height: 70px;
     position: fixed;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
@@ -28,11 +28,6 @@
 
 #home.page-wrapper header nav {
     background-color: transparent;
-    transition: all 5s ease-in-out;
-    -webkit-transition: all 5s ease-in-out;
-    -moz-transition: all 5s ease-in-out;
-    -ms-transition: all 5s ease-in-out;
-    -o-transition: all 5s ease-in-out;
 }
 
 #home.page-wrapper header nav.navbar-mobile {
@@ -60,14 +55,20 @@
 }
 
 #home.page-wrapper header nav ul li a {
+    background-color: transparent;
     color: #fff;
     display: block;
-    line-height: 80px;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
+    line-height: 70px;
+    transition: background-color 0.25s ease-in-out, line-height 0.5s ease-in-out;
+    -webkit-transition: background-color 0.25s ease-in-out, line-height 0.5s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out, line-height 0.5s ease-in-out;
+    -ms-transition: background-color 0.25s ease-in-out, line-height 0.5s ease-in-out;
+    -o-transition: background-color 0.25s ease-in-out, line-height 0.5s ease-in-out;
+}
+
+#home.page-wrapper header:not(.small-header) nav ul li a:hover {
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.18);
 }
 
 #home.page-wrapper header.small-header nav ul li a {

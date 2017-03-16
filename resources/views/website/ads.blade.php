@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </section>
-            <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1">
+            <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-7">
                 <div class="ads-image-container">
                     <img id="ads-cover-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo2.png">
                 </div>
