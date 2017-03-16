@@ -1,12 +1,14 @@
-#ads.page-wrapper .ads-image-container {
+#ads-advanced.page-wrapper .ads-image-container {
     height: 200px;
     overflow: hidden;
+    position: relative;
     width: 100%;
 }
 
-#ads.page-wrapper #ads-profile-image,
-#ads.page-wrapper #ads-cover-image,
-#ads.page-wrapper #ads-photos .ads-photo {
+#ads-advanced.page-wrapper #ads-profile-image,
+#ads-advanced.page-wrapper #ads-cover-image,
+#ads-advanced.page-wrapper #ads-photos .ads-photo,
+#ads-advanced.page-wrapper #ads-photos .ads-photo {
     display: block;
     min-height: 100%;
     height: auto;

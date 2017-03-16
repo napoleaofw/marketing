@@ -32,3 +32,9 @@ Route::get('/ads-advanced', function () {
         'pagename' => 'ads-advanced'
     ]);
 });
+
+Route::get('/search', function () {
+    return view('website.search', [
+        'pagename' => 'search'
+    ]);
+});

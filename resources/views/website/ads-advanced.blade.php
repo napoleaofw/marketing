@@ -1,6 +1,6 @@
 @extends('website.layout.index')
 @section('ads-advanced')
-<div id="ads" class="page-wrapper">
+<div id="ads-advanced" class="page-wrapper">
     <div class="container-fluid">
         @include('website.layout.header')
         <div class="row">

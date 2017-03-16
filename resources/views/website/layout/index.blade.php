@@ -25,15 +25,17 @@
         <link rel="stylesheet" href="/website/css/home/search.css">
         <link rel="stylesheet" href="/website/css/ads/image.css">
         <link rel="stylesheet" href="/website/css/ads/information.css">
+        <link rel="stylesheet" href="/website/css/search/search-result.css">
     </head>
     <body>
         @yield($pagename)
-        <script src="/vendor/jquery/js/jquery.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>
-        <script src="/vendor/typed/js/typed-modified.js"></script>
-        <script src="/website/js/general/visible-effect.js"></script>
-        <script src="/website/js/home/category.js"></script>
-        <script src="/website/js/home/header.js"></script>
+        <script type="text/javascript" src="/vendor/jquery/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>
+        <script type="text/javascript" src="/vendor/typed/js/typed-modified.js"></script>
+        <script type="text/javascript" src="/website/js/general/visible-effect.js"></script>
+        <script type="text/javascript" src="/website/js/home/category.js"></script>
+        <script type="text/javascript" src="/website/js/home/header.js"></script>
+        <script type="text/javascript" src="/website/js/search/search-result.js"></script>
     </body>
 </html>
