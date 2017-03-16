@@ -26,3 +26,9 @@ Route::get('/ads', function () {
         'pagename' => 'ads'
     ]);
 });
+
+Route::get('/ads-advanced', function () {
+    return view('website.ads', [
+        'pagename' => 'ads-advanced'
+    ]);
+});
