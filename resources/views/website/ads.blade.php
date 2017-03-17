@@ -3,7 +3,7 @@
 <div id="ads" class="page-wrapper">
     <div class="container-fluid">
         @include('website.layout.header')
-        <div class="row">
+        <div class="row page-content">
             <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-7 col-lg-offset-2">
                 <div class="box">
                     <div class="box-body">

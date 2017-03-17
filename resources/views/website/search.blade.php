@@ -3,8 +3,8 @@
 <div id="search" class="page-wrapper">
     <div class="container-fluid">
         @include('website.layout.header')
-        <div class="row">
-            <section id="search-filters" class="col-xs-12 col-sm-5 col-md-4 col-lg-2 col-lg-offset-1">
+        <div class="row page-content">
+            <section id="search-filters" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1">
                 <div class="box">
                     <div class="box-body">
                         <h1 id="" class="title">Opções de pesquisa</h1>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </section>
-            <section id="search-results" class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+            <section id="search-results" class="col-xs-12 col-sm-7 col-md-8 col-lg-7">
                 <ul class="default-list search-results-list">
                     <li class="search-result">
                         <a href="#">

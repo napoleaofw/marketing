@@ -3,7 +3,7 @@
 <div id="ads-advanced" class="page-wrapper">
     <div class="container-fluid">
         @include('website.layout.header')
-        <div class="row">
+        <div class="row page-content">
             <section id="ads-quick-info" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1">
                 <div class="ads-image-container">
                     <img id="ads-profile-image" src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/photo1.png">

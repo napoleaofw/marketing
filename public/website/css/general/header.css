@@ -1,5 +1,55 @@
+header {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    font-size: 1.17rem;
+    height: 70px;
+    position: fixed;
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    width: 100%;
+    z-index: 500;
+}
+
+header.main-header.small-header {
+    border-color: #f3f3f3;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 50px;
+}
+
 header.main-header .navbar {
     background-color: #76b1d5;
     border-radius: 0;
     color: #fff;
+    height: inherit;
+}
+
+header.main-header .navbar .header-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+header.main-header ~ div.page-content {
+    margin-top: 70px;
+    transition: margin-top 0.5s ease-in-out;
+    -webkit-transition: margin-top 0.5s ease-in-out;
+    -moz-transition: margin-top 0.5s ease-in-out;
+    -ms-transition: margin-top 0.5s ease-in-out;
+    -o-transition: margin-top 0.5s ease-in-out;
+}
+
+header.main-header.small-header ~ div.page-content {
+    margin-top: 50px;
 }
