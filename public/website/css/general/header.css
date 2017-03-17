@@ -32,7 +32,7 @@ header.main-header .navbar {
 }
 
 header.main-header .navbar .header-content {
-    position: relative;
+    height: inherit;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
