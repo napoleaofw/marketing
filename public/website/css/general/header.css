@@ -32,13 +32,17 @@ header.main-header .navbar {
 }
 
 header.main-header .navbar .header-content {
-    height: inherit;
+    text-align: center;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+}
+
+header.main-header .navbar .header-content a {
+    color: #fff;
 }
 
 header.main-header ~ div.page-content {
