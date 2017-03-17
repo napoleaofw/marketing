@@ -1,0 +1,28 @@
+.pagination-container {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+ul.pagination {
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+ul.pagination > li >  a {
+    color: #76b1d5;
+    padding: 6px 12px;
+}
+
+ul.pagination > .active > a,
+ul.pagination > .active > a:focus,
+ul.pagination > .active > a:hover,
+ul.pagination > .active > span,
+ul.pagination > .active > span:focus,
+ul.pagination > .active > span:hover {
+    background-color: #76b1d5;
+    border-color: #76b1d5;
+}

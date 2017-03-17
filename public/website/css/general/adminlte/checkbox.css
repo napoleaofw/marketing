@@ -1,0 +1,33 @@
+.checkbox-container {
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    color: #95C2DE;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease, color 0.2s ease;
+    -moz-transition: border-color 0.2s ease, color 0.2s ease;
+    -ms-transition: border-color 0.2s ease, color 0.2s ease;
+    -o-transition: border-color 0.2s ease, color 0.2s ease;
+    vertical-align: middle;
+    width: 18px;
+}
+
+.checkbox-container.hover:not(.disabled) {
+    border-color: #95C2DE;
+}
+
+.checkbox-container.checked:before {
+    content: "\2713";
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.checkbox-container.disabled {
+    color: #aaa;
+}

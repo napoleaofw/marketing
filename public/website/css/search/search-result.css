@@ -1,3 +1,15 @@
+#search.page-wrapper #search-filters ul.nav li.filter {
+    margin-bottom: 5px;
+}
+
+#search.page-wrapper #search-filters ul.nav li.filter a {
+    vertical-align: bottom;
+}
+
+#search.page-wrapper #search-filters button#find {
+    margin-top: 15px;
+}
+
 #search.page-wrapper #search-results .search-result {
     position: relative;
 }
@@ -12,7 +24,7 @@
 #search.page-wrapper #search-results .search-result a .search-result-image-container {
     height: 50px;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     transition: height 0.2s ease;
     -webkit-transition: height 0.2s ease;
     -moz-transition: height 0.2s ease;
@@ -23,6 +35,15 @@
 
 #search.page-wrapper #search-results .search-result:hover a .search-result-image-container {
     height: 80px;
+}
+
+#search.page-wrapper #search-results .search-result a .search-result-image-container .search-result-image {
+    display: block;
+    min-height: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
 }
 
 #search.page-wrapper #search-results .search-result a .search-result-image-container .search-result-background-effect {
@@ -45,6 +66,6 @@
     opacity: 0;
 }
 
-#search.page-wrapper #search-results .search-result:hover a .box .box-body .search-result-content {
+#search.page-wrapper #search-results .search-result a .box .box-body .search-result-content {
     margin-top: 80px;
 }

@@ -43,7 +43,7 @@
                             <input type="text" class="form-control" placeholder="Onde você deseja encontrar?">
                         </div>
                         <div class="col-xs-12 col-sm-2">
-                            <button type="submit" class="btn btn-default btn-block btn-flat">search</button>
+                            <button type="submit" class="btn btn-default btn-block btn-flat">encontrar</button>
                         </div>
                     </form>
                 </div>
