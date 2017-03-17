@@ -1,9 +1,9 @@
 /* begin scroll */
 var checkScroll = function checkScroll() {
     var $body = $("body");
-	var $searchContent = $("#search-content");
 	var $header = $("header");
-	if($body[0].scrollTop > $searchContent[0].scrollHeight) {
+	var scrollHeight = 600;
+	if($body[0].scrollTop >scrollHeight) {
 		$header.addClass("small-header");
 	}
 	else {
