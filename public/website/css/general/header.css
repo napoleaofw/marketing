@@ -53,7 +53,3 @@ header.main-header ~ div.page-content {
     -ms-transition: margin-top 0.5s ease-in-out;
     -o-transition: margin-top 0.5s ease-in-out;
 }
-
-header.main-header.small-header ~ div.page-content {
-    margin-top: 50px;
-}

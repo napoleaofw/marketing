@@ -2,7 +2,7 @@
 var checkScroll = function checkScroll() {
     var $body = $("body");
 	var $header = $("header");
-	var scrollHeight = 600;
+	var scrollHeight = 200;
 	if($body[0].scrollTop >scrollHeight) {
 		$header.addClass("small-header");
 	}
