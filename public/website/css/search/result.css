@@ -168,8 +168,7 @@
     width: 68px;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-phone-section .ads-phone-list .ads-phone:not(:first-child),,
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-business-hour-section .ads-business-hour-list .ads-business-hour:not(:first-child) {
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-phone-section .ads-phone-list .ads-phone:not(:first-child) {
     display: none;
 }
 
@@ -179,10 +178,11 @@
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-facility-section .ads-facility-list .ads-facility,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-icon-container,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-phone-section .ads-phone-list,
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-business-hour-section .ads-business-hour-list,
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-payment-method-section .ads-payment-method-list,
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-payment-method-section .ads-payment-method-list .ads-payment-method,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-link-section .ads-link-list .ads-link {
     display: inline-block;
-    vertical-align: middle; /* talvez tirar */
+    vertical-align: middle;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-business-hour-section .ads-business-hour-open {
