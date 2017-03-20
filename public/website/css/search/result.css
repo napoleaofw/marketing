@@ -6,10 +6,11 @@
     border-bottom: none;
     height: 80px;
     position: relative;
+    text-shadow: 1px 0 0 #f3f3f3, -1px 0 0 #f3f3f3, 0 1px 0 #f3f3f3, 0 -1px 0 #f3f3f3, 1px 1px #f3f3f3, -1px -1px 0 #f3f3f3, 1px -1px 0 #f3f3f3, -1px 1px 0 #f3f3f3;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .search-result-image-container {
-    height: 50px;
+    height: 100%;
     overflow: hidden;
     position: absolute;
     transition: height 0.2s ease;
@@ -20,9 +21,9 @@
     width: 100%;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .search-result-image-container {
+/* #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .search-result-image-container {
     height: 80px;
-}
+} */
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .search-result-image-container .search-result-image {
     display: block;
@@ -54,13 +55,14 @@
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content {
-    height: 30px;
-    margin-top: 50px;
-    transition: height 0.2s ease, margin-top 0.2s ease;
-    -webkit-transition: height 0.2s ease, margin-top 0.2s ease;
-    -moz-transition: height 0.2s ease, margin-top 0.2s ease;
-    -ms-transition: height 0.2s ease, margin-top 0.2s ease;
-    -o-transition: height 0.2s ease, margin-top 0.2s ease;
+    bottom: 0;
+    position: absolute;
+}
+
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-title-section .ads-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content {
@@ -79,17 +81,18 @@
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-title-section .ads-title-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total .ads-avaliation-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-list {
-    transition: color 0.2s ease;
-    -webkit-transition: color 0.2s ease;
-    -moz-transition: color 0.2s ease;
-    -ms-transition: color 0.2s ease;
-    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+    -webkit-transition: color 0.2s ease, text-shadow 0.2s ease;
+    -moz-transition: color 0.2s ease, text-shadow 0.2s ease;
+    -ms-transition: color 0.2s ease, text-shadow 0.2s ease;
+    -o-transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-title-section .ads-title-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total .ads-avaliation-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-list {
     color: #fff;
+    text-shadow: 1px 0 0 #5b5b5b, -1px 0 0 #5b5b5b, 0 1px 0 #5b5b5b, 0 -1px 0 #5b5b5b, 1px 1px #5b5b5b, -1px -1px 0 #5b5b5b, 1px -1px 0 #5b5b5b, -1px 1px 0 #5b5b5b;
 }
 
 /*#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total,
@@ -122,6 +125,10 @@
     padding-top: 15px;
 }
 
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group:not(:first-child) {
+    margin-top: 10px;
+}
+
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-facility-section,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-more-details-section {
     text-align: end;
@@ -131,7 +138,7 @@
     background-color: #f3f3f3;
     border-radius: 50%;
     border-color: #ddd;
-    border-style: dashed;
+    border-style: solid;
     border-width: 1px;
     height: 25px;
     line-height: 25px;

@@ -126,7 +126,7 @@
                                             <h2 class="title ads-title"><a href="#" class="default-color ads-title-link">nome do estabelecimento</a></h2>
                                         </section>
                                         <section class="col-xs-6 ads-avaliation-section">
-                                            <span class="ads-avaliation-total"><a href="#" class="default-color ads-avaliation-link">(7 avaliações)</a></span>
+                                            <span class="ads-avaliation-total"><a href="#" class="default-color ads-avaliation-link">7 avaliações</a></span>
                                             <ul class="default-list ads-avaliation-list">
                                                 <li class="ads-avaliation" title="Excelente">
                                                     <i class="fa fa-star-o"></i>
@@ -150,133 +150,146 @@
                             </div>
                             <div class="box-body no-padding">
                                 <div class="col-xs-12 box-body-content">
-                                    <div class="row">
-                                        <section class="col-xs-8 ads-address-section">
-                                            <p class="ads-address">
-                                                <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>Avenida Moema, 594, Indianópolis, São Paulo - SP
-                                            </p>
-                                            <span class="ads-icon-container"><i class="fa fa-map-o"></i></span><a href="#" class="ads-map">Como chegar?</a>
-                                        </section>
-                                        <section class="col-xs-4 ads-facility-section">
-                                            <ul class="default-list ads-facility-list">
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-wifi" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-truck" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-taxi" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-shower" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-plug" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-newspaper-o" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-shopping-cart" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-cutlery" title="nome da facilidade"></i>
-                                                </li>
-                                                <li class="ads-facility">
-                                                    <i class="fa fa-diamond" title="nome da facilidade"></i>
-                                                </li>
-                                            </ul>
-                                        </section>
+                                    <div class="row section-group">
+                                        <div class="col-xs-6">
+                                            <section class="ads-address-section">
+                                                <p class="ads-address">
+                                                    <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>Avenida Moema, 594, Indianópolis, São Paulo - SP
+                                                </p>
+                                                <span class="ads-icon-container"><i class="fa fa-map-o"></i></span><a href="#" class="ads-map">Como chegar?</a>
+                                            </section>
+                                            <section class="ads-phone-section">
+                                                <ul class="default-list ads-phone-list">
+                                                    <li class="ads-phone">
+                                                        <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
+                                                    </li>
+                                                    <li class="ads-phone">
+                                                        <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
+                                                    </li>
+                                                    <li class="ads-phone">
+                                                        <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
+                                                    </li>
+                                                </ul>
+                                                <span class="see-more"><a href="#">ver telefone(s)</a></span>
+                                            </section>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <section class="ads-facility-section">
+                                                <ul class="default-list ads-facility-list">
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-wifi" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-truck" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-taxi" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-shower" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-plug" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-newspaper-o" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-shopping-cart" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-cutlery" title="nome da facilidade"></i>
+                                                    </li>
+                                                    <li class="ads-facility">
+                                                        <i class="fa fa-diamond" title="nome da facilidade"></i>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <section class="col-xs-6 ads-phone-section">
-                                            <ul class="default-list ads-phone-list">
-                                                <li class="ads-phone">
-                                                    <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
-                                                </li>
-                                                <li class="ads-phone">
-                                                    <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
-                                                </li>
-                                                <li class="ads-phone">
-                                                    <span class="ads-icon-container"><i class="fa fa-phone"></i></span>(11) 4329-9878
-                                                </li>
-                                            </ul>
-                                            <span class="see-more"><a href="#">ver telefone(s)</a></span>
-                                        </section>
-                                        <section class="col-xs-6 ads-payment-method-section">
-                                            <ul class="default-list ads-payment-method-list">
-                                                <li class="ads-payment-method">
-                                                    <span class="ads-icon-content">
-                                                        <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
-                                                    </span>
-                                                </li>
-                                                <li class="ads-payment-method">
-                                                    <span class="ads-icon-content">
-                                                        <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
-                                                    </span>
-                                                </li>
-                                                <li class="ads-payment-method">
-                                                    <span class="ads-icon-content">
-                                                        <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
-                                                    </span>
-                                                </li>
-                                                <li class="ads-payment-method">
-                                                    <span class="ads-icon-content">
-                                                        <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                            <span class="see-more"><a href="#">ver todas</a></span>
-                                        </section>
+                                    <div class="row section-group">
+                                        <div class="col-xs-12">
+                                            <section class="ads-payment-method-section">
+                                                <span class="list-name">Formas de pagamento:</span>
+                                                <ul class="default-list ads-payment-method-list">
+                                                    <li class="ads-payment-method">
+                                                        <span class="ads-icon-container">
+                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                        </span>
+                                                    </li>
+                                                    <li class="ads-payment-method">
+                                                        <span class="ads-icon-container">
+                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                        </span>
+                                                    </li>
+                                                    <li class="ads-payment-method">
+                                                        <span class="ads-icon-container">
+                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                        </span>
+                                                    </li>
+                                                    <li class="ads-payment-method">
+                                                        <span class="ads-icon-container">
+                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row section-group">
                                         <section class="col-xs-12 ads-short-about-section">
-                                            <p class="ads-short-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros. </p>
+                                            <p class="ads-short-about"><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros.<i class="fa fa-quote-right"></i></p>
                                         </section>
                                     </div>
-                                    <div class="row">
-                                        <section class="col-xs-8 ads-business-hour-section">
-                                            <ul class="default-list ads-business-hour-list">
-                                                <li class="ads-business-hour">
-                                                    Segunda-Feira 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Terça-Feira 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Quarta-Feira 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Quinta-Feira 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Sexta-Feira 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Sábado 11:30-23:45
-                                                </li>
-                                                <li class="ads-business-hour">
-                                                    Domingo 11:30-23:45
-                                                </li>
-                                            </ul>
-                                            <span class="see-more"><a href="#">ver horários(s)</a></span>
-                                        </section>
+                                    <div class="row section-group">
+                                        <div class="col-xs-12">
+                                            <section class="ads-business-hour-section">
+                                                <span class="ads-icon-container"><i class="fa fa-clock-o"></i></span>
+                                                <ul class="default-list ads-business-hour-list">
+                                                    <li class="ads-business-hour">
+                                                        Segunda-Feira 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Terça-Feira 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Quarta-Feira 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Quinta-Feira 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Sexta-Feira 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Sábado 11:30-23:45
+                                                    </li>
+                                                    <li class="ads-business-hour">
+                                                        Domingo 11:30-23:45
+                                                    </li>
+                                                </ul>
+                                                <span class="see-more"><a href="#">ver horários(s)</a></span>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <section class="col-xs-8 ads-link-section">
-                                            <ul class="default-list ads-link-list">
-                                                <li class="ads-link">
-                                                    <a href="#">acessar website</a>
-                                                </li>
-                                                <li class="ads-link">
-                                                    <a href="#">enviar e-mail</a>
-                                                </li>
-                                            </ul>
-                                        </section>
-                                        <section class="col-xs-4 ads-more-details-section">
-                                            <a href="#" class="ads-more-details-link link-effect">Mais detalhes</a>
-                                        </section>
+                                    <div class="row section-group">
+                                        <div class="col-xs-8">
+                                            <section class="ads-link-section">
+                                                <ul class="default-list ads-link-list">
+                                                    <li class="ads-link">
+                                                        <a href="#">acessar website</a>
+                                                    </li>
+                                                    <li class="ads-link">
+                                                        <a href="#">enviar e-mail</a>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <section class="ads-more-details-section">
+                                                <a href="#" class="ads-more-details-link link-effect">Mais detalhes</a>
+                                            </section>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
