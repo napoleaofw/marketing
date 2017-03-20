@@ -1,6 +1,10 @@
 header {
-    background-color: transparent;
-    border-bottom: 1px solid transparent;
+    border-color: transparent;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-top-width: 0;
     font-size: 14px;
     font-size: 1.17rem;
     height: 70px;
@@ -15,23 +19,30 @@ header {
 }
 
 header.main-header.small-header {
-    border-color: #f3f3f3;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-color: #6eaed5;
+}
+
+header.small-header {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     height: 50px;
 }
 
-header.main-header .navbar {
+header.main-header {
     background-color: #76b1d5;
-    border-radius: 0;
     color: #fff;
-    height: inherit;
 }
 
-header.main-header .navbar .header-content {
+header nav.navbar {
+    border-radius: 0;
+    height: inherit;
+    margin: 0;
+}
+
+header nav.navbar .header-content {
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
@@ -41,15 +52,89 @@ header.main-header .navbar .header-content {
     -o-transform: translateY(-50%);
 }
 
-header.main-header .navbar .header-content a {
+header nav.navbar .header-content form {
+    text-align: start;
+}
+
+header nav.navbar .header-content a {
+    background-color: transparent;
     color: #fff;
+    transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -ms-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
 }
 
 header.main-header ~ div.page-content {
-    margin-top: 70px;
+    margin-top: 85px;
     transition: margin-top 0.5s ease-in-out;
     -webkit-transition: margin-top 0.5s ease-in-out;
     -moz-transition: margin-top 0.5s ease-in-out;
     -ms-transition: margin-top 0.5s ease-in-out;
     -o-transition: margin-top 0.5s ease-in-out;
+}
+
+header button.navbar-toggle .menu-title,
+header button.navbar-toggle .menu-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header button.navbar-toggle span {
+    color: #6f6f6f;
+    font-weight: bold;
+}
+
+header button.navbar-toggle .menu-icon {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+}
+
+header button.navbar-toggle .menu-icon span,
+header button.navbar-toggle .menu-icon span:before,
+header button.navbar-toggle .menu-icon span:after {
+    background-color: #6f6f6f;
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+}
+
+header button.navbar-toggle .menu-icon span:before,
+header button.navbar-toggle .menu-icon span:after {
+    content: '';
+    left: 0;
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+header button.navbar-toggle .menu-icon span:before {
+    top: -0.5rem;
+    transition-property: top, transform;
+}
+
+header button.navbar-toggle .menu-icon span:after {
+    bottom: -0.5rem;
+    transition-property: bottom, transform;
+}
+
+header button.navbar-toggle.active .menu-icon span {
+    background-color: transparent;
+}
+
+header button.navbar-toggle.active .menu-icon span:before,
+header button.navbar-toggle.active .menu-icon span:after {
+    transition-delay: 0s, 0.3s;
+}
+
+header button.navbar-toggle.active .menu-icon span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+header button.navbar-toggle.active .menu-icon span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
 }

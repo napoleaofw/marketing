@@ -1,5 +1,6 @@
 .title {
     font-family: "Sansita", "Helvetica", "sans-serif";
+    margin: 0;
 }
 
 h1.title {
@@ -8,6 +9,11 @@ h1.title {
 }
 
 h2.title {
+    font-size: 19px;
+    font-size: 1.583rem;
+}
+
+h3.title {
     font-size: 14px;
     font-size: 1.2rem;
 }

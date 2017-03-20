@@ -12,24 +12,24 @@
                     <div class="box-body">
                         <h1 id="ads-name" class="title">nome do estabelecimento</h1>
                         <section id="ads-presentation">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-id-card-o"></i></span>
                                 Apresentação
-                            </h2>
+                            </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </section>
                         <section id="ads-address">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-map-marker"></i></span>
                                 Endereço
-                            </h2>
+                            </h3>
                             <p>Avenida Moema, 594, Indianópolis, São Paulo - SP, CEP: 04077-022</p>
                         </section>
                         <section id="ads-phone">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-phone"></i></span>
                                 Telefone
-                            </h2>
+                            </h3>
                             <ul class="nav">
                                 <li>
                                     <a href="tel:(11)4329-5652">(11) 4329-5652</a>
@@ -43,10 +43,10 @@
                             </ul>
                         </section>
                         <section id="ads-website">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-globe"></i></span>
                                 Website
-                            </h2>
+                            </h3>
                             <ul class="nav">
                                 <li>
                                     <a href="websitelocal.com.br">websitelocal.com.br</a>
@@ -60,10 +60,10 @@
                             </ul>
                         </section>
                         <section id="ads-email">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-envelope-o"></i></span>
                                 E-mail
-                            </h2>
+                            </h3>
                             <ul class="nav">
                                 <li>
                                     <a href="mailto:restaurante@local.com.br">restaurante@local.com.br</a>
@@ -80,10 +80,10 @@
                             </ul>
                         </section>
                         <section id="ads-business-hour">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-clock-o"></i></span>
                                 Horário de atendimento
-                            </h2>
+                            </h3>
                             <ul class="default-list">
                                 <li>
                                     <p>Dom à Sab 00:00 às 23:45</p>
@@ -103,10 +103,10 @@
                             </ul>
                         </section>
                         <section id="ads-map">
-                            <h2 class="title">
+                            <h3 class="title">
                                 <span class="icon-container"><i class="fa fa-map-o"></i></span>
                                 Mapa
-                            </h2>
+                            </h3>
                             <div>
                                 map here
                             </div>
@@ -121,7 +121,7 @@
                 <div class="box">
                     <div class="box-body">
                         <section id="ads-about">
-                            <h2 class="title">Sobre</h2>
+                            <h3 class="title">Sobre</h3>
                             <p>
                                 <span class="icon-container"><i class="fa fa-quote-left"></i></span>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros. Praesent vel commodo est. Fusce et felis vehicula, hendrerit nunc eget, lobortis purus. Aenean ullamcorper facilisis lacus, id venenatis metus blandit id. In malesuada lacinia odio, vel feugiat nisi vehicula id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque efficitur imperdiet odio id finibus. Praesent bibendum tempus lectus, sed auctor libero volutpat ut. Nulla nunc nisl, varius vitae tortor et, facilisis mollis tellus. Nulla auctor lacus ligula, at ultricies odio vehicula ac. Suspendisse ligula dolor, ultricies vitae cursus non, rutrum interdum tellus. Donec condimentum placerat efficitur. Proin imperdiet elementum malesuada. Fusce gravida justo nec urna laoreet, ut porta turpis tempus.
@@ -129,7 +129,7 @@
                             </p>
                         </section>
                         <section id="ads-payment-methods">
-                            <h2 class="title">Formas de pagamento</h2>
+                            <h3 class="title">Formas de pagamento</h3>
                             <ul class="default-list">
                                 <li>
                                     <p>Dinheiro</p>
@@ -146,7 +146,7 @@
                             </ul>
                         </section>
                         <section id="ads-facilities">
-                            <h2 class="title">Serviços oferecidos</h2>
+                            <h3 class="title">Serviços oferecidos</h3>
                             <ul class="default-list">
                                 <li>
                                     <p>Alimentos e Bebidas - Alimentos</p>
@@ -181,7 +181,7 @@
                             </ul>
                         </section>
                         <section id="ads-photos">
-                            <h2 class="title">Fotos</h2>
+                            <h3 class="title">Fotos</h3>
                             <ul class="default-list">
                                 <li class="col-xs-3 col-sm-2 no-padding">
                                     <a href="#" class="square">

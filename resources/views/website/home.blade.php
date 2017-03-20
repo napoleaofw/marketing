@@ -4,34 +4,40 @@
     <div class="container-fluid">
         <header class="row">
             <button type="button" class="navbar-toggle">
-                menu
-                <i class="fa fa-bars"></i>
+                <div class="menu-title">
+                    <span>menu</span>
+                </div>
+                <div class="menu-icon">
+                    <span></span>
+                </div>
             </button>
             <nav class="navbar hidden-xs">
-                <ul class="nav">
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                    <li class="no-padding col-sm-2">
-                        <a href="" class="title">link menu</a>
-                    </li>
-                </ul>
+                <div class="col-xs-12 header-content">
+                    <ul class="nav">
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                        <li class="no-padding col-sm-2">
+                            <a href="" class="title">link menu</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <div class="row page-content">
-            <section id="search-wrapper">
+            <section id="search-wrapper" class="col-xs-12 no-padding">
                 <div id="search-background"></div>
                 <div id="search-content">
                     <h1 class="title">frase principal para o website marketing regional<span class="typed"></span></h1>
@@ -44,13 +50,15 @@
                                 <input type="text" class="form-control" placeholder="Onde você deseja encontrar?">
                             </div>
                             <div class="col-xs-12 col-sm-2">
-                                <button type="submit" class="btn btn-default btn-block btn-flat">encontrar</button>
+                                <button type="submit" class="btn btn-default btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
-            <section id="highlight-wrapper">
+            <section id="highlight-wrapper" class="col-xs-12 no-padding">
                 <ul class="nav highlight-list">
                     <li class="highlight col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-effect">
                         <div class="box">
@@ -150,7 +158,7 @@
                     </li>
                 </ul>
             </section>
-            <section id="category-wrapper">
+            <section id="category-wrapper" class="col-xs-12 no-padding">
                 <ul class="nav category-list">
                     <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="box">

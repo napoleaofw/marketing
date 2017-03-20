@@ -1,0 +1,63 @@
+@-webkit-keyframes link-effect {
+    0% {
+        color: #76b1d5;
+    }
+    50% {
+        color: #0567a2;
+    }
+    100% {
+        color: #76b1d5;
+    }
+}
+
+@-moz-keyframes link-effect {
+    0% {
+        color: #76b1d5;
+    }
+    50% {
+        color: #0567a2;
+    }
+    100% {
+        color: #76b1d5;
+    }
+}
+
+@-ms-keyframes link-effect {
+    0% {
+        color: #76b1d5;
+    }
+    50% {
+        color: #0567a2;
+    }
+    100% {
+        color: #76b1d5;
+    }
+}
+
+@-o-keyframes link-effect {
+    0% {
+        color: #76b1d5;
+    }
+    50% {
+        color: #0567a2;
+    }
+    100% {
+        color: #76b1d5;
+    }
+}
+
+@keyframes link-effect {
+    0% {
+        color: #76b1d5;
+    }
+    50% {
+        color: #0567a2;
+    }
+    100% {
+        color: #76b1d5;
+    }
+}
+
+.link-effect {
+    animation: link-effect 1s ease-in-out infinite;
+}

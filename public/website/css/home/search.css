@@ -19,3 +19,11 @@
     position: relative;
     text-align: center;
 }
+
+#home.page-wrapper #search-content .title {
+    margin-bottom: 15px;
+}
+
+#home.page-wrapper #search-content form {
+    text-align: start;
+}

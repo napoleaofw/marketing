@@ -19,8 +19,10 @@
         <link rel="stylesheet" href="/website/css/general/list.css">
         <link rel="stylesheet" href="/website/css/general/pagination.css">
         <link rel="stylesheet" href="/website/css/general/spacing.css">
+        <link rel="stylesheet" href="/website/css/general/text.css">
         <link rel="stylesheet" href="/website/css/general/title.css">
         <link rel="stylesheet" href="/website/css/general/keyframe/fade-in-down.css">
+        <link rel="stylesheet" href="/website/css/general/keyframe/link-effect.css">
         <link rel="stylesheet" href="/website/css/general/keyframe/svg-stroke-animate.css">
         <link rel="stylesheet" href="/website/css/home/category.css">
         <link rel="stylesheet" href="/website/css/home/header.css">
@@ -28,7 +30,8 @@
         <link rel="stylesheet" href="/website/css/home/search.css">
         <link rel="stylesheet" href="/website/css/ads/image.css">
         <link rel="stylesheet" href="/website/css/ads/information.css">
-        <link rel="stylesheet" href="/website/css/search/search-result.css">
+        <link rel="stylesheet" href="/website/css/search/filter.css">
+        <link rel="stylesheet" href="/website/css/search/result.css">
     </head>
     <body>
         @yield($pagename)
@@ -38,9 +41,9 @@
         <script type="text/javascript" src="/vendor/typed/js/typed-modified.js"></script>
         <script type="text/javascript" src="/website/js/general/adminlte/plugins/icheck.min.js"></script>
         <script type="text/javascript" src="/website/js/general/adminlte/checkbox.js"></script>
+        <script type="text/javascript" src="/website/js/general/header.js"></script>
         <script type="text/javascript" src="/website/js/general/visible-effect.js"></script>
         <script type="text/javascript" src="/website/js/home/category.js"></script>
-        <script type="text/javascript" src="/website/js/home/header.js"></script>
-        <script type="text/javascript" src="/website/js/search/search-result.js"></script>
+        <script type="text/javascript" src="/website/js/search/result.js"></script>
     </body>
 </html>
