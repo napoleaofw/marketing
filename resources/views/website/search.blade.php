@@ -227,14 +227,13 @@
                                     </div>
                                     <div class="row section-group">
                                         <section class="col-xs-12 ads-short-about-section">
-                                            <p class="ads-short-about"><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros.<i class="fa fa-quote-right"></i></p>
+                                            <p class="ads-short-about"><span class="ads-icon-container"><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros.<span class="ads-icon-container"><i class="fa fa-quote-right"></i></span></p>
                                         </section>
                                     </div>
                                     <div class="row section-group">
                                         <div class="col-xs-12">
                                             <section class="ads-business-hour-section">
-                                                <span class="ads-icon-container"><i class="fa fa-clock-o"></i></span>
-                                                <p><span class="ads-business-hour-open">Aberto agora</span>(08:30 - 18:00)</p>
+                                                <p><span class="ads-icon-container"><i class="fa fa-clock-o"></i></span><span class="ads-business-hour-open">Aberto agora </span>(08:30 - 18:00)</p>
                                             </section>
                                         </div>
                                     </div>
