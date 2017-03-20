@@ -125,12 +125,14 @@
     padding-top: 15px;
 }
 
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-phone-section,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group:not(:first-child) {
     margin-top: 10px;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-facility-section,
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-more-details-section {
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-more-details-section,
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-payment-method-section {
     text-align: end;
 }
 
@@ -148,10 +150,13 @@
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-icon-container {
+    font-size: 14px;
+    font-size: 1.166rem;
     position: relative;
     text-align: center;
-    width: 20px;
+    width: 25px;
 }
+
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-phone-section .ads-phone-list {
     vertical-align: top;
 }
@@ -181,6 +186,10 @@
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-link-section .ads-link-list .ads-link {
     display: inline-block;
     vertical-align: middle; /* talvez tirar */
+}
+
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-business-hour-section .ads-business-hour-open {
+    color: #29ca29;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-link-section .ads-link-list .ads-link {

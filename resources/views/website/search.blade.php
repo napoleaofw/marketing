@@ -205,35 +205,24 @@
                                                     </li>
                                                 </ul>
                                             </section>
-                                        </div>
-                                    </div>
-                                    <div class="row section-group">
-                                        <div class="col-xs-12">
                                             <section class="ads-payment-method-section">
-                                                <span class="list-name">Formas de pagamento:</span>
                                                 <ul class="default-list ads-payment-method-list">
                                                     <li class="ads-payment-method">
                                                         <span class="ads-icon-container">
-                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                            <i class="fa fa-credit-card" title="nome da forma de pagamento"></i>
                                                         </span>
                                                     </li>
                                                     <li class="ads-payment-method">
                                                         <span class="ads-icon-container">
-                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                            <i class="fa fa-money" title="nome da forma de pagamento"></i>
                                                         </span>
                                                     </li>
                                                     <li class="ads-payment-method">
                                                         <span class="ads-icon-container">
-                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
-                                                        </span>
-                                                    </li>
-                                                    <li class="ads-payment-method">
-                                                        <span class="ads-icon-container">
-                                                            <i class="fa fa-cc-visa" title="nome da forma de pagamento"></i>
+                                                            <i class="fa fa-barcode" title="nome da forma de pagamento"></i>
                                                         </span>
                                                     </li>
                                                 </ul>
-                                            </section>
                                         </div>
                                     </div>
                                     <div class="row section-group">
@@ -245,30 +234,7 @@
                                         <div class="col-xs-12">
                                             <section class="ads-business-hour-section">
                                                 <span class="ads-icon-container"><i class="fa fa-clock-o"></i></span>
-                                                <ul class="default-list ads-business-hour-list">
-                                                    <li class="ads-business-hour">
-                                                        Segunda-Feira 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Terça-Feira 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Quarta-Feira 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Quinta-Feira 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Sexta-Feira 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Sábado 11:30-23:45
-                                                    </li>
-                                                    <li class="ads-business-hour">
-                                                        Domingo 11:30-23:45
-                                                    </li>
-                                                </ul>
-                                                <span class="see-more"><a href="#">ver horários(s)</a></span>
+                                                <p><span class="ads-business-hour-open">Aberto agora</span>(08:30 - 18:00)</p>
                                             </section>
                                         </div>
                                     </div>
