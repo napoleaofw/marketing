@@ -11,26 +11,26 @@
                     <span></span>
                 </div>
             </button>
-            <nav class="navbar hidden-xs">
+            <nav class="navbar navbar-collapse hidden-xs">
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
-                        <li class="no-padding col-sm-2">
-                            <a href="" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-2 no-padding">
+                            <a href="#" class="title">link menu</a>
                         </li>
                     </ul>
                 </div>
@@ -43,16 +43,18 @@
                     <h1 class="title">frase principal para o website marketing regional<span class="typed"></span></h1>
                     <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
                         <form method="post">
-                            <div class="col-xs-12 col-sm-5">
+                            <div class="col-xs-12 col-sm-6">
                                 <input type="text" class="form-control" placeholder="O que você está procurando?">
                             </div>
-                            <div class="col-xs-12 col-sm-5">
-                                <input type="text" class="form-control" placeholder="Onde você deseja encontrar?">
-                            </div>
-                            <div class="col-xs-12 col-sm-2">
-                                <button type="submit" class="btn btn-default btn-flat">
-                                    <i class="fa fa-search"></i>
-                                </button>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Onde você deseja encontrar?">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-default btn-flat">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>

@@ -40,6 +40,11 @@ header nav.navbar {
     border-radius: 0;
     height: inherit;
     margin: 0;
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
 }
 
 header nav.navbar .header-content {
@@ -73,6 +78,10 @@ header.main-header ~ div.page-content {
     -moz-transition: margin-top 0.5s ease-in-out;
     -ms-transition: margin-top 0.5s ease-in-out;
     -o-transition: margin-top 0.5s ease-in-out;
+}
+
+header button.navbar-toggle {
+    z-index: 501;
 }
 
 header button.navbar-toggle .menu-title,

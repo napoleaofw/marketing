@@ -17,9 +17,18 @@ $(document).on("scroll", checkScroll);
 /* begin navbar */
 $(document).on("click", "header .navbar-toggle", function() {
 	var $this = $(this);
+	$header = $this.parent("header");
 	$this.toggleClass("active");
 	$("body").toggleClass("overlay");
 	$navbar = $(this).siblings(".navbar");
-	$navbar.toggleClass("collapse navbar-mobile");
+	if($navbar.hasClass("navbar-mobile")) {
+		$navbar.fadeOut("slow", function() {
+			$navbar.toggleClass("hidden-xs navbar-mobile");
+		});
+	}
+	else {
+		$navbar.toggleClass("hidden-xs navbar-mobile");
+		$navbar.fadeIn("slow");
+	}
 });
 /* end navbar */

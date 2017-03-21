@@ -1,4 +1,12 @@
-#ads-advanced.page-wrapper .quick-info .icon-container {
+#ads-advanced.page-wrapper .box .box-body section {
+    margin-top: 10px;
+}
+
+#ads-advanced.page-wrapper .box .box-body section .title {
+    margin-bottom: 5px;
+}
+
+#ads-advanced.page-wrapper .box .box-body section .icon-container {
     display: inline-block;
     text-align: center;
     vertical-align: top;
