@@ -56,7 +56,7 @@ var placeList = [
 ];
 
 var personId = 1; // required info to create the script
-var adTitle, adTitleUri, country, state, city, district, address, addressNumber, postalCode, mapLatitude, mapLongitude, subcategoryName, segmentName, segmentNameUri, phoneSequence, tagName;
+var adTitle, adTitleUri, country, state, city, district, address, addressNumber, postalCode, mapLatitude, mapLongitude, categoryId, categoryName, subcategoryId, subcategoryName, categoryNameDatabase, segmentName, segmentNameUri, phoneSequence, tagName;
 var variableCursorNotFound = 'DECLARE v_cursor_not_found INT DEFAULT FALSE;\n';
 var continueHandler = 'DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_cursor_not_found = TRUE;\n';
 var variablesChar = 'DECLARE v_country_acronym, v_state_acronym CHAR(2);\n';
@@ -130,12 +130,21 @@ $.each(placeList, function(pageIndex, pageValue) {
 		script += indentCode('INSERT INTO AD_TBL(id, person_id, city_id, title, title_uri, district, address, address_number, postal_code, map_latitude, map_longitude, created_at, updated_at) VALUES(v_ad_id_max, '+personId+', '+'v_city_id, '+formatVarcharColumnValue(formatQuotationMarks(adTitle))+', '+formatVarcharColumnValue(adTitleUri)+', '+formatVarcharColumnValue(formatQuotationMarks(district))+', '+formatVarcharColumnValue(formatQuotationMarks(address))+', '+formatVarcharColumnValue(formatQuotationMarks(addressNumber))+', '+formatVarcharColumnValue(postalCode)+', '+mapLatitude+', '+mapLongitude+', now(), now());\n', 2);
 		
 		$.each(placeValue.categories, function(categoryIndex, categoryValue) {
+			categoryId = categoryValue.id;
+			categoryName = categoryValue.name;
+			subcategoryId = categoryValue.subcategory.id;
 			subcategoryName = categoryValue.subcategory.name;
+			if(categoryId === subcategoryId) {
+				categoryNameDatabase = categoryName;
+			}
+			else {
+				categoryNameDatabase = subcategoryName;
+			}
 			script += indentCode('SET v_cursor_not_found = FALSE;\n', 2)+indentCode('OPEN cursorAdCategoryMax;\n', 2)+indentCode('FETCH cursorAdCategoryMax INTO v_ad_category_id_max;\n', 2)+indentCode('IF v_cursor_not_found THEN\n', 2)+indentCode('SET v_ad_category_id_max = null;\n', 3)+indentCode('END IF;\n', 2)+indentCode('CLOSE cursorAdCategoryMax;\n', 2);
 			script += indentCode('SET v_ad_category_id_max = v_ad_category_id_max + 1;\n', 2);
-			script += indentCode('SET v_category_name = \''+subcategoryName+'\';\n', 2);
+			script += indentCode('SET v_category_name = \''+categoryNameDatabase+'\';\n', 2);
 			script += indentCode('SET v_cursor_not_found = FALSE;\n', 2)+indentCode('OPEN cursorCategory;\n', 2)+indentCode('FETCH cursorCategory INTO v_category_id;\n', 2)+indentCode('IF v_cursor_not_found THEN\n', 2)+indentCode('SET v_category_id = null;\n', 3)+indentCode('END IF;\n', 2)+indentCode('CLOSE cursorCategory;\n', 2);
-			if(!categoryValue.products) {
+			if(!categoryValue.products || categoryId === subcategoryId) {
 				script += indentCode('INSERT INTO AD_CATEGORY_TBL(id, ad_id, category_id, created_at, updated_at) VALUES(v_ad_category_id_max, v_ad_id_max, v_category_id, now(), now());\n', 2);
 			}
 			else {
