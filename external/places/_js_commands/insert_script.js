@@ -50,7 +50,7 @@ function removeAccents(stringWithAccents) {
 }
 
 var formatUri = function formatUri(stringToFormat) {
-	return removeAccents(stringToFormat.toLowerCase()).replace(/\s+/g, "-").replace(",", "-").replace("\\", "").replace("/", "").replace("\'", "").replace('"', "");
+	return removeAccents(stringToFormat.toLowerCase()).replace(/\s+/g, "-").replace(",", "-").replace("\\", "").replace("/", "").replace("\'", "").replace('"', "").replace(/'/g, "").replace(/"/g, "");
 };
 
 var indentCode = function indentCode(code, qtd) {
@@ -78,6 +78,7 @@ var placeList = [list]; // required info to create the script
 
 var currentCity = formatUri(cidade); // required info to create the script
 var personId = 1; // required info to create the script
+var fileCounter = 1;
 var adTitle, adTitleUri, country, state, city, district, address, addressNumber, postalCode, mapLatitude, mapLongitude, categoryId, categoryName, subcategoryId, subcategoryName, categoryNameDatabase, segmentName, segmentNameUri, phoneSequence, tagName;
 var variableCursorNotFound = 'DECLARE v_cursor_not_found INT DEFAULT FALSE;\n';
 var continueHandler = 'DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_cursor_not_found = TRUE;\n';
@@ -99,11 +100,20 @@ var cursorState = 'DECLARE cursorState CURSOR FOR SELECT id FROM STATE_TBL WHERE
 var cursorCity = 'DECLARE cursorCity CURSOR FOR SELECT id FROM CITY_TBL WHERE state_id = v_state_id AND UPPER(name_uri) = UPPER(v_city_name_uri);\n';
 var cursorCategory = 'DECLARE cursorCategory CURSOR FOR SELECT id FROM CATEGORY_TBL WHERE UPPER(name) = UPPER(v_category_name);\n';
 var cursorTag = 'DECLARE cursorTag CURSOR FOR SELECT id FROM TAG_TBL WHERE UPPER(name) = UPPER(v_tag_name);\n';
-var script = 'DROP PROCEDURE IF EXISTS script;\n\nDELIMITER //\n\nCREATE PROCEDURE `script` ()\nBEGIN\n'+indentCode(variableCursorNotFound, 1)+indentCode(variablesChar, 1)+indentCode(variablesVarchar, 1)+indentCode(variablesInt, 1)+indentCode(cursorAdMax, 1)+indentCode(cursorAdCategoryMax, 1)+indentCode(cursorPhoneMax, 1)+indentCode(cursorAdPhoneMax, 1)+indentCode(cursorCategoryMax, 1)+indentCode(cursorTagMax, 1)+indentCode(cursorAdTagMax, 1)+indentCode(cursorCountry, 1)+indentCode(cursorState, 1)+indentCode(cursorCity, 1)+indentCode(cursorCategory, 1)+indentCode(cursorTag, 1)+indentCode(continueHandler, 1);
+var scriptBegin = 'DROP PROCEDURE IF EXISTS script;\n\nDELIMITER //\n\nCREATE PROCEDURE `script` ()\nBEGIN\n'+indentCode(variableCursorNotFound, 1)+indentCode(variablesChar, 1)+indentCode(variablesVarchar, 1)+indentCode(variablesInt, 1)+indentCode(cursorAdMax, 1)+indentCode(cursorAdCategoryMax, 1)+indentCode(cursorPhoneMax, 1)+indentCode(cursorAdPhoneMax, 1)+indentCode(cursorCategoryMax, 1)+indentCode(cursorTagMax, 1)+indentCode(cursorAdTagMax, 1)+indentCode(cursorCountry, 1)+indentCode(cursorState, 1)+indentCode(cursorCity, 1)+indentCode(cursorCategory, 1)+indentCode(cursorTag, 1)+indentCode(continueHandler, 1);
+var scriptEnd = 'END;\n//';;
+var script = scriptBegin; 
 
 $.each(placeList, function(pageIndex, pageValue) {
 	$.each(pageValue.results.places, function(placeIndex, placeValue) {
 		
+    if(script.split(/\r\n|\r|\n/).length > 98000) {
+      script += scriptEnd;
+      console.save(script, 'placeList-'+currentCity+'-'+fileCounter+'.sql');
+      script = scriptBegin;
+      fileCounter++;
+    }
+
 		adTitle         = undefined;
 		adTitleUri      = undefined;
 		country         = undefined;
@@ -139,7 +149,6 @@ $.each(placeList, function(pageIndex, pageValue) {
     
       script += indentCode('-- begin ad record\n', 1);
       
-      script += indentCode('SET v_record_counter = COALESCE(v_record_counter, 0) + 1;\n', 1);
       script += resetVariablesChar+resetVariablesVarchar+resetVariablesInt;
       script += indentCode('SET v_cursor_not_found = FALSE;\n', 1)+indentCode('OPEN cursorAdMax;\n', 1)+indentCode('FETCH cursorAdMax INTO v_ad_id_max;\n', 1)+indentCode('IF v_cursor_not_found THEN\n', 1)+indentCode('SET v_ad_id_max = null;\n', 2)+indentCode('END IF;\n', 1)+indentCode('CLOSE cursorAdMax;\n', 1);
       script += indentCode('SET v_ad_id_max = v_ad_id_max + 1;\n', 1);
@@ -150,7 +159,6 @@ $.each(placeList, function(pageIndex, pageValue) {
       script += indentCode('SET v_city_name_uri = \''+city+'\';\n', 1);
       script += indentCode('SET v_cursor_not_found = FALSE;\n', 1)+indentCode('OPEN cursorCity;\n', 1)+indentCode('FETCH cursorCity INTO v_city_id;\n', 1)+indentCode('IF v_cursor_not_found THEN\n', 1)+indentCode('SET v_city_id = null;\n', 2)+indentCode('END IF;\n', 1)+indentCode('CLOSE cursorCity;\n', 1);
       script += indentCode('IF v_city_id IS NOT NULL THEN\n', 1);
-      script += indentCode('SET v_record_added_counter = COALESCE(v_record_added_counter, 0) + 1;\n', 2);
       script += indentCode('INSERT INTO AD_TBL(id, person_id, city_id, title, title_uri, district, address, address_number, postal_code, map_latitude, map_longitude, created_at, updated_at) VALUES(v_ad_id_max, '+personId+', '+'v_city_id, '+formatVarcharColumnValue(formatQuotationMarks(adTitle))+', '+formatVarcharColumnValue(adTitleUri)+', '+formatVarcharColumnValue(formatQuotationMarks(district))+', '+formatVarcharColumnValue(formatQuotationMarks(address))+', '+formatVarcharColumnValue(formatQuotationMarks(addressNumber))+', '+formatVarcharColumnValue(postalCode)+', '+mapLatitude+', '+mapLongitude+', now(), now());\n', 2);
       
       $.each(placeValue.categories, function(categoryIndex, categoryValue) {
@@ -227,8 +235,7 @@ $.each(placeList, function(pageIndex, pageValue) {
 	
 });
 
-script += indentCode('INSERT INTO LOG_TBL(records, records_added) VALUES(v_record_counter, v_record_added_counter);\n', 1);
-script += 'END;\n//';
+script += scriptEnd;
 
 console.clear();
-console.save(script, 'placeList-'+currentCity+'.sql');
+console.save(script, 'placeList-'+currentCity+'-'+fileCounter+'.sql');
