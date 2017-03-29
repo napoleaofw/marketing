@@ -63,7 +63,7 @@ var indentCode = function indentCode(code, qtd) {
 
 var formatQuotationMarks = function formatQuotationMarks(stringToFormat) {
 	if(stringToFormat !== undefined)
-		return stringToFormat.replace('\'', '\\\'');
+		return stringToFormat.replace(/'/g, '\\\'');
 	return stringToFormat;
 };
 
