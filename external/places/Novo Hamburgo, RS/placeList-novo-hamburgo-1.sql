@@ -57222,7 +57222,7 @@ BEGIN
         END IF;
         CLOSE cursorTagMax;
         SET v_tag_id_max = v_tag_id_max + 1;
-        SET v_tag_name = 'tag's';
+        SET v_tag_name = 'tag\'s';
         SET v_cursor_not_found = FALSE;
         OPEN cursorTag;
         FETCH cursorTag INTO v_tag_id_exists;
