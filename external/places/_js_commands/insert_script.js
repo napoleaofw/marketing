@@ -210,10 +210,10 @@ $.each(placeList, function(pageIndex, pageValue) {
       });
       
       $.each(placeValue.tags, function(tagIndex, tagValue) {
-        tagName = tagValue.value;
+        tagName = formatVarcharColumnValue(formatQuotationMarks(tagValue.value));
         script += indentCode('SET v_cursor_not_found = FALSE;\n', 2)+indentCode('OPEN cursorTagMax;\n', 2)+indentCode('FETCH cursorTagMax INTO v_tag_id_max;\n', 2)+indentCode('IF v_cursor_not_found THEN\n', 2)+indentCode('SET v_tag_id_max = null;\n', 3)+indentCode('END IF;\n', 2)+indentCode('CLOSE cursorTagMax;\n', 2);
         script += indentCode('SET v_tag_id_max = v_tag_id_max + 1;\n', 2);
-        script += indentCode('SET v_tag_name = \''+tagName+'\';\n', 2);
+        script += indentCode('SET v_tag_name = '+tagName+';\n', 2);
         script += indentCode('SET v_cursor_not_found = FALSE;\n', 2)+indentCode('OPEN cursorTag;\n', 2)+indentCode('FETCH cursorTag INTO v_tag_id_exists;\n', 2)+indentCode('IF v_cursor_not_found THEN\n', 2)+indentCode('SET v_tag_id_exists = null;\n', 3)+indentCode('END IF;\n', 2)+indentCode('CLOSE cursorTag;\n', 2);
         script += indentCode('IF v_tag_id_exists IS NULL THEN\n', 2);
         script += indentCode('INSERT INTO TAG_TBL(id, name, created_at, updated_at) VALUES(v_tag_id_max, '+formatVarcharColumnValue(formatQuotationMarks(tagName))+', now(), now());\n', 3);
