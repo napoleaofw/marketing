@@ -1,8 +1,8 @@
-DROP PROCEDURE IF EXISTS script;
+DROP PROCEDURE IF EXISTS `records-novo-hamburgo-17`;
 
 DELIMITER //
 
-CREATE PROCEDURE `script` ()
+CREATE PROCEDURE `records-novo-hamburgo-17` ()
 BEGIN
     DECLARE v_cursor_not_found INT DEFAULT FALSE;
     DECLARE v_country_acronym, v_state_acronym CHAR(2);
