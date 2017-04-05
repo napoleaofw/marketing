@@ -64,11 +64,13 @@
                     <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
                         <div class="box">
                             <div class="box-body">
-                                <div class="category-icon stroke-default col-xs-4">
-                                    @include('website.category.'.$cityCategory->category_name_uri)
-                                </div>
-                                <div class="category-content col-xs-8">
-                                    <a href="#" class="category-link title" title="{{$cityCategory->category_name}}">{{$cityCategory->category_name}}</a>
+                                <div class="category-content col-xs-12">
+                                    <div class="category-icon stroke-default">
+                                        @include('website.category.'.$cityCategory->category_name_uri)
+                                    </div>
+                                    <div class="category-text">
+                                        <a href="#" class="link uppercase title" title="{{$cityCategory->category_name}}">{{$cityCategory->category_name}}</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

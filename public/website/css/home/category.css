@@ -3,33 +3,46 @@
 }
 
 #home.page-wrapper #category-wrapper .category-list .category .box {
-    height: 85px;
+    height: 160px;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-icon,
-#home.page-wrapper #category-wrapper .category-list .category .category-content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon,
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text {
+    position: relative;
+    text-align: center;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-icon {
-    left: 0;
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon {
+    height: 100px;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content {
-    right: 0;
-}
-
-#home.page-wrapper #category-wrapper .category-list .category .category-icon svg {
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon svg {
+    height: 100%;
     width: 100%;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content > a.category-link {
-    display: inline-block;
-    text-transform: uppercase;
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text {
+    height: 30px;
+    position: relative !important;
 }
+
+#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text .link {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: auto;
+}
+
+/* #home.page-wrapper #category-wrapper .category-list .category .category-content .link {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+} */

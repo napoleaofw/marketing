@@ -5,3 +5,7 @@ a {
 a.default-color {
     color: #5b5b5b;
 }
+
+.link {
+    display: inline-block;
+}
