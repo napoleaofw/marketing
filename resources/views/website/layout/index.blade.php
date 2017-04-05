@@ -26,7 +26,6 @@
         <link rel="stylesheet" href="/website/css/general/keyframe/svg-stroke-animate.css">
         <link rel="stylesheet" href="/website/css/home/category.css">
         <link rel="stylesheet" href="/website/css/home/header.css">
-        <link rel="stylesheet" href="/website/css/home/highlight.css">
         <link rel="stylesheet" href="/website/css/home/search.css">
         <link rel="stylesheet" href="/website/css/ads/image.css">
         <link rel="stylesheet" href="/website/css/ads/information.css">
@@ -34,7 +33,7 @@
         <link rel="stylesheet" href="/website/css/search/result.css">
     </head>
     <body>
-        @yield($pagename)
+        @yield($pageName)
         <script type="text/javascript" src="/vendor/jquery/js/jquery.min.js"></script>
         <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>

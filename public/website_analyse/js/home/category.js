@@ -731,24 +731,37 @@ function removerAcentos( newStringComAcento ) {
 	return string;
 }
 
-// var $categorySvgList = $("#category-svg");
-// $categorySvgList.remove();
-// var $categoryWrapper = $("#category-wrapper");
-// var $categoryList = $categoryWrapper.find(".category-list");
-// var $category = $categoryList.find(".category");
-// $category.remove();
-// $.each(categoryList, function(index, value) {
-//     var category = index;
-//     var $categoryClone = $category.clone();
-//     var $categoryLink = $categoryClone.find(".category-link");
-//     $categoryLink.text(category);
-//     $categoryLink.attr("title", category);
-//     var svgName = removerAcentos(category.toLowerCase()).replace(/\s+/g, "").replace(",", "");
-//     var $categorySvg = $categorySvgList.find("#"+svgName).html();
-//     var $categoryAnimation = $categoryClone.find(".category-icon");
-//     $categoryAnimation.html($categorySvg);
-//     $categoryList.append($categoryClone);
-// });
+var $categorySvgList = $("#category-svg");
+$categorySvgList.remove();
+var $categoryWrapper = $("#category-wrapper");
+var $categoryList = $categoryWrapper.find(".category-list");
+var $category = $categoryList.find(".category");
+$category.remove();
+$.each(categoryList, function(index, value) {
+    var category = index;
+    var subcategoryList = value;
+    var $categoryClone = $category.clone();
+    var $categoryLink = $categoryClone.find(".category-link");
+    $categoryLink.text(category);
+    $categoryLink.attr("title", category);
+    var svgName = removerAcentos(category.toLowerCase()).replace(/\s+/g, "").replace(",", "");
+    var $categorySvg = $categorySvgList.find("#"+svgName).html();
+    var $categoryAnimation = $categoryClone.find(".category-icon");
+    $categoryAnimation.html($categorySvg);
+    var $subcategoryList = $categoryClone.find(".subcategory-list");
+    var $subcategory = $subcategoryList.find(".subcategory");
+    $subcategory.remove();
+    $.each(subcategoryList, function(index, value) {
+        var subcategory = value;
+        var $subcategoryClone = $subcategory.clone();
+        var $subcategoryLink = $subcategoryClone.find(".subcategory-link");
+        $subcategoryLink.text(subcategory);
+        $subcategoryLink.attr("title", subcategory);
+        $subcategoryList.append($subcategoryClone);
+        if (index === 3) return false;
+    });
+    $categoryList.append($categoryClone);
+});
 
 $(".category svg path").each(function() {
     var comprimento = $(this).get(0).getTotalLength();
@@ -759,9 +772,7 @@ $(".category svg path").each(function() {
 
 $(document).ready(function() {
 	setTimeout(function() {
-			$.each($(".category"), function() {
-				$(this).find(".category-icon").addClass("stroke-animate");
-			});
+			$(".category svg").addClass("svg-stroke-animate");
 			// $.each($(".category svg"), function() {
 			// 	var $this = $(this)
 			// 	var strokeDashoffset = $this.attr("stroke-dashoffset");

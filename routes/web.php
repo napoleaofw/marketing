@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function() {
-    return redirect('home');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/{cityName}', 'HomeController@index');
+Route::get('/{cityName}/{adTitle}', 'HomeController@ad');
 
-Route::get('/home', function () {
-    return view('website.home', [
-        'pagename' => 'home'
-    ]);
-});
+// Route::get('/', function() {
+//     return redirect('home');
+// });
+
+// Route::get('/home', function () {
+//     return view('website.home', [
+//         'pagename' => 'home'
+//     ]);
+// });
 
 Route::get('/ads', function () {
     return view('website.ads', [

@@ -1,0 +1,29 @@
+#home.page-wrapper #search-wrapper {
+    height: 600px;
+    position: relative;
+}
+
+#home.page-wrapper #search-background {
+    background-image: url("/website/img/home/search/background.svg");
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: auto;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#home.page-wrapper #search-content {
+    color: #fff;
+    margin-top: 120px;
+    position: relative;
+    text-align: center;
+}
+
+#home.page-wrapper #search-content .title {
+    margin-bottom: 15px;
+}
+
+#home.page-wrapper #search-content form {
+    text-align: start;
+}

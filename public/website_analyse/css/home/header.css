@@ -1,0 +1,15 @@
+#home.page-wrapper header.small-header {
+    background-color: #fff;
+    border-color: #f3f3f3;
+    color: #95C2DE;
+}
+
+#home.page-wrapper header nav.navbar ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+#home.page-wrapper header.small-header nav.navbar ul li a {
+    color: #76b1d5;
+    line-height: 50px;
+}
