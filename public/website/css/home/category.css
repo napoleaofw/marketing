@@ -23,26 +23,14 @@
 
 #home.page-wrapper #category-wrapper .category-list .category .category-content .category-text {
     height: 30px;
-    position: relative !important;
 }
 
 #home.page-wrapper #category-wrapper .category-list .category .category-content .category-text .link {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-    margin: auto;
-}
-
-/* #home.page-wrapper #category-wrapper .category-list .category .category-content .link {
-    left: 0;
-    position: absolute;
-    right: 0;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-} */
+}

@@ -57,8 +57,8 @@
                     </div>
                 </div>
             </section>
-            <h1>Categorias para {{$cityName}}</h1>
             <section id="category-wrapper" class="col-xs-12 no-padding">
+                <h1 class="title title-margin">Categorias para {{$cityName}}</h1>
                 <ul class="nav category-list">
                     @foreach($cityCategoryList as $cityCategory)
                     <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
