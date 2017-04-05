@@ -16,7 +16,7 @@ class CityModel extends Model {
     ];
 
     public function recordState() {
-        return $this->hasOne('\App\Models\StateModel', 'state_id', 'id');
+        return $this->hasOne('\App\Models\StateModel', 'id', 'state_id');
     }
 
 }

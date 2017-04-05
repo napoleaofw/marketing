@@ -7,35 +7,37 @@
             <section id="ads-more-info" class="col-xs-12 col-sm-7 col-md-8 col-lg-7 col-lg-offset-2">
                 <div class="box">
                     <div class="box-body">
-                        <h1 id="ads-name" class="title">$recordAd->title</h1>
+                        <h1 id="ads-name" class="title">{{$recordAd->ad_title}}</h1>
                         <section id="ads-address">
                             <h3 class="title">
                                 Endereço
                             </h3>
-                            <!--<p>Avenida Moema, 594, Indianópolis, São Paulo - SP, CEP: 04077-022</p>-->
-                            <p>{{$recordAd->address.','.$recordAd->address_number.','.$recordAd->city->name.' - '.$recordAd->city->state->acronym.', CEP: '.$recordAd->postal_code}}}</p>
+                            <p>{{$recordAd->getFullAddress()}}</p>
                         </section>
+                        @if(count($recordsAdPhone) > 0)
                         <section id="ads-phone">
                             <h3 class="title">
                                 Telefone
                             </h3>
                             <ul class="nav">
-                                @foreach($recordAd->phone as $recordPhone)
+                                @foreach($recordsAdPhone as $recordAdPhone)
                                 <li>
-                                    <a href="tel:">{{$recordPhone->phone}}</a>
+                                    <a href="tel:">{{$recordAdPhone->phone_phone}}</a>
                                 </li>
                                 @endforeach
                             </ul>
                         </section>
+                        @endif
+                        @if($recordAd->ad_description)
                         <section id="ads-about">
                             <h3 class="title">Sobre</h3>
                             <p>
                                 <span class="icon-container"><i class="fa fa-quote-left"></i></span>
-                                {{$recordAd->description}}
-                                <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis ornare tellus, id maximus neque elementum id. Nulla vitae placerat erat, finibus condimentum sem. Suspendisse sagittis nibh eros. Praesent vel commodo est. Fusce et felis vehicula, hendrerit nunc eget, lobortis purus. Aenean ullamcorper facilisis lacus, id venenatis metus blandit id. In malesuada lacinia odio, vel feugiat nisi vehicula id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque efficitur imperdiet odio id finibus. Praesent bibendum tempus lectus, sed auctor libero volutpat ut. Nulla nunc nisl, varius vitae tortor et, facilisis mollis tellus. Nulla auctor lacus ligula, at ultricies odio vehicula ac. Suspendisse ligula dolor, ultricies vitae cursus non, rutrum interdum tellus. Donec condimentum placerat efficitur. Proin imperdiet elementum malesuada. Fusce gravida justo nec urna laoreet, ut porta turpis tempus.-->
+                                {{$recordAd->ad_description}}
                                 <span class="icon-container"><i class="fa fa-quote-right"></i></span>
                             </p>
                         </section>
+                        @endif
                     </div>
                 </div>
             </section>

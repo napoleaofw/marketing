@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CityCategoryViewModel extends Model {
+class AdCategoryViewModel extends Model {
 
-    protected $table = 'CITY_CATEGORY_VIEW';
+    protected $table = 'AD_CATEGORY_VIEW';
     protected $fillable = [];
 
 }

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AdModel;
+use App\Models\AdDataViewModel;
+use App\Models\AdPhoneViewModel;
 use App\Models\CityModel;
 use App\Models\CityCategoryViewModel;
 use App\Exceptions;
@@ -24,10 +25,7 @@ class HomeController extends Controller {
             $cityNameUri = $this->_defaultCity;
         }
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
-        $recordsCityCategoryView = CityCategoryViewModel::where('city_name_uri', $cityNameUri)->get();
-
-        //dd($recordsCityCategoryView);
-        //dd($recordCity);
+        $recordsCityCategoryView = CityCategoryViewModel::where('city_name_uri', $cityNameUri)->orderBy('category_name_uri')->get();
         $this->_data['cityCategoryList'] = $recordsCityCategoryView;
         $this->_data['cityName'] = $recordCity->name;
         $this->_data['pageName'] = 'home';
@@ -36,9 +34,11 @@ class HomeController extends Controller {
 
     public function ad($cityNameUri=null, $adTitle=null) {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
-        $recordAd = AdModel::where('city_id', $recordCity->id)->where('title_uri', $adTitle)->firstOrFail();
+        $recordAd = AdDataViewModel::where('city_id', $recordCity->id)->where('ad_title_uri', $adTitle)->firstOrFail();
+        $recordsAdPhone = AdPhoneViewModel::where('ad_id', $recordAd->ad_id)->get();
         $this->_data['pageName'] = 'ad';
         $this->_data['recordAd'] = $recordAd;
+        $this->_data['recordsAdPhone'] = $recordsAdPhone;
         return view('website.ad', $this->_data);
     }
 

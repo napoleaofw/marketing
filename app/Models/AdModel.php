@@ -24,12 +24,12 @@ class AdModel extends Model {
         'map_longitude'
     ];
 
-    public function recordsAdPhone() {
-        return $this->hasMany('\App\Models\AdPhoneModel', 'ad_id', 'id');
-    }
+    // public function recordsAdPhone() {
+    //     return $this->hasMany('\App\Models\AdPhoneModel', 'ad_id', 'id');
+    // }
 
-    public function recordCity() {
-        return $this->hasOne('\App\Models\CityModel', 'id', 'city_id');
-    }
+    // public function recordCity() {
+    //     return $this->hasOne('\App\Models\CityModel', 'id', 'city_id');
+    // }
 
 }
