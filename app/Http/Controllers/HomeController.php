@@ -38,6 +38,7 @@ class HomeController extends Controller {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
         $recordAd = AdModel::where('city_id', $recordCity->id)->where('title_uri', $adTitle)->firstOrFail();
         $this->_data['pageName'] = 'ad';
+        $this->_data['recordAd'] = $recordAd;
         return view('website.ad', $this->_data);
     }
 
