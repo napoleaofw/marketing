@@ -1,5 +1,25 @@
 @extends('website.layout.index')
 @section('home')
+<div id="city-selection" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav city-list">
+                    @foreach($recordsCity as $recordCity)
+                    <li class="city">
+                        <a href="/{{$recordCity->name_uri}}" class="link">{{$recordCity->name}}</a>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="home" class="page-wrapper">
     <div class="container-fluid">
         <header class="row">
@@ -14,23 +34,11 @@
             <nav class="navbar navbar-collapse hidden-xs">
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-8 no-padding">
+                            <a href="#" class="title" data-toggle="modal" data-target="#city-selection">Você está em {{$cityName}}. Mude a cidade aqui.</a>
                         </li>
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
-                        </li>
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
-                        </li>
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
-                        </li>
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
-                        </li>
-                        <li class="col-xs-12 col-sm-2 no-padding">
-                            <a href="#" class="title">link menu</a>
+                        <li class="col-xs-12 col-sm-4 no-padding">
+                            <a href="#" class="title">login</a>
                         </li>
                     </ul>
                 </div>

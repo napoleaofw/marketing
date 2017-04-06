@@ -26,9 +26,11 @@ class HomeController extends Controller {
         }
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
         $recordsCityCategoryView = CityCategoryViewModel::where('city_name_uri', $cityNameUri)->orderBy('category_name_uri')->get();
+        $recordsCity = CityModel::all()->sortBy('name');
         $this->_data['cityCategoryList'] = $recordsCityCategoryView;
         $this->_data['cityName'] = $recordCity->name;
         $this->_data['pageName'] = 'home';
+        $this->_data['recordsCity'] = $recordsCity;
         return view('website.home', $this->_data);
     }
 

@@ -7,6 +7,6 @@ $(document).ready(function() {
 	});
 	$(".category-icon").viewportChecker({
 		classToAdd: "stroke-animate",
-		offset: 150
+		offset: 50
 	});
 });
