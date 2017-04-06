@@ -10,24 +10,16 @@
                         <section class="search-filter-section">
                             <h3 class="title search-filter-title">Categorias</h3>
                             <ul class="nav search-filter-list">
+                                @foreach($filter['recordsCategory'] as $recordCategory)
                                 <li class="search-filter">
                                     <a href="#" class="search-filter-link">
-                                        <input id="checkbox1" type="checkbox">nome da categoria
+                                        <input type="checkbox">{{$recordCategory->name}}
                                     </a>
                                 </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox2" type="checkbox">nome da categoria
-                                    </a>
-                                </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox3" type="checkbox">nome da categoria
-                                    </a>
-                                </li>
+                                @endforeach
                             </ul>
                         </section>
-                        <section class="search-filter-section">
+                        <!--<section class="search-filter-section">
                             <h3 class="title search-filter-title">Subcategorias</h3>
                             <ul class="nav search-filter-list">
                                 <li class="search-filter">
@@ -46,8 +38,8 @@
                                     </a>
                                 </li>
                             </ul>
-                        </section>
-                        <section class="search-filter-section">
+                        </section>-->
+                        <!--<section class="search-filter-section">
                             <h3 class="title search-filter-title">Facilidades</h3>
                             <ul class="nav search-filter-list">
                                 <li class="search-filter">
@@ -66,45 +58,17 @@
                                     </a>
                                 </li>
                             </ul>
-                        </section>
-                        <section class="search-filter-section">
-                            <h3 class="title search-filter-title">Estados</h3>
-                            <ul class="nav search-filter-list">
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox10" type="checkbox">nome do estado
-                                    </a>
-                                </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox11" type="checkbox">nome do estado
-                                    </a>
-                                </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox12" type="checkbox">nome do estado
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
+                        </section>-->
                         <section class="search-filter-section">
                             <h3 class="title search-filter-title">Cidades</h3>
                             <ul class="nav search-filter-list">
+                                @foreach($filter['recordsCity'] as $recordCity)
                                 <li class="search-filter">
                                     <a href="#" class="search-filter-link">
-                                        <input id="checkbox13" type="checkbox">nome da cidade
+                                        <input type="checkbox">{{$recordCity->name}}
                                     </a>
                                 </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox14" type="checkbox">nome da cidade
-                                    </a>
-                                </li>
-                                <li class="search-filter">
-                                    <a href="#" class="search-filter-link">
-                                        <input id="checkbox15" type="checkbox">nome da cidade
-                                    </a>
-                                </li>
+                                @endforeach
                             </ul>
                         </section>
                     </div>
@@ -112,6 +76,7 @@
             </section>
             <section id="search-result-section" class="col-xs-12 col-sm-7 col-md-8 col-lg-7">
                 <ul class="default-list search-result-list">
+                    @foreach($recordsAd as $recordAd)
                     <li class="search-result">
                         <div class="box">
                             <div class="box-header no-padding">
@@ -123,7 +88,7 @@
                                 <div class="col-xs-12 box-header-content">
                                     <div class="row">
                                         <section class="col-xs-6 ads-title-section">
-                                            <h2 class="title ads-title"><a href="#" class="default-color ads-title-link">nome do estabelecimento</a></h2>
+                                            <h2 class="title ads-title"><a href="#" class="default-color ads-title-link">{{$recordAd->title}}</a></h2>
                                         </section>
                                         <section class="col-xs-6 ads-avaliation-section">
                                             <span class="ads-avaliation-total"><a href="#" class="default-color ads-avaliation-link">7 avaliações</a></span>
@@ -154,7 +119,7 @@
                                         <div class="col-xs-6">
                                             <section class="ads-address-section">
                                                 <p class="ads-address">
-                                                    <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>Avenida Moema, 594, Indianópolis, São Paulo - SP
+                                                    <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>{{$recordAd}}
                                                 </p>
                                                 <span class="ads-icon-container"><i class="fa fa-map-o"></i></span><a href="#" class="ads-map">Como chegar?</a>
                                             </section>

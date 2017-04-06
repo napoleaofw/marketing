@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdCategoryViewModel;
 use App\Models\AdDataViewModel;
 use App\Models\AdPhoneViewModel;
+use App\Models\CategoryModel;
 use App\Models\CityModel;
 use App\Models\CityCategoryViewModel;
 use App\Exceptions;
@@ -31,17 +33,32 @@ class HomeController extends Controller {
         $this->_data['cityName'] = $recordCity->name;
         $this->_data['pageName'] = 'home';
         $this->_data['recordsCity'] = $recordsCity;
-        return view('website.home', $this->_data);
+        return view('website.'.$this->_data['pagename'], $this->_data);
     }
 
-    public function ad($cityNameUri=null, $adTitle=null) {
+    public function ad($cityNameUri=null, $adTitleUri=null) {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
-        $recordAd = AdDataViewModel::where('city_id', $recordCity->id)->where('ad_title_uri', $adTitle)->firstOrFail();
+        $recordAd = AdDataViewModel::where('city_id', $recordCity->id)->where('ad_title_uri', $adTitleUri)->firstOrFail();
         $recordsAdPhone = AdPhoneViewModel::where('ad_id', $recordAd->ad_id)->get();
         $this->_data['pageName'] = 'ad';
         $this->_data['recordAd'] = $recordAd;
         $this->_data['recordsAdPhone'] = $recordsAdPhone;
-        return view('website.ad', $this->_data);
+        return view('website.'.$this->_data['pagename'], $this->_data);
+    }
+
+    public function search($cityNameUri, $categoryNameUri) {
+        $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
+        $recordCategory = CategoryModel::where('name_uri', $categoryNameUri)->firstOrFail();
+        $recordsAd = AdCategoryViewModel::where('city_id', $recordCity->id)->where('category_id', $recordCategory->id)->orderBy('ad_title_uri')->get();
+        $recordsCategory = CategoryModel::where('category_id', null)->orderBy('name_uri')->get();
+        $recordsCity = CityModel::orderBy('name_uri')->get();
+        $this->_data['pagename'] = 'search';
+        $this->_data['recordsAd'] = $recordsAd;
+        $this->_data['filter'] = [
+            'recordsCategory' => $recordsCategory,
+            'recordsCity' => $recordsCity
+        ];
+        return view('website.'.$this->_data['pagename'], $this->_data);
     }
 
 }

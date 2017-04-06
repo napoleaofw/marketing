@@ -12,8 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/{cityName}', 'HomeController@index');
-Route::get('/{cityName}/{adTitle}', 'HomeController@ad');
+Route::get('/{cityNameUri}', 'HomeController@index');
+Route::get('/{cityNameUri}/{adTitleUri}', 'HomeController@ad');
+Route::get('/{cityNameUri}/category/{categoryNameUri}', 'HomeController@search');
+
 
 // Route::get('/', function() {
 //     return redirect('home');
