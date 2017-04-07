@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AdCategoryViewModel;
 use App\Models\AdDataViewModel;
+use App\Models\AdMainCategoryViewModel;
 use App\Models\AdPhoneViewModel;
 use App\Models\CategoryModel;
 use App\Models\CityModel;
@@ -49,15 +50,17 @@ class HomeController extends Controller {
     public function search($cityNameUri, $categoryNameUri) {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
         $recordCategory = CategoryModel::where('name_uri', $categoryNameUri)->firstOrFail();
-        $recordsAd = AdCategoryViewModel::where('city_id', $recordCity->id)->where('category_id', $recordCategory->id)->orderBy('ad_title_uri')->get();
-        $recordsCategory = CategoryModel::where('category_id', null)->orderBy('name_uri')->get();
-        $recordsCity = CityModel::orderBy('name_uri')->get();
-        $this->_data['pageName'] = 'search';
-        $this->_data['recordsAd'] = $recordsAd;
-        $this->_data['filter'] = [
-            'recordsCategory' => $recordsCategory,
-            'recordsCity' => $recordsCity
-        ];
+        $recordsAdMainCategory = AdMainCategoryViewModel::where('main_category_id', $recordCategory->id)->get();
+        dd($recordCategory);
+        // $recordsAd = AdCategoryViewModel::where('city_id', $recordCity->id)->where('category_id', $recordCategory->id)->orderBy('ad_title_uri')->get();
+        // $recordsCategory = CategoryModel::where('category_id', null)->orderBy('name_uri')->get();
+        // $recordsCity = CityModel::orderBy('name_uri')->get();
+        // $this->_data['pageName'] = 'search';
+        // $this->_data['recordsAd'] = $recordsAd;
+        // $this->_data['filter'] = [
+        //     'recordsCategory' => $recordsCategory,
+        //     'recordsCity' => $recordsCity
+        // ];
         return view('website.'.$this->_data['pageName'], $this->_data);
     }
 
