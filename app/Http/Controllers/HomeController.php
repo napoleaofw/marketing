@@ -33,7 +33,7 @@ class HomeController extends Controller {
         $this->_data['cityName'] = $recordCity->name;
         $this->_data['pageName'] = 'home';
         $this->_data['recordsCity'] = $recordsCity;
-        return view('website.'.$this->_data['pagename'], $this->_data);
+        return view('website.'.$this->_data['pageName'], $this->_data);
     }
 
     public function ad($cityNameUri=null, $adTitleUri=null) {
@@ -43,7 +43,7 @@ class HomeController extends Controller {
         $this->_data['pageName'] = 'ad';
         $this->_data['recordAd'] = $recordAd;
         $this->_data['recordsAdPhone'] = $recordsAdPhone;
-        return view('website.'.$this->_data['pagename'], $this->_data);
+        return view('website.'.$this->_data['pageName'], $this->_data);
     }
 
     public function search($cityNameUri, $categoryNameUri) {
@@ -52,13 +52,13 @@ class HomeController extends Controller {
         $recordsAd = AdCategoryViewModel::where('city_id', $recordCity->id)->where('category_id', $recordCategory->id)->orderBy('ad_title_uri')->get();
         $recordsCategory = CategoryModel::where('category_id', null)->orderBy('name_uri')->get();
         $recordsCity = CityModel::orderBy('name_uri')->get();
-        $this->_data['pagename'] = 'search';
+        $this->_data['pageName'] = 'search';
         $this->_data['recordsAd'] = $recordsAd;
         $this->_data['filter'] = [
             'recordsCategory' => $recordsCategory,
             'recordsCity' => $recordsCity
         ];
-        return view('website.'.$this->_data['pagename'], $this->_data);
+        return view('website.'.$this->_data['pageName'], $this->_data);
     }
 
 }
