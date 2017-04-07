@@ -11,6 +11,7 @@ use App\Models\CityModel;
 use App\Models\CityCategoryViewModel;
 use App\Exceptions;
 use Illumnate\Http\Request;
+use Illuminate\Support\Collection;
 use DB;
 use Session;
 
@@ -51,7 +52,11 @@ class HomeController extends Controller {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
         $recordCategory = CategoryModel::where('name_uri', $categoryNameUri)->firstOrFail();
         $recordsAdMainCategory = AdMainCategoryViewModel::where('main_category_id', $recordCategory->id)->get();
-        dd($recordCategory);
+        $recordsAd = Collection::make([]);
+        foreach($recordsAdMainCategory as $recordAdMainCategory) {
+            $recordsAd->push(AdDataViewModel::where('ad_id', $recordAdMainCategory->ad_id)->get());
+        }
+        dd($recordsAd->forPage(1, 10));
         // $recordsAd = AdCategoryViewModel::where('city_id', $recordCity->id)->where('category_id', $recordCategory->id)->orderBy('ad_title_uri')->get();
         // $recordsCategory = CategoryModel::where('category_id', null)->orderBy('name_uri')->get();
         // $recordsCity = CityModel::orderBy('name_uri')->get();
