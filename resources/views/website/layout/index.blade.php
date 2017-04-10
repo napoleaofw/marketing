@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/box.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/button.css">
-        <link rel="stylesheet" href="/website/css/general/adminlte/form-control.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/checkbox.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/form-control.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/modal.css">
         <link rel="stylesheet" href="/website/css/general/aspect-ratio.css">
         <link rel="stylesheet" href="/website/css/general/document.css">
         <link rel="stylesheet" href="/website/css/general/header.css">
