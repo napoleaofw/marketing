@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/login', 'HomeController@login');
+Route::get('/register', 'HomeController@register');
 Route::get('/', 'HomeController@index');
 Route::get('/{cityNameUri}', 'HomeController@index');
 Route::get('/{cityNameUri}/{adTitleUri}', 'HomeController@ad');

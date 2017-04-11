@@ -38,6 +38,16 @@ class HomeController extends Controller {
         return view('website.'.$this->_data['pageName'], $this->_data);
     }
 
+    public function login() {
+        $this->_data['pageName'] = 'login';
+        return view('website.'.$this->_data['pageName'], $this->_data);
+    }
+
+    public function register() {
+        $this->_data['pageName'] = 'register';
+        return view('website.'.$this->_data['pageName'], $this->_data);
+    }
+
     public function ad($cityNameUri=null, $adTitleUri=null) {
         $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
         $recordAd = AdDataViewModel::where('city_id', $recordCity->id)->where('ad_title_uri', $adTitleUri)->firstOrFail();
