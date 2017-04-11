@@ -42,7 +42,7 @@
                             Você está em {{$cityName}}.<a href="#" class="title" data-toggle="modal" data-target="#city-selection">Você pode mudar a cidade aqui.</a>
                         </li>
                         <li class="col-xs-12 col-sm-3 text-right no-padding">
-                            <a href="#" class="title">login</a>
+                            <a href="/login" class="title">login</a>
                         </li>
                     </ul>
                 </div>
