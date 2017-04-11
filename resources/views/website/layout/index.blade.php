@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Sansita&amp;subset=latin-ext">
         <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/access.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/box.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/button.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/checkbox.css">
