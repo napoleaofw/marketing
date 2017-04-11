@@ -1,12 +1,13 @@
 @extends('website.layout.index')
 @section('home')
-<div id="city-selection" class="modal">
+<div id="city-selection" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">×</span>
                 </button>
+                <h4 class="title">Escolha uma cidade</h4>
             </div>
             <div class="modal-body">
                 <ul class="nav city-list">
@@ -34,10 +35,13 @@
             <nav class="navbar navbar-collapse hidden-xs">
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
-                        <li class="col-xs-12 col-sm-8 no-padding">
-                            <a href="#" class="title" data-toggle="modal" data-target="#city-selection">Você está em {{$cityName}}. Mude a cidade aqui.</a>
+                        <li class="col-xs-12 col-sm-3 text-left no-padding">
+                            <a href="#" class="title">logo</a>
                         </li>
-                        <li class="col-xs-12 col-sm-4 no-padding">
+                        <li class="col-xs-12 col-sm-6 text-left no-padding">
+                            Você está em {{$cityName}}.<a href="#" class="title" data-toggle="modal" data-target="#city-selection">Você pode mudar a cidade aqui.</a>
+                        </li>
+                        <li class="col-xs-12 col-sm-3 text-right no-padding">
                             <a href="#" class="title">login</a>
                         </li>
                     </ul>

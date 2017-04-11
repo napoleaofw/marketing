@@ -48,7 +48,6 @@ header nav.navbar {
 }
 
 header nav.navbar .header-content {
-    text-align: center;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
