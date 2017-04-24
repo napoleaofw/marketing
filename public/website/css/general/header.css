@@ -8,18 +8,15 @@ header {
     font-size: 14px;
     font-size: 1.17rem;
     height: 70px;
+    line-height: 24px;
     position: fixed;
-    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
-    -webkit-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
-    -ms-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out, line-height 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out, line-height 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out, line-height 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out, line-height 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, height 0.5s ease-in-out, line-height 0.5s ease-in-out;
     width: 100%;
     z-index: 500;
-}
-
-header.main-header.small-header {
-    border-color: #6eaed5;
 }
 
 header.small-header {
@@ -32,7 +29,7 @@ header.small-header {
 }
 
 header.main-header {
-    background-color: #76b1d5;
+    background-color: #529eff;
     color: #fff;
 }
 
@@ -175,7 +172,7 @@ header nav.navbar-mobile li:not(:last-child):after {
 
 header nav.navbar-mobile ul li a,
 header nav.navbar-mobile .header-content a {
-    color: #76b1d5;
+    color: #529eff;
 }
 
 header button.navbar-toggle {

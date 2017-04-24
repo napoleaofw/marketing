@@ -27,18 +27,23 @@
     bottom: -15px;
 }
 
-#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-title {
+#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-header .search-filter-title {
     margin-bottom: 10px;
 }
 
-#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-list .search-filter {
+#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-body {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-body .search-filter-list .search-filter {
     margin-bottom: 5px;
 }
 
-#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-list .search-filter a.search-filter-link {
+#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-body .search-filter-list .search-filter a.search-filter-link {
     vertical-align: bottom;
 }
 
-#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-list .search-filter a.search-filter-link .checkbox-container {
+#search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-body .search-filter-list .search-filter a.search-filter-link .checkbox-container {
     margin-right: 5px;
 }

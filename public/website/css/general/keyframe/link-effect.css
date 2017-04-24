@@ -1,65 +1,65 @@
 @-webkit-keyframes link-effect {
     0% {
-        color: #76b1d5;
+        color: #529eff;
     }
     50% {
         /*color: #0567a2;*/
         color: #ccc;
     }
     100% {
-        color: #76b1d5;
+        color: #529eff;
     }
 }
 
 @-moz-keyframes link-effect {
     0% {
-        color: #76b1d5;
+        color: #529eff;
     }
     50% {
         /*color: #0567a2;*/
         color: #ccc;
     }
     100% {
-        color: #76b1d5;
+        color: #529eff;
     }
 }
 
 @-ms-keyframes link-effect {
     0% {
-        color: #76b1d5;
+        color: #529eff;
     }
     50% {
         /*color: #0567a2;*/
         color: #ccc;
     }
     100% {
-        color: #76b1d5;
+        color: #529eff;
     }
 }
 
 @-o-keyframes link-effect {
     0% {
-        color: #76b1d5;
+        color: #529eff;
     }
     50% {
         /*color: #0567a2;*/
         color: #ccc;
     }
     100% {
-        color: #76b1d5;
+        color: #529eff;
     }
 }
 
 @keyframes link-effect {
     0% {
-        color: #76b1d5;
+        color: #529eff;
     }
     50% {
         /*color: #0567a2;*/
         color: #ccc;
     }
     100% {
-        color: #76b1d5;
+        color: #529eff;
     }
 }
 

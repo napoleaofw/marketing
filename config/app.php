@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,6 +176,24 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Application Providers
+         */
+        App\Providers\ApplicationServiceProvider::class,
+        App\Providers\ApplicationRepositoryProvider::class,
+
+        /*
+         * Repository Providers
+         */
+        // App\Providers\Repositories\AdRepositoryProvider::class,
+        // App\Providers\Repositories\CityRepositoryProvider::class,
+        // App\Providers\Repositories\UserRepositoryProvider::class,
+
+        /*
+         * Service Providers
+         */
+        // App\Providers\Services\InternalResponseServiceProvider::class,
 
     ],
 

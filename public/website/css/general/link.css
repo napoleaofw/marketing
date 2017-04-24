@@ -1,5 +1,10 @@
 a {
-    color: #76b1d5;
+    color: #529eff;
+}
+
+a:focus,
+a:hover {
+    color: #2e64c3;
 }
 
 a.default-color {

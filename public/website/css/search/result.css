@@ -59,12 +59,6 @@
     position: absolute;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-title-section .ads-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 /* #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content {
     height: 80px;
     margin-top: 0;
@@ -78,7 +72,6 @@
     font-size: 0.83rem;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-title-section .ads-title-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total .ads-avaliation-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-list {
     transition: color 0.2s ease, text-shadow 0.2s ease;
@@ -88,7 +81,6 @@
     -o-transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-title-section .ads-title-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total .ads-avaliation-link,
 #search.page-wrapper #search-result-section .search-result-list .search-result:hover .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-list {
     color: #fff;
@@ -125,7 +117,11 @@
     padding-top: 15px;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .ads-icon-container {
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group section + section {
+    margin-top: 15px;
+}
+
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group section .ads-icon-container {
     font-size: 14px;
     font-size: 1.166rem;
     position: relative;
@@ -133,10 +129,11 @@
     width: 25px;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-phone-section,
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-payment-method-section,
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group:not(:first-child) {
-    margin-top: 10px;
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-title-section .ads-title,
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-address-section .ads-address {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-facility-section,
@@ -160,17 +157,6 @@
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-phone-section .ads-phone-list {
     vertical-align: top;
-}
-
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-phone-section .ads-phone-list .ads-phone:first-child {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 68px;
-}
-
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-phone-section .ads-phone-list .ads-phone:not(:first-child) {
-    display: none;
 }
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header .box-header-content .ads-avaliation-section .ads-avaliation-total,

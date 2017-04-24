@@ -4,7 +4,8 @@ html {
 
 body {
     color: #5b5b5b;
-    font-family: "Raleway", "Helvetica", "sans-serif";
+    /*font-family: "Raleway", "Helvetica", "sans-serif";*/
+    font-family: "Questrial", "Helvetica", "sans-serif";
     font-size: 1rem;
     position: relative;
 }

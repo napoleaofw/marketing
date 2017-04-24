@@ -24,4 +24,24 @@ class AdDataViewModel extends Model {
         return $fullAddress;
     }
 
+    public function getCompleteAddress() {
+        $fullAddress = $this->ad_address;
+        if($this->ad_address_number) {
+            $fullAddress .= ', ' . $this->ad_address_number;
+        }
+        if($this->ad_address_complement) {
+            $fullAddress .= ', ' . $this->ad_address_complement;
+        }
+         $fullAddress .= ' - ' . $this->ad_district;
+        return $fullAddress;
+    }
+
+    public function getFinallyAddress() {
+        $fullAddress = $this->city_name . ' / ' . $this->state_acronym;
+        if($this->ad_postal_code) {
+            $fullAddress .= ' -  CEP: ' . $this->ad_postal_code;
+        }
+        return $fullAddress;
+    }
+
 }

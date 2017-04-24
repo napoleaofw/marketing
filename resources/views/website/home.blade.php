@@ -1,6 +1,6 @@
 @extends('website.layout.index')
 @section('home')
-<div id="city-selection" class="modal fade">
+<div id="modal-city" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,11 +11,12 @@
             </div>
             <div class="modal-body">
                 <ul class="nav city-list">
-                    @foreach($recordsCity as $recordCity)
                     <li class="city">
-                        <a href="/{{$recordCity->name_uri}}" class="link">{{$recordCity->name}}</a>
+                        <a href="/dois-irmaos" class="link">Dois Irmãos</a>
                     </li>
-                    @endforeach
+                    <li class="city">
+                        <a href="/morro-reuter" class="link">Morro Reuter</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,13 +36,16 @@
             <nav class="navbar navbar-collapse hidden-xs">
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
-                        <li class="col-xs-12 col-sm-3 text-left no-padding">
-                            <a href="#" class="title">logo</a>
+                        <li class="col-xs-12 col-sm-2 text-left no-padding">
+                            <a href="/" class="title">logo</a>
                         </li>
-                        <li class="col-xs-12 col-sm-6 text-left no-padding">
-                            Você está em {{$cityName}}.<a href="#" class="title" data-toggle="modal" data-target="#city-selection">Você pode mudar a cidade aqui.</a>
+                        <li class="col-xs-12 col-sm-4 text-left no-padding">
+                            <a href="#" data-toggle="modal" data-target="#modal-city">Você está em <span class="title">Dois Irmãos</span>.Você pode mudar a cidade aqui.</a>
                         </li>
-                        <li class="col-xs-12 col-sm-3 text-right no-padding">
+                        <li class="col-xs-12 col-sm-4 no-padding form-search-container">
+                            @include('website.layout.form-search')
+                        </li>
+                        <li class="col-xs-12 col-sm-2 text-right no-padding">
                             <a href="/login" class="title">login</a>
                         </li>
                     </ul>
@@ -54,40 +58,43 @@
                 <div id="search-content">
                     <h1 class="title">frase principal para o website marketing regional<span class="typed"></span></h1>
                     <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                        <form method="post">
-                            <div class="col-xs-12">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="O que você está procurando?">
-                                    <div class="input-group-btn">
-                                        <button type="submit" class="btn btn-default btn-flat">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        @include('website.layout.form-search')
                     </div>
                 </div>
             </section>
             <section id="category-wrapper" class="col-xs-12">
-                <h1 class="title title-margin">Categorias para {{$cityName}}</h1>
+                <h1 class="title title-margin">Categorias em Dois Irmãos</h1>
                 <ul class="nav category-list">
-                    @foreach($cityCategoryList as $cityCategory)
+                    @for($i=0;$i<50;$i++)
                     <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
                         <div class="box">
                             <div class="box-body">
                                 <div class="category-content col-xs-12">
                                     <div class="category-icon stroke-default">
-                                        @include('website.category.'.$cityCategory->category_name_uri)
+                                        @include('common.svg.category.alimentos-e-bebidas')
                                     </div>
                                     <div class="category-text">
-                                        <a href="#" class="link uppercase title" title="{{$cityCategory->category_name}}">{{$cityCategory->category_name}}</a>
+                                        <a href="/dois-irmaos/category/alimentos-e-bebidas" class="link uppercase title" title="Alimentos e Bebidas">Alimentos e Bebidas</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    @endforeach
+                    <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="box">
+                            <div class="box-body">
+                                <div class="category-content col-xs-12">
+                                    <div class="category-icon stroke-default">
+                                        @include('common.svg.category.animais')
+                                    </div>
+                                    <div class="category-text">
+                                        <a href="/dois-irmaos/category/animais" class="link uppercase title" title="Animais">Animais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @endfor
                 </ul>
             </section>
         </div>

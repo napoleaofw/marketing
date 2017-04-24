@@ -2,7 +2,7 @@
     border-color: #ddd;
     border-style: solid;
     border-width: 1px;
-    color: #95C2DE;
+    color: #529eff;
     cursor: pointer;
     display: inline-block;
     height: 18px;
@@ -19,7 +19,7 @@
 }
 
 .checkbox-container.hover:not(.disabled) {
-    border-color: #95C2DE;
+    border-color: #529eff;
 }
 
 .checkbox-container.checked:before {
