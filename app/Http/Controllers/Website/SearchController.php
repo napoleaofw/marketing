@@ -40,7 +40,7 @@ class SearchController extends Controller {
         $filters = [];
         $parameters = $request->all();
         foreach($parameters as $parameter => $value) {
-            if(!array_key_exists($parameter, $this->parameters)){
+            if(!array_key_exists($parameter, $this->parameters) || ($parameter === 'page' && is_int($value))) {
                 abort(404);
             }
             else {
@@ -49,7 +49,6 @@ class SearchController extends Controller {
                 }
             }
         }
-        whiskas.com.br/search?city=dois-irmaos,morro-reuter&category=animais&subcategory=veterinarios&q=animais%20loucos&page=2
         $limit = 25;
         $offset = ($parameters['page'] || 1) * $limit;
         // validate page as number...
