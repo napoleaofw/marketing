@@ -91,6 +91,10 @@ abstract class BaseRepository implements BaseRepositoryInterface {
 		return $this->processTransaction([$this, 'deleteRecord'], [$id]);
 	}
 
+	public function list($filters, $limit, $offset) {
+		return $this->model::whereIn($filters)->limit($limit)->offset($offset)->get();
+	}
+
 	public function getTransactionStatus() {
 		return $this->transactionStatus;
 	}
