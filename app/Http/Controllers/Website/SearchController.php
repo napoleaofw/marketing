@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Ad\AdFilterViewRepository;
+use App\Http\Repositories\Ad\AdFilterViewRepositoryInterface;
 // use App\Models\Views\AdFilterViewModel;
 // use DB;
 
@@ -36,7 +36,7 @@ class SearchController extends Controller {
         ];
     }
 
-    public function process(Request $request, AdFilterViewRepository $adFilterViewRepository) {
+    public function process(Request $request, AdFilterViewRepositoryInterface $adFilterViewRepository) {
         $filters = [];
         $parameters = $request->all();
         foreach($parameters as $parameter => $value) {

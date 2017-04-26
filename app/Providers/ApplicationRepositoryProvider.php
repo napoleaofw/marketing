@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\Ad\AdRepositoryInterface;
 use App\Repositories\Ad\AdRepository;
+use App\Repositories\Ad\AdFilterViewRepositoryInterface;
+use App\Repositories\Ad\AdFilterViewRepository;
 use App\Repositories\City\CityRepositoryInterface;
 use App\Repositories\City\CityRepository;
 use App\Repositories\User\UserRepositoryInterface;
@@ -35,6 +37,7 @@ class ApplicationRepositoryProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->bind(AdRepositoryInterface::class, AdRepository::class);
+        $this->app->bind(AdFilterViewRepositoryInterface::class, AdFilterViewRepository::class);
         $this->app->bind(CityRepositoryInterface::class, CityRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
     }
@@ -47,6 +50,7 @@ class ApplicationRepositoryProvider extends ServiceProvider {
     public function provides() {
         return [
             AdRepositoryInterface::class,
+            AdFilterViewRepositoryInterface::class,
             CityRepositoryInterface::class,
             UserRepositoryInterface::class
         ];
