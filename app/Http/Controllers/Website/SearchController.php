@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Ad\AdFilterViewRepositoryInterface;
+use App\Repositories\Ad\AdFilterViewRepositoryInterface;
 // use App\Models\Views\AdFilterViewModel;
 // use DB;
 
