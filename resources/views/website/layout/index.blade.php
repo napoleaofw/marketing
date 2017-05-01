@@ -47,6 +47,7 @@
         <script type="text/javascript" src="/website/js/general/header.js"></script>
         <script type="text/javascript" src="/website/js/general/visible-effect.js"></script>
         <script type="text/javascript" src="/website/js/home/category.js"></script>
+        <script type="text/javascript" src="/website/js/search/filter.js"></script>
         <script type="text/javascript" src="/website/js/search/result.js"></script>
     </body>
 </html>

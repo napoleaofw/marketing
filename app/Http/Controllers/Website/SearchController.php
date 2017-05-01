@@ -111,7 +111,7 @@ class SearchController extends Controller {
             $cityRecord['uri'] = $this->createUri($uriParameters);
         }
         $lastPage = ceil($totalPages / $limit);
-        if($page > $lastPage) {
+        if($totalPages > 0 && $page > $lastPage) {
             abort(404);
         }
         $pagination = [];
