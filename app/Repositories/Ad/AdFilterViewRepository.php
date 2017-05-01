@@ -28,7 +28,14 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 			$newFilters[$columns[$column]] = $values;
 			unset($filters[$column]);
 		}
-		return parent::count($newFilters);
+		$query = new $this->model();
+		foreach($newFilters as $column => $values) {
+			if($column !== $columns['q'])
+				$query = $query->whereIn($column, $values);
+			else
+				$query = $query->where($column, 'LIKE', $values);
+		}
+		return $query->count();
 	}
 
 	public function list($filters, $limit, $offset) {
@@ -43,7 +50,14 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 			$newFilters[$columns[$column]] = $values;
 			unset($filters[$column]);
 		}
-		$adFilterRecordList = parent::list($newFilters, $limit, $offset);
+		$query = new $this->model();
+		foreach($newFilters as $column => $values) {
+			if($column !== $columns['q'])
+				$query = $query->whereIn($column, $values);
+			else
+				$query = $query->where($column, 'LIKE', $values);
+		}
+		$adFilterRecordList = $query->limit($limit)->offset($offset)->get();
 		$adRecordList = [];
 		foreach($adFilterRecordList as $adFilterRecord) {
 			$adRecord = AdDataViewModel::where('ad_id', $adFilterRecord->ad_id)->firstOrFail();
