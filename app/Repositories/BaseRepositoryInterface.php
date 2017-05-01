@@ -12,6 +12,12 @@ interface BaseRepositoryInterface {
 
 	public function delete($id);
 
+	public function count($filters);
+
+	public function list($filters, $limit, $offset);
+
+	public function records();
+
 	public function getTransactionStatus();
 
 	public function enableTransaction();

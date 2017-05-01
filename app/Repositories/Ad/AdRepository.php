@@ -40,24 +40,3 @@ class AdRepository extends BaseRepository implements AdRepositoryInterface {
 	}
 
 }
-
-// Controller
-
-// namespace App\Controllers;
-
-// use App\Repositories\AdRepository;
-
-// class AdController {
-
-// 	private $adRepository;
-
-// 	public function __construct(AdRepository $adRepository) {
-// 		$this->adRepository = $adRepository;
-// 	}
-
-// 	public function save(Request $request) {
-// 		$data = $request->all();
-// 		$response = $this->adRepository->create($data);
-// 	}
-
-// }

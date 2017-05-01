@@ -1,4 +1,5 @@
 #search.page-wrapper #search-result-section .search-result-list .search-result {
+    height: 180px;
     position: relative;
 }
 

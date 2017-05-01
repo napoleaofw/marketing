@@ -13,223 +13,47 @@
                             </div>
                             <div class="search-filter-body">
                                 <ul class="nav search-filter-list">
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/alimentos-e-bebidas" class="search-filter-link">
-                                            <input type="checkbox">Alimentos e Bebidas
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/animais" class="search-filter-link">
-                                            <input type="checkbox">Animais
-                                        </a>
-                                    </li>
+                                    @foreach($categoryRecordList as $categoryRecord)
+                                        <li class="search-filter">
+                                            <a href="/{{$categoryRecord->uri}}" class="search-filter-link">
+                                                <input type="checkbox" {{$categoryRecord->checked ? 'checked' : ''}}>{{$categoryRecord->name}}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </section>
-                        <section class="search-filter-section">
-                            <div class="search-filter-header">
-                                <h3 class="title search-filter-title">Subcategorias</h3>
-                            </div>
-                            <div class="search-filter-body">
-                                <ul class="nav search-filter-list">
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox4" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox5" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox6" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox4" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox5" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox6" type="checkbox">nome da subcategoria
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="search-filter-section">
-                            <div class="search-filter-header">
-                                <h3 class="title search-filter-title">Facilidades</h3>
-                            </div>
-                            <div class="search-filter-body">
-                                <ul class="nav search-filter-list">
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox7" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox8" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox9" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox7" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox8" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox9" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox7" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox8" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="#" class="search-filter-link">
-                                            <input id="checkbox9" type="checkbox">nome da facilidade
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
+                        @if(count($subcategoryRecordList) > 0)
+                            <section class="search-filter-section">
+                                <div class="search-filter-header">
+                                    <h3 class="title search-filter-title">Subcategorias</h3>
+                                </div>
+                                <div class="search-filter-body">
+                                    <ul class="nav search-filter-list">
+                                        @foreach($subcategoryRecordList as $subcategoryRecord)
+                                            <li class="search-filter">
+                                                <a href="{{$subcategoryRecord->name_uri}}" class="search-filter-link">
+                                                    <input id="checkbox4" type="checkbox">{{$subcategoryRecord->name}}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </section>
+                        @endif
                         <section class="search-filter-section">
                             <div class="search-filter-header">
                                 <h3 class="title search-filter-title">Cidades</h3>
                             </div>
                             <div class="search-filter-body">
                                 <ul class="nav search-filter-list">
-                                    <li class="search-filter">
-                                        <a href="/campo-bom" class="search-filter-link">
-                                            <input type="checkbox">Campo Bom
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/dois-irmaos" class="search-filter-link">
-                                            <input type="checkbox">Dois Irmãos
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/estancia-velha" class="search-filter-link">
-                                            <input type="checkbox">Estância Velha
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/ivoti" class="search-filter-link">
-                                            <input type="checkbox">Ivoti
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/morro-reuter" class="search-filter-link">
-                                            <input type="checkbox">Morro Reuter
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/novo-hamburgo" class="search-filter-link">
-                                            <input type="checkbox">Novo Hamburgo
-                                        </a>
-                                    </li>
-                                    <li class="search-filter">
-                                        <a href="/sapiranga" class="search-filter-link">
-                                            <input type="checkbox">Sapiranga
-                                        </a>
-                                    </li>
+                                    @foreach($cityRecordList as $cityRecord)
+                                        <li class="search-filter">
+                                            <a href="/{{$cityRecord->uri}}" class="search-filter-link">
+                                                <input type="checkbox" {{$cityRecord->checked ? 'checked' : ''}}>{{$cityRecord->name}}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </section>
@@ -238,7 +62,7 @@
             </section>
             <section id="search-result-section" class="col-xs-12 col-sm-7 col-md-8 col-lg-7">
                 <ul class="row default-list search-result-list">
-                    @foreach($recordsAd as $recordAd)
+                    @foreach($adRecordList as $adRecord)
                     <li class="col-xs-12 col-md-6 search-result">
                         <div class="box">
                             <div class="box-body no-padding">
@@ -246,22 +70,24 @@
                                     <div class="row section-group">
                                         <div class="col-xs-12">
                                             <section class="ads-title-section">
-                                                <h2 class="title ads-title"><a href="#" class="default-color ads-title-link">{{$recordAd->ad_title}}</a></h2>
+                                                <h2 class="title ads-title"><a href="#" class="default-color ads-title-link">{{$adRecord->ad_title}}</a></h2>
                                             </section>
                                             <section class="ads-address-section">
                                                 <p class="ads-address">
-                                                    <span class="ads-icon-container"><i class="fa fa-map-signs"></i></span>{{$recordAd->getCompleteAddress()}}
+                                                    <span class="ads-icon-container"><i class="fa fa-map-signs"></i></span>{{$adRecord->getFirstPartAddress()}}
                                                 </p>
                                                 <p class="ads-address">
-                                                    <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>{{$recordAd->getFinallyAddress()}}
+                                                    <span class="ads-icon-container"><i class="fa fa-map-marker"></i></span>{{$adRecord->getLastPartAddress()}}
                                                 </p>
-                                                <span class="ads-icon-container"><i class="fa fa-map-o"></i></span><a href="#" class="ads-map">Como chegar?</a>
+                                                <span class="ads-icon-container"><i class="fa fa-map-o"></i></span><a href="http://www.google.com/maps/place/{{$adRecord->ad_map_latitude}},{{$adRecord->ad_map_longitude}}" target="_blank" class="ads-map">Como chegar?</a>
                                             </section>
                                             <section class="ads-phone-section">
                                                 <ul class="default-list ads-phone-list">
-                                                    <li class="ads-phone">
-                                                        <span class="ads-icon-container"><i class="fa fa-phone"></i></span>{{$recordAd['recordsPhone']->phone_phone}}
-                                                    </li>
+                                                    @foreach($adRecord['phoneRecordList'] as $phoneRecord)
+                                                        <li class="ads-phone">
+                                                            <span class="ads-icon-container"><i class="fa fa-phone"></i></span>{{$phoneRecord->getFormattedPhone()}}
+                                                        </li>
+                                                    @endforeach
                                                 </ul>
                                             </section>
                                         </div>
@@ -272,19 +98,17 @@
                     </li>
                     @endforeach
                 </ul>
+                @if(count($pagination) > 0)
                 <div class="col-xs-3 pagination-container">
                     <ul class="nav pagination">
-                        <li class="active">
-                            <a href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
+                        @foreach($pagination as $page)
+                            <li class="{{$page['active'] ? 'active' : ''}}">
+                                <a href="{{$page['active'] ? '#' : $page['uri']}}">{{$page['text']}}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
+                @endif
             </section>
         </div>
     </div>

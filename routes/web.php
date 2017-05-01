@@ -18,9 +18,9 @@ Route::get('/', function() {
     return view('website.'.$data['pageName'], $data);
 });
 Route::get('/searching', function() {
-    $recordsAd = \App\Models\AdDataViewModel::where('city_name_uri', 'dois-irmaos')->get();
+    $recordsAd = \App\Models\Views\AdDataViewModel::where('city_name_uri', 'dois-irmaos')->get();
     foreach($recordsAd as $key => $recordAd) {
-        $recordsPhone = \App\Models\AdPhoneViewModel::where('ad_id', $recordAd->ad_id)->first();
+        $recordsPhone = \App\Models\Views\AdPhoneViewModel::where('ad_id', $recordAd->ad_id)->first();
         if(count($recordsPhone) > 0) {
             $recordAd['recordsPhone'] = $recordsPhone;
         }

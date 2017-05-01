@@ -30,6 +30,7 @@ class ApplicationServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
+        // dd('register ApplicationServiceProvider');
         $this->app->bind(InternalResponseServiceInterface::class, InternalResponseService::class);
     }
 

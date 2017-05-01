@@ -9,6 +9,8 @@ use App\Repositories\Ad\AdFilterViewRepositoryInterface;
 use App\Repositories\Ad\AdFilterViewRepository;
 use App\Repositories\City\CityRepositoryInterface;
 use App\Repositories\City\CityRepository;
+use App\Repositories\Category\CategoryRepositoryInterface;
+use App\Repositories\Category\CategoryRepository;
 use App\Repositories\User\UserRepositoryInterface;
 use App\Repositories\User\UserRepository;
 
@@ -36,9 +38,11 @@ class ApplicationRepositoryProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
+        // dd('register ApplicationRepositoryProvider');
         $this->app->bind(AdRepositoryInterface::class, AdRepository::class);
         $this->app->bind(AdFilterViewRepositoryInterface::class, AdFilterViewRepository::class);
         $this->app->bind(CityRepositoryInterface::class, CityRepository::class);
+        $this->app->bind(CategoryRepositoryInterface::class, CategoryRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
     }
 
@@ -52,6 +56,7 @@ class ApplicationRepositoryProvider extends ServiceProvider {
             AdRepositoryInterface::class,
             AdFilterViewRepositoryInterface::class,
             CityRepositoryInterface::class,
+            CategoryRepositoryInterface::class,
             UserRepositoryInterface::class
         ];
     }
