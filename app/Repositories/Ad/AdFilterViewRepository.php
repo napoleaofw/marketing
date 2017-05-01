@@ -22,7 +22,7 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 			'city'        => 'city_name_uri',
 			'category'    => 'main_category_name_uri',
 			'subcategory' => 'category_name_uri',
-			'q'           => 'ad_title_uri'
+			'q'           => 'ad_title'
 		];
 		foreach($filters as $column => $values) {
 			$newFilters[$columns[$column]] = $values;
@@ -44,7 +44,7 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 			'city'        => 'city_name_uri',
 			'category'    => 'main_category_name_uri',
 			'subcategory' => 'category_name_uri',
-			'q'           => 'ad_title_uri'
+			'q'           => 'ad_title'
 		];
 		foreach($filters as $column => $values) {
 			$newFilters[$columns[$column]] = $values;
