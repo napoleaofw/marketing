@@ -10,13 +10,6 @@
 | contains the 'web' middleware group. Now create something great!
 |
 */
-
-Route::get('/', function() {
-    $data = [
-        'pageName' => 'home'
-    ];
-    return view('website.'.$data['pageName'], $data);
-});
 Route::get('/searching', function() {
     $recordsAd = \App\Models\Views\AdDataViewModel::where('city_name_uri', 'dois-irmaos')->get();
     foreach($recordsAd as $key => $recordAd) {
@@ -35,44 +28,30 @@ Route::get('/searching', function() {
     return view('website.'.$data['pageName'], $data);
 });
 Route::get('/search', 'Website\SearchController@process');
-// Route::get('/search', function() {
-//     $parameters = request()->all();
-//     $filters = [
-//         'city'        => [],
-//         'category'    => [],
-//         'subcategory' => [],
-//         'facility'    => [],
-//         'q'           => ''
+Route::get('/', 'WebsiteController@home');
+Route::get('/{cityNameUri}', 'WebsiteController@home');
+// Route::get('/ad', function() {
+//     $data = [
+//         'pageName' => 'ad'
 //     ];
-//     foreach($parameters as $parameter => $value) {
-//         if(!array_key_exists($parameter, $filters)){
-//             dd('parameter: '.$parameter);
-//             abort(404);
-//         }
-//         else {
-//             $filters[$parameter] = $parameter === 'q' ? $value : explode(',', $value);
-//         }
-//     }
-//     $adModel = new \App\Models\AdModel();
-//     $adCategoryViewModel = new \App\Models\AdCategoryViewModel();
-//     $adCategoryViewModel = $adCategoryViewModel->whereIn('category_name_uri', $filters['category']);
-//     $adCategoryViewModel = $adCategoryViewModel->whereIn('main_category_name_uri', $filters['subcategory']);
-//     dd($filters);
+//     return view('website.'.$data['pageName'], $data);
 // });
-Route::get('/ad', function() {
-    $data = [
-        'pageName' => 'ad'
-    ];
-    return view('website.'.$data['pageName'], $data);
-});
-Route::get('/login', 'Website\UserController@loginForm');
-Route::post('/login', 'Website\UserController@login');
-Route::get('/register', 'Website\UserController@registerForm');
-Route::post('/register', 'Website\UserController@register');
+// Route::get('/login', 'Website\UserController@loginForm');
+// Route::post('/login', 'Website\UserController@login');
+// Route::get('/register', 'Website\UserController@registerForm');
+// Route::post('/register', 'Website\UserController@register');
 
-// Route::get('/', function() {
-    
-// });
+
+
+
+
+
+
+
+
+
+
+
 
 /*Route::get('/user', 'UserController@create');
 
@@ -96,9 +75,4 @@ Route::get('/ads-advanced', function () {
         'pagename' => 'ads-advanced'
     ]);
 });
-
-Route::get('/search', function () {
-    return view('website.search', [
-        'pagename' => 'search'
-    ]);
-});*/
+*/

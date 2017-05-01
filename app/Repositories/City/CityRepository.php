@@ -18,4 +18,8 @@ class CityRepository extends BaseRepository implements CityRepositoryInterface {
 		return $this->model::orderBy('name')->get();
 	}
 
+	public function readByNameUri($nameUri) {
+		return $this->model::where('name_uri', $nameUri)->firstOrFail();
+	}
+
 }

@@ -142,13 +142,16 @@ class SearchController extends Controller {
                 'uri'    => $this->createUri($uriParameters)
             ]);
         }
+        $uriParameters = $this->explodeParameters($parameters);
+        $searchUri = $this->createUri($uriParameters);
         $data = [
             'pageName'              => 'search',
             'adRecordList'          => $adRecordList,
             'categoryRecordList'    => $categoryRecordList,
             'subcategoryRecordList' => [],
             'cityRecordList'        => $cityRecordList,
-            'pagination'            => $pagination
+            'pagination'            => $pagination,
+            'searchUri'             => $searchUri
         ];
         return view('website.search', $data);
     }

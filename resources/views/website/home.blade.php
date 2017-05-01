@@ -11,12 +11,11 @@
             </div>
             <div class="modal-body">
                 <ul class="nav city-list">
-                    <li class="city">
-                        <a href="/dois-irmaos" class="link">Dois Irmãos</a>
-                    </li>
-                    <li class="city">
-                        <a href="/morro-reuter" class="link">Morro Reuter</a>
-                    </li>
+                    @foreach($cityRecordList as $cityRecord)
+                        <li class="city">
+                            <a href="/{{$cityRecord->name_uri}}" class="link">{{$cityRecord->name}}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -40,7 +39,7 @@
                             <a href="/" class="title">logo</a>
                         </li>
                         <li class="col-xs-12 col-sm-4 text-left no-padding">
-                            <a href="#" data-toggle="modal" data-target="#modal-city">Você está em <span class="title">Dois Irmãos</span>.Você pode mudar a cidade aqui.</a>
+                            <a href="#" data-toggle="modal" data-target="#modal-city">Você está em <span class="title">{{$currentCity->name}}</span>.Você pode mudar a cidade aqui.</a>
                         </li>
                         <li class="col-xs-12 col-sm-4 no-padding form-search-container">
                             @include('website.layout.form-search')
@@ -65,36 +64,22 @@
             <section id="category-wrapper" class="col-xs-12">
                 <h1 class="title title-margin">Categorias em Dois Irmãos</h1>
                 <ul class="nav category-list">
-                    @for($i=0;$i<50;$i++)
-                    <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                        <div class="box">
-                            <div class="box-body">
-                                <div class="category-content col-xs-12">
-                                    <div class="category-icon stroke-default">
-                                        @include('common.svg.category.alimentos-e-bebidas')
-                                    </div>
-                                    <div class="category-text">
-                                        <a href="/dois-irmaos/category/alimentos-e-bebidas" class="link uppercase title" title="Alimentos e Bebidas">Alimentos e Bebidas</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                        <div class="box">
-                            <div class="box-body">
-                                <div class="category-content col-xs-12">
-                                    <div class="category-icon stroke-default">
-                                        @include('common.svg.category.animais')
-                                    </div>
-                                    <div class="category-text">
-                                        <a href="/dois-irmaos/category/animais" class="link uppercase title" title="Animais">Animais</a>
+                    @foreach($cityCategoryRecordList as $cityCategoryRecord)
+                        <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                            <div class="box">
+                                <div class="box-body">
+                                    <div class="category-content col-xs-12">
+                                        <div class="category-icon stroke-default">
+                                            @include('common.svg.category.'.$cityCategoryRecord->category_name_uri)
+                                        </div>
+                                        <div class="category-text">
+                                            <a href="/search?category={{$cityCategoryRecord->category_name_uri}}&city={{$currentCity->name_uri}}" class="link uppercase title" title="{{$cityCategoryRecord->category_name}}">{{$cityCategoryRecord->category_name}}</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    @endfor
+                        </li>
+                    @endforeach
                 </ul>
             </section>
         </div>

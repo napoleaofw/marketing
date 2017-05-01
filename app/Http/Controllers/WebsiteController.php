@@ -3,38 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\CityRepository;
-use App\Repositories\UserRepository;
+use App\Repositories\City\CityRepositoryInterface;
+use App\Repositories\CityCategoryView\CityCategoryViewRepositoryInterface;
+use App\Repositories\User\UserRepositoryInterface;
 
 class WebsiteController extends Controller {
 
-    private $userRepository;
-    private $cityRepository;
+    public function __construct() {}
 
-    public function __construct(CityRepository $cityRepository, UserRepository $userRepository) {
-        $this->userRepository = $userRepository;
-        $this->cityRepository = $cityRepository;
-    }
-
-    public function home($cityNameUri=null) {
+    public function home(
+        CityRepositoryInterface $cityRepository,
+        CityCategoryViewRepositoryInterface $cityCategoryViewRepository,
+        $cityNameUri = null
+    ) {
         if(!$cityNameUri) {
             $cityNameUri = 'dois-irmaos';
         }
-        ///// here continue
-        $recordCity = CityModel::where('name_uri', $cityNameUri)->firstOrFail();
-        $recordsCityCategoryView = CityCategoryViewModel::where('city_name_uri', $cityNameUri)->orderBy('category_name_uri')->get();
-        $recordsCity = CityModel::all()->sortBy('name');
-        $this->_data['cityCategoryList'] = $recordsCityCategoryView;
-        $this->_data['cityName'] = $recordCity->name;
-        $this->_data['pageName'] = 'home';
-        $this->_data['recordsCity'] = $recordsCity;
+        $cityRecord = $cityRepository->readByNameUri($cityNameUri);
+        $cityRecordList = $cityRepository->records();
+        $cityCategoryViewRecordList = $cityCategoryViewRepository->recordsByCityNameUri($cityNameUri);
         $data = [
-            'cityCategoryList' => ,
-            'cityName'         => ,
-            'pageName'         => ,
-            'recordsCity'      => 
+            'cityCategoryRecordList' => $cityCategoryViewRecordList,
+            'currentCity'            => $cityRecord,
+            'pageName'               => 'home',
+            'cityRecordList'         => $cityRecordList
         ];
-        return view('website.'.$this->_data['pageName'], $data);
+        return view('website.home', $data);
     }
 
     public function loginForm() {
@@ -55,9 +49,12 @@ class WebsiteController extends Controller {
         return view('website.register', $data);
     }
 
-    public function register(Request $request) {
-        dd($this->userRepository);
-        $response = $this->userRepository->createRecord($request->all());
+    public function register(
+        Request $request,
+        UserRepositoryInterface $userRepository
+    ) {
+        dd($userRepository);
+        $response = $userRepository->createRecord($request->all());
         dd($response);
     }
 

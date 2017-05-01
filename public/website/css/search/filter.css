@@ -32,7 +32,7 @@
 }
 
 #search.page-wrapper #search-group-filter-section .search-filter-section .search-filter-body {
-    max-height: 180px;
+    max-height: 250px;
     overflow-y: auto;
 }
 
