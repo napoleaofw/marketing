@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Tables;
+namespace App\Models\Authentication;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class UserModel extends Model {
+class UserAuthModel extends Authenticatable {
 
     protected $table = 'USER_TBL';
     protected $primaryKey = 'id';
@@ -20,5 +20,5 @@ class UserModel extends Model {
         'created_at',
         'updated_at'
     ];
-
+    
 }

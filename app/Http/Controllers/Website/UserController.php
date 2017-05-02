@@ -17,10 +17,22 @@ class UserController extends Controller {
         return view('website.login', $data);
     }
 
-    public function login(Request $request, UserRepositoryInterface $userRepository) {
-        
+    public function login(
+        Request $request,
+        UserRepositoryInterface $userRepository
+    ) {
+        $response = $userRepository->login($request->all());
+        if($response->status() === 200) {
+            return redirect('/');
+        }
+        $dataResponse = $response->getOriginalContent();
+        $data = [
+            'messages' => $dataResponse['messages'],
+            'pageName' => 'login'
+        ];
+        return view('website.login', $data);
     }
-
+    
     public function registerForm() {
         $data = [
             'pageName' => 'register'

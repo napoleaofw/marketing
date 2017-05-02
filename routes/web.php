@@ -28,6 +28,10 @@ Route::get('/searching', function() {
     return view('website.'.$data['pageName'], $data);
 });
 Route::get('/search', 'Website\SearchController@process');
+Route::get('/login', 'Website\UserController@loginForm');
+Route::post('/login', 'Website\UserController@login');
+// Route::get('/register', 'Website\UserController@registerForm');
+// Route::post('/register', 'Website\UserController@register');
 Route::get('/', 'WebsiteController@home');
 Route::get('/{cityNameUri}', 'WebsiteController@home');
 // Route::get('/ad', function() {
@@ -36,10 +40,6 @@ Route::get('/{cityNameUri}', 'WebsiteController@home');
 //     ];
 //     return view('website.'.$data['pageName'], $data);
 // });
-// Route::get('/login', 'Website\UserController@loginForm');
-// Route::post('/login', 'Website\UserController@login');
-// Route::get('/register', 'Website\UserController@registerForm');
-// Route::post('/register', 'Website\UserController@register');
 
 
 
