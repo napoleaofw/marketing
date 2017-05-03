@@ -5,7 +5,7 @@
 
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-header {
     border-bottom: none;
-    height: 80px;
+    /*height: 80px; comment while doesn't have ads advanced page */
     position: relative;
     text-shadow: 1px 0 0 #f3f3f3, -1px 0 0 #f3f3f3, 0 1px 0 #f3f3f3, 0 -1px 0 #f3f3f3, 1px 1px #f3f3f3, -1px -1px 0 #f3f3f3, 1px -1px 0 #f3f3f3, -1px 1px 0 #f3f3f3;
 }
