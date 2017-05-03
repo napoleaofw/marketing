@@ -44,9 +44,14 @@
                         <li class="col-xs-12 col-sm-4 no-padding form-search-container">
                             @include('website.layout.form-search')
                         </li>
-                        <li class="col-xs-12 col-sm-2 text-right no-padding">
+                        <!--<li class="col-xs-12 col-sm-2 text-right no-padding">
                             <a href="/login" class="title">login</a>
-                        </li>
+                        </li>-->
+                        @if(Auth::user())
+                            <li class="col-xs-12 col-sm-2 text-right no-padding">
+                                <a href="/logout" class="title">logout</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </nav>

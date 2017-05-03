@@ -42,3 +42,29 @@
 .box-footer:after {
     clear: both;
 }
+
+.box-header > .box-tools {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.box-header > .box-tools [data-toggle="tooltip"] {
+    position: relative;
+}
+
+.btn-box-tool {
+    background: transparent;
+    color: #97a0b3;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.open .btn-box-tool,
+.btn-box-tool:hover {
+    color: #606c84
+}
+
+.btn-box-tool.btn:active {
+    box-shadow: none
+}

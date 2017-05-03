@@ -16,7 +16,6 @@ class WebsiteController extends Controller {
         CityCategoryViewRepositoryInterface $cityCategoryViewRepository,
         $cityNameUri = null
     ) {
-        dd(Auth::user());
         if(!$cityNameUri) {
             $cityNameUri = 'dois-irmaos';
         }

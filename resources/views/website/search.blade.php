@@ -69,6 +69,18 @@
                         @foreach($adRecordList as $adRecord)
                             <li class="col-xs-12 col-md-6 search-result">
                                 <div class="box">
+                                    @if(Auth::user())
+                                        <div class="box-header">
+                                            <div class="box-tools pull-right">
+                                                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" data-original-title="Revisar">
+                                                    <i class="fa fa-wrench"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-box-tool" data-widget="tooltip" data-original-title="Deletar">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    @endif
                                     <div class="box-body no-padding">
                                         <div class="col-xs-12 box-body-content">
                                             <div class="row section-group">
