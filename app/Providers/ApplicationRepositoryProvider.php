@@ -15,6 +15,8 @@ use App\Repositories\CityCategoryView\CityCategoryViewRepositoryInterface;
 use App\Repositories\CityCategoryView\CityCategoryViewRepository;
 use App\Repositories\User\UserRepositoryInterface;
 use App\Repositories\User\UserRepository;
+use App\Repositories\User\UserAuthRepositoryInterface;
+use App\Repositories\User\UserAuthRepository;
 
 class ApplicationRepositoryProvider extends ServiceProvider {
 
@@ -47,6 +49,7 @@ class ApplicationRepositoryProvider extends ServiceProvider {
         $this->app->bind(CityRepositoryInterface::class, CityRepository::class);
         $this->app->bind(CityCategoryViewRepositoryInterface::class, CityCategoryViewRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
+        $this->app->bind(UserAuthRepositoryInterface::class, UserAuthRepository::class);
     }
 
     /**
@@ -61,7 +64,8 @@ class ApplicationRepositoryProvider extends ServiceProvider {
             CategoryRepositoryInterface::class,
             CityRepositoryInterface::class,
             CityCategoryViewRepositoryInterface::class,
-            UserRepositoryInterface::class
+            UserRepositoryInterface::class,
+            UserAuthRepositoryInterface::class
         ];
     }
 

@@ -4,7 +4,6 @@ namespace App\Repositories\User;
 
 use App\Repositories\BaseRepository;
 use App\Models\Tables\UserModel;
-use App\Models\Authentication\UserAuthModel;
 use Hash;
 
 class UserRepository extends BaseRepository implements UserRepositoryInterface {
@@ -43,31 +42,5 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface {
 		$userRecord->save();
 		return $userRecord;
 	}
-
-    protected function loginRecord($data) {
-		// validate
-		$userRecord = $this->model::where('email', $data['email'])->first();
-		if($userRecord) {
-			if(Hash::check()) {
-				// everything ok
-				// return ok response
-			}
-			// password doesnt match
-			// return error response
-		}
-		else {
-			// user not found
-			// return error response
-		}
-    }
-
-    public function login($data) {
-		// change model
-		// change validation rules
-		// keep result
-		return $this->processTransaction([$this, 'loginRecord'], [$data]);
-		// change back everything
-		// return result
-    }
 
 }

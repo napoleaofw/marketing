@@ -35,6 +35,9 @@ abstract class BaseRepository implements BaseRepositoryInterface {
 			else {
 				$data = call_user_func_array($transaction, $parameters);
 			}
+			if($this->internalResponse->done()) {
+				return $this->internalResponse->get();
+			}
 			$this->internalResponse->setData($data);
 			$this->internalResponse->setStatusCode(200);
 			$this->internalResponse->setMessages('success', ['Solicitação concluída com sucesso.']);

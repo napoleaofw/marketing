@@ -19,4 +19,9 @@ interface InternalResponseServiceInterface extends BaseServiceInterface {
 	public function getStatusCode();
 
 	public function setStatusCode($statusCode);
+	
+	public function done();
+
+	public function get();
+	
 }

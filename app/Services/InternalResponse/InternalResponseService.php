@@ -11,9 +11,11 @@ class InternalResponseService extends BaseService implements InternalResponseSer
 	private $messages;
 	private $statusCode;
 	private $internalResponse;
+	private $done;
 
 	public function __construct() {
 		parent::__construct();
+		$done = false;
 	}
 
 	private function makeContent() {
@@ -24,6 +26,7 @@ class InternalResponseService extends BaseService implements InternalResponseSer
 	}
 
 	public function make() {
+		$this->done = true;
 		return ($this->internalResponse = Response::make($this->makeContent(), $this->statusCode));
 	}
 
@@ -49,6 +52,14 @@ class InternalResponseService extends BaseService implements InternalResponseSer
 
 	public function setStatusCode($statusCode) {
 		$this->statusCode = $statusCode;
+	}
+
+	public function done() {
+		return $this->done;
+	}
+
+	public function get() {
+		return $this->internalResponse;
 	}
 
 }
