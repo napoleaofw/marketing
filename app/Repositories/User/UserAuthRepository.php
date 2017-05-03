@@ -29,7 +29,7 @@ class UserAuthRepository extends BaseRepository implements UserAuthRepositoryInt
     protected function loginRecord($data) {
 		$userRecord = $this->model::where('email', $data['email'])->first();
 		if($userRecord) {
-			if(Hash::check()) {
+			if(Hash::check($data['password'], $userRecord->password)) {
                 Auth::login($userRecord);
                 return $userRecord;
 			}
@@ -39,7 +39,7 @@ class UserAuthRepository extends BaseRepository implements UserAuthRepositoryInt
 		}
 		else {
 			$this->internalResponse->setStatusCode(401);
-			$this->internalResponse->setMessages('error', ['Nenhum usuário foi encontrado com o e-mail '. $data['email'] . '.']);
+			$this->internalResponse->setMessages('error', ['O usuário '. $data['email'] . ' não existe.']);
             $this->internalResponse->make();
 		}
     }

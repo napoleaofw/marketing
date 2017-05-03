@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\City\CityRepositoryInterface;
 use App\Repositories\CityCategoryView\CityCategoryViewRepositoryInterface;
+use Auth;
 
 class WebsiteController extends Controller {
 
