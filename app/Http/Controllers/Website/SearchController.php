@@ -70,10 +70,12 @@ class SearchController extends Controller {
             }
         }
         $page = isset($parameters['page']) ? $parameters['page'] : 1;
-        $limit = 25;
+        $limit = 20;
         $offset = ($page - 1) * $limit;
         $totalPages = $adFilterViewRepository->count($filters);
         $adRecordList = $adFilterViewRepository->list($filters, $limit, $offset);
+        $subcategoryRecordList;
+        $categoryRecordCheckedList = [];
         $categoryRecordList = $categoryRepository->records();
         foreach($categoryRecordList as $categoryRecord) {
             $uriParameters = $this->explodeParameters($parameters);
@@ -84,13 +86,32 @@ class SearchController extends Controller {
             $key = array_search($categoryRecord->name_uri, $uriParameters['category']);
             if($key === FALSE) {
                 array_push($uriParameters['category'], $categoryRecord->name_uri);
-               $categoryRecord['checked'] = false;
+                $categoryRecord['checked'] = false;
             }
             else {
-               unset($uriParameters['category'][$key]);
-               $categoryRecord['checked'] = true;
+                unset($uriParameters['category'][$key]);
+                $categoryRecord['checked'] = true;
+                array_push($categoryRecordCheckedList, $categoryRecord->id);
             }
             $categoryRecord['uri'] = $this->createUri($uriParameters);
+        }
+        $subcategoryRecordList = $categoryRepository->subcategoryRecordList($categoryRecordCheckedList);
+        foreach($subcategoryRecordList as $subcategoryRecord) {
+            $uriParameters = $this->explodeParameters($parameters);
+            if(isset($uriParameters['page']))
+                unset($uriParameters['page']);
+            if(!isset($uriParameters['subcategory']))
+                $uriParameters['subcategory'] = [];
+            $key = array_search($subcategoryRecord->name_uri, $uriParameters['subcategory']);
+            if($key === FALSE) {
+                array_push($uriParameters['subcategory'], $subcategoryRecord->name_uri);
+                $subcategoryRecord['checked'] = false;
+            }
+            else {
+                unset($uriParameters['subcategory'][$key]);
+                $subcategoryRecord['checked'] = true;
+            }
+            $subcategoryRecord['uri'] = $this->createUri($uriParameters);
         }
         $cityRecordList = $cityRepository->records();
         foreach($cityRecordList as $cityRecord) {
@@ -102,11 +123,11 @@ class SearchController extends Controller {
             $key = array_search($cityRecord->name_uri, $uriParameters['city']);
             if($key === FALSE) {
                 array_push($uriParameters['city'], $cityRecord->name_uri);
-               $cityRecord['checked'] = false;
+                $cityRecord['checked'] = false;
             }
             else {
                 unset($uriParameters['city'][$key]);
-               $cityRecord['checked'] = true;
+                $cityRecord['checked'] = true;
             }
             $cityRecord['uri'] = $this->createUri($uriParameters);
         }
@@ -148,7 +169,7 @@ class SearchController extends Controller {
             'pageName'              => 'search',
             'adRecordList'          => $adRecordList,
             'categoryRecordList'    => $categoryRecordList,
-            'subcategoryRecordList' => [],
+            'subcategoryRecordList' => $subcategoryRecordList,
             'cityRecordList'        => $cityRecordList,
             'pagination'            => $pagination,
             'searchUri'             => $searchUri

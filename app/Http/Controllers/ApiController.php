@@ -37,7 +37,7 @@ class ApiController extends Controller {
             ], 422);
         }
         $dataResponse = $response->getOriginalContent();
-        $dataResponse['html'] = view('website.layout.messages')->render();
+        $dataResponse['html'] = view('website.layout.messages', $dataResponse)->render();
         return Response::json($dataResponse, $response->status());
     }
 

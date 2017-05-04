@@ -24,15 +24,7 @@
 <div id="home" class="page-wrapper">
     <div class="container-fluid">
         <header class="row">
-            <button type="button" class="navbar-toggle">
-                <div class="menu-title">
-                    <span>menu</span>
-                </div>
-                <div class="menu-icon">
-                    <span></span>
-                </div>
-            </button>
-            <nav class="navbar navbar-collapse hidden-xs">
+            <nav class="navbar navbar-collapse">
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
                         <li class="col-xs-12 col-sm-2 text-left no-padding">

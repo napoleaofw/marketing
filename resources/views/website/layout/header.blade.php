@@ -1,9 +1,5 @@
 <header class="row main-header">
-    <button type="button" class="navbar-toggle">
-        <span>menu</span>
-        <div class="menu-icon"><span></span></div>
-    </button>
-    <nav class="navbar hidden-xs">
+    <nav class="navbar">
         <div class="col-xs-12 header-content">
             <ul class="nav">
                 <li class="col-xs-12 col-sm-3 text-left no-padding">

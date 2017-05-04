@@ -41,10 +41,10 @@ class AdRepository extends BaseRepository implements AdRepositoryInterface {
 	protected function markForReviewRecord($id) {
 		$adRecord = $this->readRecord($id);
 		if($adRecord->review === 'y') {
-			$adRecord->review = 'y';
+			$adRecord->review = 'n';
 		}
 		else {
-			$adRecord->review = 'n';
+			$adRecord->review = 'y';
 		}
 		return $adRecord->save();
 	}
@@ -52,10 +52,10 @@ class AdRepository extends BaseRepository implements AdRepositoryInterface {
 	protected function markForDeleteRecord($id) {
 		$adRecord = $this->readRecord($id);
 		if($adRecord->delete === 'y') {
-			$adRecord->delete = 'y';
+			$adRecord->delete = 'n';
 		}
 		else {
-			$adRecord->delete = 'n';
+			$adRecord->delete = 'y';
 		}
 		return $adRecord->save();
 	}

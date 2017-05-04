@@ -9,6 +9,7 @@ $(document).ready(function() {
     var request = function request(button, action) {
         var $searchResult = button.parents(".search-result");
         var id = $searchResult.data("id");
+        $searchResult.find('.box-tools button').prop("disabled", true);
         $.ajax({
             type: "PUT",
             url: "/api/ad/markFor",
@@ -27,22 +28,24 @@ $(document).ready(function() {
                 }
             },
             error: function(data) {},
-            done: function(data) {
-                var $html = $(data.html);
+            complete: function(data) {
+                var $html = $(data.responseJSON.html);
                 $html.find("button").remove();
                 $html.css({
                     "display": "none",
-                    "position": "absolute",
+                    "position": "fixed",
                     "right": "15px",
                     "z-index": "9999"
                 });
                 $(".page-content").prepend($html);
                 $html.fadeIn("fast", function() {
                     setTimeout(function() {
-                        $html.fadeOut("slow");
+                        $html.fadeOut("slow", function() {
+                            $html.remove();
+                        });
                     }, 3000);
                 });
-                $html.remove();
+                $searchResult.find('.box-tools button').prop("disabled", false);
             }
         });
     };

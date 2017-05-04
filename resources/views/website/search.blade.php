@@ -35,8 +35,8 @@
                                     <ul class="nav search-filter-list">
                                         @foreach($subcategoryRecordList as $subcategoryRecord)
                                             <li class="search-filter">
-                                                <a href="{{$subcategoryRecord->name_uri}}" class="search-filter-link">
-                                                    <input id="checkbox4" type="checkbox">{{$subcategoryRecord->name}}
+                                                <a href="{{$subcategoryRecord->uri}}" class="search-filter-link">
+                                                    <input type="checkbox" {{$subcategoryRecord->checked ? 'checked' : ''}}>{{$subcategoryRecord->name}}
                                                 </a>
                                             </li>
                                         @endforeach
@@ -76,11 +76,10 @@
                                         <div class="col-xs-12 box-body-content">
                                             @if(Auth::user())
                                                 <div class="box-tools pull-right">
-                                                    <h1>pintar as tretas ao carregar pagina e tb ordenar por ordem alfabetica</h1>
-                                                    <button type="button" class="btn btn-box-tool" title="Revisar" data-toggle="tooltip" data-action="review">
+                                                    <button type="button" class="btn btn-box-tool {{$adRecord->ad_review === 'y' ? 'text-green' : ''}}" title="Revisar" data-toggle="tooltip" data-action="review">
                                                         <i class="fa fa-wrench"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-box-tool" title="Deletar" data-toggle="tooltip" data-action="delete">
+                                                    <button type="button" class="btn btn-box-tool {{$adRecord->ad_delete === 'y' ? 'text-red' : ''}}" title="Deletar" data-toggle="tooltip" data-action="delete">
                                                         <i class="fa fa-times"></i>
                                                     </button>
                                                 </div>

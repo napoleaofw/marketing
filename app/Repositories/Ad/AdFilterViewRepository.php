@@ -6,6 +6,7 @@ use App\Repositories\BaseRepository;
 use App\Models\Views\AdFilterViewModel;
 use App\Models\Views\AdDataViewModel;
 use App\Models\Views\AdPhoneViewModel;
+use Auth;
 
 class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepositoryInterface {
 
@@ -57,7 +58,10 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 			else
 				$query = $query->where($column, 'LIKE', $values);
 		}
-		$adFilterRecordList = $query->limit($limit)->offset($offset)->get();
+		if(!Auth::user()) {
+			$query = $query->where('ad_review', 'n')->where('ad_delete', 'n');
+		}
+		$adFilterRecordList = $query->limit($limit)->offset($offset)->orderBy('ad_review')->orderBy('ad_delete')->orderBy('ad_title')->get();
 		$adRecordList = [];
 		foreach($adFilterRecordList as $adFilterRecord) {
 			$adRecord = AdDataViewModel::where('ad_id', $adFilterRecord->ad_id)->firstOrFail();
