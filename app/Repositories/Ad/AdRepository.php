@@ -33,10 +33,39 @@ class AdRepository extends BaseRepository implements AdRepositoryInterface {
 		/* criar um extract data
 			e um validate data */
 
-		$adModel = AdModel::create($data);
+		$adRecord = AdModel::create($data);
 		$phoneRepository->setTransactionStatus(false);
 		$phoneRepository = $this->phoneRepository->createWithoutTransaction($phoneData);
+	}
 
+	protected function markForReviewRecord($id) {
+		$adRecord = $this->readRecord($id);
+		if($adRecord->review === 'y') {
+			$adRecord->review = 'y';
+		}
+		else {
+			$adRecord->review = 'n';
+		}
+		return $adRecord->save();
+	}
+
+	protected function markForDeleteRecord($id) {
+		$adRecord = $this->readRecord($id);
+		if($adRecord->delete === 'y') {
+			$adRecord->delete = 'y';
+		}
+		else {
+			$adRecord->delete = 'n';
+		}
+		return $adRecord->save();
+	}
+
+	public function markForReview($id) {
+		return $this->processTransaction([$this, 'markForReviewRecord'], [$id]);
+	}
+
+	public function markForDelete($id) {
+		return $this->processTransaction([$this, 'markForDeleteRecord'], [$id]);
 	}
 
 }

@@ -32,6 +32,11 @@ class UserController extends Controller {
         ];
         return view('website.login', $data);
     }
+
+    public function logout() {
+        Auth::logout();
+        redirect('/');
+    }
     
     // public function registerForm() {
     //     $data = [

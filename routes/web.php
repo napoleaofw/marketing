@@ -10,6 +10,7 @@
 | contains the 'web' middleware group. Now create something great!
 |
 */
+Route::put('/api/ad/markFor', 'ApiController@adMarkFor');
 Route::get('/searching', function() {
     $recordsAd = \App\Models\Views\AdDataViewModel::where('city_name_uri', 'dois-irmaos')->get();
     foreach($recordsAd as $key => $recordAd) {
@@ -30,6 +31,7 @@ Route::get('/searching', function() {
 Route::get('/search', 'Website\SearchController@process');
 Route::get('/login', 'Website\UserController@loginForm');
 Route::post('/login', 'Website\UserController@login');
+Route::get('/logout', 'Website\UserController@logout');
 // Route::get('/register', 'Website\UserController@registerForm');
 // Route::post('/register', 'Website\UserController@register');
 Route::get('/', 'WebsiteController@home');

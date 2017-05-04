@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/website/css/general/adminlte/checkbox.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/form-control.css">
         <link rel="stylesheet" href="/website/css/general/adminlte/modal.css">
+        <link rel="stylesheet" href="/website/css/general/adminlte/text.css">
         <link rel="stylesheet" href="/website/css/general/aspect-ratio.css">
         <link rel="stylesheet" href="/website/css/general/document.css">
         <link rel="stylesheet" href="/website/css/general/header.css">
@@ -45,6 +46,7 @@
         <script type="text/javascript" src="/website/js/general/adminlte/plugins/icheck.min.js"></script>
         <script type="text/javascript" src="/website/js/general/adminlte/checkbox.js"></script>
         <script type="text/javascript" src="/website/js/general/header.js"></script>
+        <script type="text/javascript" src="/website/js/general/tooltip.js"></script>
         <script type="text/javascript" src="/website/js/general/visible-effect.js"></script>
         <script type="text/javascript" src="/website/js/home/category.js"></script>
         <script type="text/javascript" src="/website/js/search/filter.js"></script>

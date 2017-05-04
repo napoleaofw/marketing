@@ -64,25 +64,27 @@
                 </div>
             </section>
             <section id="search-result-section" class="col-xs-12 col-sm-7 col-md-8 col-lg-7">
+                @if(Auth::user())
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                @endif
                 @if(count($adRecordList) > 0)
                     <ul class="row default-list search-result-list">
                         @foreach($adRecordList as $adRecord)
-                            <li class="col-xs-12 col-md-6 search-result">
+                            <li class="col-xs-12 col-md-6 search-result" data-id="{{$adRecord->ad_id}}">
                                 <div class="box">
-                                    @if(Auth::user())
-                                        <div class="box-header">
-                                            <div class="box-tools pull-right">
-                                                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" data-original-title="Revisar">
-                                                    <i class="fa fa-wrench"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-box-tool" data-widget="tooltip" data-original-title="Deletar">
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    @endif
                                     <div class="box-body no-padding">
                                         <div class="col-xs-12 box-body-content">
+                                            @if(Auth::user())
+                                                <div class="box-tools pull-right">
+                                                    <h1>pintar as tretas ao carregar pagina e tb ordenar por ordem alfabetica</h1>
+                                                    <button type="button" class="btn btn-box-tool" title="Revisar" data-toggle="tooltip" data-action="review">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-box-tool" title="Deletar" data-toggle="tooltip" data-action="delete">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            @endif
                                             <div class="row section-group">
                                                 <div class="col-xs-12">
                                                     <section class="ads-title-section">
