@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Website;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\User\UserAuthRepositoryInterface;
+use Auth;
 
 class UserController extends Controller {
 
@@ -35,7 +36,7 @@ class UserController extends Controller {
 
     public function logout() {
         Auth::logout();
-        redirect('/');
+        return redirect('/');
     }
     
     // public function registerForm() {

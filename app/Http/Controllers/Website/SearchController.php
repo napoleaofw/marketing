@@ -172,7 +172,8 @@ class SearchController extends Controller {
             'subcategoryRecordList' => $subcategoryRecordList,
             'cityRecordList'        => $cityRecordList,
             'pagination'            => $pagination,
-            'searchUri'             => $searchUri
+            'searchUri'             => $searchUri,
+            'uriParameters'         => $parameters
         ];
         return view('website.search', $data);
     }
