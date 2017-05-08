@@ -73,7 +73,7 @@ class SearchController extends Controller {
         $limit = 20;
         $offset = ($page - 1) * $limit;
         $totalPages = $adFilterViewRepository->count($filters);
-        $adRecordList = $adFilterViewRepository->list($filters, $limit, $offset);
+        $adRecordList = $adFilterViewRepository->recordList($filters, $limit, $offset);
         $subcategoryRecordList;
         $categoryRecordCheckedList = [];
         $categoryRecordList = $categoryRepository->records();

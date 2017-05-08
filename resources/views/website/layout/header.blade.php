@@ -3,7 +3,9 @@
         <div class="col-xs-12 header-content">
             <ul class="nav">
                 <li class="col-xs-12 col-sm-3 text-left no-padding">
-                    <a href="/" class="title">logo</a>
+                    <a href="/" class="title">
+                        Baita Guia
+                    </a>
                 </li>
                 <li class="col-xs-12 col-sm-6 no-padding">
                     @include('website.layout.form-search')

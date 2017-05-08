@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>marketing</title>
+        <title>Baita Guia</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/website/img/favicon.ico">
         <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Sansita&amp;subset=latin-ext">-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Questrial&amp;subset=latin-ext">
         <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">

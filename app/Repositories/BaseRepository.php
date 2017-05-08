@@ -102,7 +102,7 @@ abstract class BaseRepository implements BaseRepositoryInterface {
 		return $query->count();
 	}
 
-	public function list($filters, $limit, $offset) {
+	public function recordList($filters, $limit, $offset) {
 		$query = new $this->model();
 		foreach($filters as $column => $values) {
 			$query = $query->whereIn($column, $values);

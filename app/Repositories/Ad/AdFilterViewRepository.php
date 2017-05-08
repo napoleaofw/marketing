@@ -39,7 +39,7 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 		return $query->count();
 	}
 
-	public function list($filters, $limit, $offset) {
+	public function recordList($filters, $limit, $offset) {
 		$newFilters = [];
 		$columns = [
 			'city'        => 'city_name_uri',

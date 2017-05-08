@@ -51,6 +51,14 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
+            /* the options config have security problems; that resolves the issue:
+            SQLSTATE[HY000]: General error: 1615 Prepared statement needs to be re-prepared
+            but, for fix without security problems, the config table_definition_cache on Mysql needs to be changed;
+            contact the provider for future versions.
+             */
+            'options' => [
+                \PDO::ATTR_EMULATE_PREPARES => true
+            ]
         ],
 
         'pgsql' => [

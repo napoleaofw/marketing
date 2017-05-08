@@ -28,7 +28,9 @@
                 <div class="col-xs-12 header-content">
                     <ul class="nav">
                         <li class="col-xs-12 col-sm-2 text-left no-padding">
-                            <a href="/" class="title">logo</a>
+                            <a href="/" class="title">
+                                Baita Guia
+                            </a>
                         </li>
                         <li class="col-xs-12 col-sm-4 text-left no-padding">
                             <a href="#" data-toggle="modal" data-target="#modal-city">Você está em <span class="title">{{$currentCity->name}}</span>.Você pode mudar a cidade aqui.</a>

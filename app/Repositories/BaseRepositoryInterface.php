@@ -14,7 +14,7 @@ interface BaseRepositoryInterface {
 
 	public function count($filters);
 
-	public function list($filters, $limit, $offset);
+	public function recordList($filters, $limit, $offset);
 
 	public function records();
 
