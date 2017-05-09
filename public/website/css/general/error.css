@@ -1,0 +1,19 @@
+#error-404 {
+    padding: 10% 0;
+    position: relative;
+    text-align: center;
+}
+
+#error-404 .error-content {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#error-404 .error-content p {
+    font-size: 3rem;
+}

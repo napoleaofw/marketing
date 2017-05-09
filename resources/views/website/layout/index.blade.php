@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="/website/css/general/adminlte/text.css">
         <link rel="stylesheet" href="/website/css/general/aspect-ratio.css">
         <link rel="stylesheet" href="/website/css/general/document.css">
+        <link rel="stylesheet" href="/website/css/general/error.css">
         <link rel="stylesheet" href="/website/css/general/header.css">
         <link rel="stylesheet" href="/website/css/general/link.css">
         <link rel="stylesheet" href="/website/css/general/list.css">

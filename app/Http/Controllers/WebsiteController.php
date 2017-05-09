@@ -20,6 +20,9 @@ class WebsiteController extends Controller {
             $cityNameUri = 'dois-irmaos';
         }
         $cityRecord = $cityRepository->readByNameUri($cityNameUri);
+        if(!$cityRecord) {
+            abort(404);
+        }
         $cityRecordList = $cityRepository->records();
         $cityCategoryViewRecordList = $cityCategoryViewRepository->recordsByCityNameUri($cityNameUri);
         $data = [
