@@ -54,7 +54,7 @@
             <section id="search-wrapper" class="col-xs-12 no-padding">
                 <div id="search-background"></div>
                 <div id="search-content">
-                    <h1 class="title">frase principal para o website marketing regional<span class="typed"></span></h1>
+                    <h1 class="title">Nós te aproximamos do que há de melhor em sua cidade!<span class="typed"></span></h1>
                     <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
                         @include('website.layout.form-search')
                     </div>
