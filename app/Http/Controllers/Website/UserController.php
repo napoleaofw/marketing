@@ -36,7 +36,7 @@ class UserController extends Controller {
 
     public function logout() {
         Auth::logout();
-        return r1300edirect('/');
+        return redirect('/');
     }
     
     // public function registerForm() {

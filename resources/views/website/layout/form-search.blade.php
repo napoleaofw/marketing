@@ -5,9 +5,11 @@
             @if(isset($currentCity))
                 <input name="city" type="hidden" value="{{$currentCity->name_uri}}">
             @else
-                @foreach($uriParameters as $parameter => $values)
-                    <input name="{{$parameter}}" type="hidden" value="{{$values}}">
-                @endforeach
+                @if(isset($uriParameters))
+                    @foreach($uriParameters as $parameter => $values)
+                        <input name="{{$parameter}}" type="hidden" value="{{$values}}">
+                    @endforeach
+                @endif
             @endif
             <div class="input-group-btn">
                 <button type="submit" class="btn btn-default btn-flat">

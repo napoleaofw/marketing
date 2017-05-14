@@ -18,8 +18,15 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
 		return $this->model::whereNull('category_id')->orderBy('name')->get();
 	}
 
-	public function subcategoryRecordList($idList) {
-		return $this->model::whereIn('category_id', $idList)->get();
-	}
+	// public function recordsByCity($cityList) {
+	// 	return null;
+	// 	// return $this->model::whereNull('category_id')->
+	// 	// // I think I'll need to use views here... I don't know yet
+	// 	// ->orderBy('name')->get();
+	// }
+
+	// public function subcategoryRecordList($idList) {
+	// 	return $this->model::whereIn('category_id', $idList)->get();
+	// }
 
 }

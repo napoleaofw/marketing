@@ -36,6 +36,7 @@ Route::get('/logout', 'Website\UserController@logout');
 // Route::post('/register', 'Website\UserController@register');
 Route::get('/', 'WebsiteController@home');
 Route::get('/{cityNameUri}', 'WebsiteController@home');
+Route::get('/{cityNameUri}/{adId}', 'WebsiteController@ad');
 // Route::get('/ad', function() {
 //     $data = [
 //         'pageName' => 'ad'

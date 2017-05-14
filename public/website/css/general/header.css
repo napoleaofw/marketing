@@ -203,5 +203,143 @@ header nav.navbar-mobile .header-content a {
 header button.navbar-toggle {
     color: #fff;
     cursor: pointer;
+    margin: 0;
     padding: 0;
+}
+
+
+
+
+
+
+
+
+header nav {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+header nav #main-navbar.collapse .nav {
+    float: right;
+    width: 85%;
+}
+
+header nav #main-navbar.collapse.in .nav {
+    float: left;
+    width: auto;
+}
+
+header nav .navbar-header > a,
+header nav #main-navbar.collapse .nav li a {
+    color: #fff;
+}
+
+header nav .navbar-header > button {
+    margin-top: -4px;
+}
+
+header nav .navbar-header > a,
+header nav .navbar-header > button,
+header nav #main-navbar.collapse .nav li a {
+    line-height: 6rem;
+    transition: line-height 0.5s ease-in-out;
+    -webkit-transition: line-height 0.5s ease-in-out;
+    -moz-transition: line-height 0.5s ease-in-out;
+    -ms-transition: line-height 0.5s ease-in-out;
+    -o-transition: line-height 0.5s ease-in-out;
+}
+
+header.small-header nav .navbar-header > a,
+header.small-header nav .navbar-header > button,
+header.small-header nav #main-navbar.collapse .nav li a {
+    line-height: 4rem;
+}
+
+header nav #main-navbar.collapse .nav li form {
+    margin-top: 20px;
+    transition: margin-top 0.5s ease-in-out;
+    -webkit-transition: margin-top 0.5s ease-in-out;
+    -moz-transition: margin-top 0.5s ease-in-out;
+    -ms-transition: margin-top 0.5s ease-in-out;
+    -o-transition: margin-top 0.5s ease-in-out;
+}
+
+header.small-header nav #main-navbar.collapse .nav li form {
+    margin-top: 8px;
+}
+
+#home.page-wrapper header.small-header nav .navbar-header > a {
+    color: #529eff;
+}
+
+header nav .navbar-header > a,
+header nav .navbar-header > button {
+    padding: 0 15px !important;
+    z-index: 99999;
+}
+
+header nav #main-navbar {
+    overflow: hidden;
+}
+
+header nav #main-navbar.collapsing .nav {
+    display: none !important;
+}
+
+header nav #main-navbar.collapse.in {
+    background-color: #fff;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+header nav #main-navbar.collapse.in .nav {
+    font-size: 1rem;
+    padding: 0 15px;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+}
+
+header nav #main-navbar.collapse.in .nav li {
+    text-align: center;
+}
+
+header nav #main-navbar.collapse.in .nav li:not(:first-child) {
+    margin-top: 20px;
+}
+
+header nav #main-navbar.collapse.in .nav li:not(:last-child):after {
+    background: rgba(243,243,243,1);
+    background: linear-gradient(to right, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+}
+
+header nav #main-navbar.collapse.in .nav li.form-search-container {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+header nav #main-navbar.collapse.in .nav li a {
+    color: #529eff;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }

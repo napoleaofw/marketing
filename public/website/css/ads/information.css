@@ -1,4 +1,4 @@
-#ads-advanced.page-wrapper .box .box-body section {
+/*#ads-advanced.page-wrapper .box .box-body section {
     margin-top: 10px;
 }
 
@@ -11,4 +11,38 @@
     text-align: center;
     vertical-align: top;
     width: 20px;
+}*/
+
+#ads.page-wrapper #ads-more-info .box .box-body #ads-name {
+    margin-bottom: 15px;
+}
+
+#ads.page-wrapper #ads-more-info .box .box-body section + section {
+    margin-top: 15px;
+}
+
+#ads.page-wrapper #ads-more-info .box .box-body section .title {
+    margin-bottom: 10px;
+}
+
+#ads.page-wrapper #ads-more-info .box .box-body section .title {
+    margin-bottom: 10px;
+}
+
+#ads.page-wrapper #ads-more-info .box .box-body section .ads-icon-container {
+    font-size: 14px;
+    font-size: 1.166rem;
+    position: relative;
+    text-align: center;
+    width: 25px;
+}
+
+ #ads.page-wrapper #ads-more-info .box .box-body .ads-phone-section .ads-phone-list {
+    vertical-align: top;
+}
+
+ #ads.page-wrapper #ads-more-info .box .box-body .ads-icon-container,
+ #ads.page-wrapper #ads-more-info .box .box-body .ads-phone-section .ads-phone-list {
+    display: inline-block;
+    vertical-align: middle;
 }

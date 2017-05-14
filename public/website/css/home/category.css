@@ -3,29 +3,36 @@
 }
 
 #home.page-wrapper #category-wrapper .category-list .category .box {
-    height: 160px;
+    height: 155px;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon,
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text {
+#home.page-wrapper #category-wrapper .category-list .category .box .link {
+    height: 100%;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-icon,
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-text {
     position: relative;
     text-align: center;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon {
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-icon {
     height: 100px;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-icon svg {
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-icon svg {
     height: 100%;
     width: 100%;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text {
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-text {
     height: 30px;
 }
 
-#home.page-wrapper #category-wrapper .category-list .category .category-content .category-text .link {
+#home.page-wrapper #category-wrapper .category-list .category .box .link .box-body  .category-content .category-text .title {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -33,4 +40,8 @@
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+}
+
+#home.page-wrapper #category-wrapper .category-list .category .box .link:hover .box-body .category-content .category-text .title {
+    text-decoration: underline;
 }

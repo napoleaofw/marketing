@@ -40,8 +40,17 @@
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     stroke-width: 2;
+    transition: stroke 0.5s ease-in-out;
+    -webkit-transition: stroke 0.5s ease-in-out;
+    -moz-transition: stroke 0.5s ease-in-out;
+    -ms-transition: stroke 0.5s ease-in-out;
+    -o-transition: stroke 0.5s ease-in-out;
 }
 
 .stroke-animate svg path {
     animation: svg-stroke-animate 4s forwards;
+}
+
+.link:hover .stroke-default svg path {
+    stroke: #2e64c3;
 }

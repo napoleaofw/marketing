@@ -24,29 +24,45 @@
 <div id="home" class="page-wrapper">
     <div class="container-fluid">
         <header class="row">
-            <nav class="navbar navbar-collapse">
-                <div class="col-xs-12 header-content">
-                    <ul class="nav">
-                        <li class="col-xs-12 col-sm-2 text-left no-padding">
-                            <a href="/" class="title">
-                                Baita Guia
-                            </a>
-                        </li>
-                        <li class="col-xs-12 col-sm-4 text-left no-padding">
-                            <a href="#" data-toggle="modal" data-target="#modal-city">Você está em <span class="title">{{$currentCity->name}}</span>.Você pode mudar a cidade aqui.</a>
-                        </li>
-                        <li class="col-xs-12 col-sm-4 no-padding form-search-container">
-                            @include('website.layout.form-search')
-                        </li>
-                        <!--<li class="col-xs-12 col-sm-2 text-right no-padding">
-                            <a href="/login" class="title">login</a>
-                        </li>-->
-                        @if(Auth::user())
-                            <li class="col-xs-12 col-sm-2 text-right no-padding">
-                                <a href="/logout" class="title">logout</a>
-                            </li>
-                        @endif
-                    </ul>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="/" class="title">Baita Guia</a>
+                        <button class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                            <div class="menu-title">
+                                <span>menu</span>
+                            </div>
+                            <div class="menu-icon">
+                                <span></span>
+                            </div>
+                        </button>
+                    </div>
+                    <div id="main-navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            @if(Auth::user())
+                                <li class="col-xs-12 col-sm-7 text-left no-padding">
+                                    <a href="#" data-toggle="modal" data-target="#modal-city">
+                                        Você está em <span class="title">{{$currentCity->name}}</span>. Você pode mudar a cidade aqui.
+                                    </a>
+                                </li>
+                                <li class="col-xs-12 col-sm-3 no-padding form-search-container">
+                                    @include('website.layout.form-search')
+                                </li>
+                                <li class="col-xs-12 col-sm-2 text-right no-padding">
+                                    <a href="/logout" class="title">logout</a>
+                                </li>
+                            @else
+                                <li class="col-xs-12 col-sm-8 text-left no-padding">
+                                    <a href="#" data-toggle="modal" data-target="#modal-city">
+                                        Você está em <span class="title">{{$currentCity->name}}</span>. Você pode mudar a cidade aqui.
+                                    </a>
+                                </li>
+                                <li class="col-xs-12 col-sm-4 no-padding form-search-container">
+                                    @include('website.layout.form-search')
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -54,8 +70,8 @@
             <section id="search-wrapper" class="col-xs-12 no-padding">
                 <div id="search-background"></div>
                 <div id="search-content">
-                    <h1 class="title">Nós te aproximamos do que há de melhor em sua cidade!<span class="typed"></span></h1>
                     <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                        <h1 class="title">Nós te aproximamos do que há de melhor em sua cidade!<span class="typed"></span></h1>
                         @include('website.layout.form-search')
                     </div>
                 </div>
@@ -66,16 +82,18 @@
                     @foreach($cityCategoryRecordList as $cityCategoryRecord)
                         <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">
                             <div class="box">
-                                <div class="box-body">
-                                    <div class="category-content col-xs-12">
-                                        <div class="category-icon stroke-default">
-                                            @include('common.svg.category.'.$cityCategoryRecord->category_name_uri)
-                                        </div>
-                                        <div class="category-text">
-                                            <a href="/search?category={{$cityCategoryRecord->category_name_uri}}&city={{$currentCity->name_uri}}" class="link uppercase title" title="{{$cityCategoryRecord->category_name}}">{{$cityCategoryRecord->category_name}}</a>
+                                <a href="/search?category={{$cityCategoryRecord->category_name_uri}}&city={{$currentCity->name_uri}}" class="link" title="{{$cityCategoryRecord->category_name}}">
+                                    <div class="box-body">
+                                        <div class="category-content col-xs-12">
+                                            <div class="category-icon stroke-default">
+                                                @include('common.svg.category.'.$cityCategoryRecord->category_name_uri)
+                                            </div>
+                                            <div class="category-text">
+                                                <p class="uppercase title">{{$cityCategoryRecord->category_name}}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </li>
                     @endforeach

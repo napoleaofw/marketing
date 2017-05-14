@@ -12,4 +12,6 @@ interface AdRepositoryInterface extends BaseRepositoryInterface {
 
 	public function markForDelete($id);
 
+	public function readByTitleUri($titleUri);
+
 }

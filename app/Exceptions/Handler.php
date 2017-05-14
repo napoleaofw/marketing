@@ -44,12 +44,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        // dd($exception);
-        // dd($exception->getStatusCode());
-        // dd(view()->exists('error.'.$exception->getStatusCode()));
-        // dd('error.'.$exception->getStatusCode());
-        // dd(response()->view('error.'.$exception->getStatusCode(), [], $exception->getStatusCode()));
-        if(view()->exists('error.'.$exception->getStatusCode())) {
+        if(isset($exception->getStatusCode) && view()->exists('error.'.$exception->getStatusCode())) {
             return response()->view('error.'.$exception->getStatusCode(), ['pageName' => 'error'], $exception->getStatusCode());
         }
         return parent::render($request, $exception);

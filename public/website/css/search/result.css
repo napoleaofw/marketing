@@ -130,7 +130,7 @@
     width: 25px;
 }
 
-#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-title-section .ads-title,
+#search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-title-section .title,
 #search.page-wrapper #search-result-section .search-result-list .search-result .box .box-body .box-body-content .section-group .ads-address-section .ads-address {
     overflow: hidden;
     text-overflow: ellipsis;

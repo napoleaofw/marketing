@@ -68,4 +68,8 @@ class AdRepository extends BaseRepository implements AdRepositoryInterface {
 		return $this->processTransaction([$this, 'markForDeleteRecord'], [$id]);
 	}
 
+	public function readByTitleUri($titleUri) {
+		return $this->model::where('title_uri', $titleUri)->first();
+	}
+
 }

@@ -13,3 +13,7 @@ body {
 body.overlay {
     overflow: hidden;
 }
+
+body.modal-open {
+    padding-right: 0 !important;
+}

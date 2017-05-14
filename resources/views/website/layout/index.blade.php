@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="/website/css/home/header.css">
         <link rel="stylesheet" href="/website/css/home/modal-city.css">
         <link rel="stylesheet" href="/website/css/home/search.css">
-        <link rel="stylesheet" href="/website/css/ads/image.css">
+        <!--<link rel="stylesheet" href="/website/css/ads/image.css">-->
         <link rel="stylesheet" href="/website/css/ads/information.css">
         <link rel="stylesheet" href="/website/css/search/filter.css">
         <link rel="stylesheet" href="/website/css/search/result.css">
@@ -43,6 +43,7 @@
         @yield($pageName)
         <script type="text/javascript" src="/vendor/jquery/js/jquery.min.js"></script>
         <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/vendor/responsive-bootstrap-toolkit-master/js/bootstrap-toolkit.min.js"></script>
         <script type="text/javascript" src="/vendor/viewportchecker/js/jquery.viewportchecker.min.js"></script>
         <script type="text/javascript" src="/vendor/typed/js/typed-modified.js"></script>
         <script type="text/javascript" src="/website/js/general/adminlte/plugins/icheck.min.js"></script>
