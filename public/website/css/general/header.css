@@ -69,29 +69,6 @@ header nav.navbar {
     -o-transition: background-color 0.5s ease-in-out;
 }
 
-header nav.navbar .header-content {
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-}
-
-header nav.navbar .header-content form {
-    text-align: start;
-}
-
-header nav.navbar .header-content a {
-    background-color: transparent;
-    color: #fff;
-    transition: color 0.5s ease-in-out;
-    -webkit-transition: color 0.5s ease-in-out;
-    -moz-transition: color 0.5s ease-in-out;
-    -ms-transition: color 0.5s ease-in-out;
-    -o-transition: color 0.5s ease-in-out;
-}
-
 header.main-header ~ div.page-content {
     margin-top: 85px;
     transition: margin-top 0.5s ease-in-out;
@@ -111,9 +88,19 @@ header button.navbar-toggle .menu-icon {
     vertical-align: middle;
 }
 
-header button.navbar-toggle span {
-    color: #6f6f6f;
+body header button.navbar-toggle span {
+    color: #fff;
     font-weight: bold;
+    transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.6s ease-in-out;
+    -moz-transition: color 0.6s ease-in-out;
+    -ms-transition: color 0.6s ease-in-out;
+    -o-transition: color 0.6s ease-in-out;
+}
+
+body.overlay header button.navbar-toggle span,
+body #home.page-wrapper header.small-header button.navbar-toggle span {
+    color: #6f6f6f;
 }
 
 header button.navbar-toggle .menu-icon {
@@ -122,14 +109,29 @@ header button.navbar-toggle .menu-icon {
     width: 20px;
 }
 
-header button.navbar-toggle .menu-icon span,
-header button.navbar-toggle .menu-icon span:before,
-header button.navbar-toggle .menu-icon span:after {
-    background-color: #6f6f6f;
+body header button.navbar-toggle .menu-icon span {    
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.2s, 0s;
+    transition-property: background-color;
+}
+
+body header button.navbar-toggle .menu-icon span,
+body header button.navbar-toggle .menu-icon span:before,
+body header button.navbar-toggle .menu-icon span:after {
+    background-color: #fff;
     display: block;
     height: 3px;
     position: absolute;
     width: 100%;
+}
+
+body.overlay header button.navbar-toggle .menu-icon span,
+body.overlay header button.navbar-toggle .menu-icon span:before,
+body.overlay header button.navbar-toggle .menu-icon span:after,
+body #home.page-wrapper header.small-header button.navbar-toggle .menu-icon span,
+body #home.page-wrapper header.small-header button.navbar-toggle .menu-icon span:before,
+body #home.page-wrapper header.small-header button.navbar-toggle .menu-icon span:after {
+    background-color: #6f6f6f;
 }
 
 header button.navbar-toggle .menu-icon span:before,
@@ -142,16 +144,16 @@ header button.navbar-toggle .menu-icon span:after {
 
 header button.navbar-toggle .menu-icon span:before {
     top: -0.5rem;
-    transition-property: top, transform;
+    transition-property: top, transform, background-color;
 }
 
 header button.navbar-toggle .menu-icon span:after {
     bottom: -0.5rem;
-    transition-property: bottom, transform;
+    transition-property: bottom, transform, background-color;
 }
 
 header button.navbar-toggle.active .menu-icon span {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 header button.navbar-toggle.active .menu-icon span:before,
@@ -169,48 +171,12 @@ header button.navbar-toggle.active .menu-icon span:after {
     transform: rotate(-45deg);
 }
 
-header nav.navbar-mobile {
-    background-color: #fff;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-}
-
-header nav.navbar-mobile li a {
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-header nav.navbar-mobile li:not(:last-child):after {
-    background: rgba(243,243,243,1);
-    background: linear-gradient(to right, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
-    background: -webkit-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
-    background: -moz-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
-    background: -ms-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(255,255,255,0) 100%);
-    content: '';
-    display: block;
-    height: 1px;
-    position: absolute;
-    width: 100%;
-}
-
-header nav.navbar-mobile ul li a,
-header nav.navbar-mobile .header-content a {
-    color: #529eff;
-}
-
 header button.navbar-toggle {
     color: #fff;
     cursor: pointer;
     margin: 0;
     padding: 0;
 }
-
-
-
-
-
 
 
 
@@ -238,9 +204,8 @@ header nav .navbar-header > button {
     margin-top: -4px;
 }
 
-header nav .navbar-header > a,
-header nav .navbar-header > button,
-header nav #main-navbar.collapse .nav li a {
+header nav .navbar-header,
+header nav #main-navbar.collapse .nav li {
     line-height: 6rem;
     transition: line-height 0.5s ease-in-out;
     -webkit-transition: line-height 0.5s ease-in-out;
@@ -249,10 +214,13 @@ header nav #main-navbar.collapse .nav li a {
     -o-transition: line-height 0.5s ease-in-out;
 }
 
-header.small-header nav .navbar-header > a,
-header.small-header nav .navbar-header > button,
-header.small-header nav #main-navbar.collapse .nav li a {
+header.small-header nav .navbar-header,
+header.small-header nav #main-navbar.collapse .nav li {
     line-height: 4rem;
+}
+
+header nav #main-navbar.collapse .nav li form {
+    line-height: initial;
 }
 
 header nav #main-navbar.collapse .nav li form {
