@@ -17,6 +17,10 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
 	public function records() {
 		return $this->model::whereNull('category_id')->orderBy('name')->get();
 	}
+	
+	public function recordsByCategory($categoryId) {
+		return $this->model::where('category_id', $categoryId)->orderBy('name')->get();
+	}
 
 	// public function recordsByCity($cityList) {
 	// 	return null;

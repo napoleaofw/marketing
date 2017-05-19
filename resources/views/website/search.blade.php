@@ -6,6 +6,15 @@
         <div class="row page-content">
             <div class="col-xs-12 col-lg-10 col-lg-offset-1">
                 <h1 class="title title-margin">Resultados da pesquisa</h1>
+                @if(Auth::user())
+                    <div class="ad-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" title="Novo anúncio" data-toggle="tooltip">
+                            <a href="/create">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </button>
+                    </div>
+                @endif
             </div>
             <section id="search-group-filter-section" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1">
                 <div class="box">
@@ -14,7 +23,7 @@
                             <section class="search-filter-section">
                                 <div class="search-filter-header">
                                     <h3 class="title search-filter-title">Categorias</h3>
-                                    <div class="filter-tools pull-right">
+                                    <div class="ad-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                             <i class="fa fa-minus"></i>
                                         </button>
@@ -37,7 +46,7 @@
                             <section class="search-filter-section">
                                 <div class="search-filter-header">
                                     <h3 class="title search-filter-title">Subcategorias</h3>
-                                    <div class="filter-tools pull-right">
+                                    <div class="ad-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                             <i class="fa fa-minus"></i>
                                         </button>
@@ -59,7 +68,7 @@
                         <section class="search-filter-section">
                             <div class="search-filter-header">
                                 <h3 class="title search-filter-title">Cidades</h3>
-                                <div class="filter-tools pull-right">
+                                <div class="ad-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                         <i class="fa fa-minus"></i>
                                     </button>
@@ -93,6 +102,11 @@
                                         <div class="col-xs-12 box-body-content">
                                             @if(Auth::user())
                                                 <div class="box-tools pull-right">
+                                                    <button type="button" class="btn btn-box-tool" title="Editar" data-toggle="tooltip">
+                                                        <a href="/edit/{{$adRecord->ad_id}}">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </button>
                                                     <button type="button" class="btn btn-box-tool {{$adRecord->ad_review === 'y' ? 'text-green' : ''}}" title="Revisar" data-toggle="tooltip" data-action="review">
                                                         <i class="fa fa-wrench"></i>
                                                     </button>

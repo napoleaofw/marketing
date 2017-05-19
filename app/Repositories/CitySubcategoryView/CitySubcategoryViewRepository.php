@@ -15,7 +15,7 @@ class CitySubcategoryViewRepository extends BaseRepository implements CitySubcat
     }
 
 	public function recordsByCityCategoryList($cityList, $categoryList) {
-		return $this->model::whereIn('city_id', $cityList)->whereIn('category_id', $categoryList)->orderBy('subcategory_name_uri')->get();
+		return $this->model::select('category_id', 'category_name', 'category_name_uri', 'subcategory_id', 'subcategory_name', 'subcategory_name_uri')->whereIn('city_id', $cityList)->whereIn('category_id', $categoryList)->groupBy('category_id', 'category_name', 'category_name_uri', 'subcategory_id', 'subcategory_name', 'subcategory_name_uri')->orderBy('subcategory_name_uri')->get();
 	}
 
 }

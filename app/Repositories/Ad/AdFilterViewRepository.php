@@ -72,4 +72,8 @@ class AdFilterViewRepository extends BaseRepository implements AdFilterViewRepos
 		return $adRecordList;
 	}
 
+	public function dataByAd($adId) {
+		return $this->model::where('ad_id', $adId)->firstOrFail();
+	}
+
 }

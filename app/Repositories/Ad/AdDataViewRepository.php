@@ -18,4 +18,8 @@ class AdDataViewRepository extends BaseRepository implements AdDataViewRepositor
         return $this->model::where('city_name_uri', $cityNameUri)->where('ad_id', $adId)->first();
     }
 
+	protected function readRecord($id) {
+		return $this->model::where('ad_id', $id)->firstOrFail();
+	}
+
 }

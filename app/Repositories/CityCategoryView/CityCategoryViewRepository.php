@@ -19,7 +19,7 @@ class CityCategoryViewRepository extends BaseRepository implements CityCategoryV
 	}
 
 	public function recordsByCityList($cityList) {
-		return $this->model::whereIn('city_id', $cityList)->orderBy('category_name_uri')->get();
+		return $this->model::select('category_id', 'category_name', 'category_name_uri')->whereIn('city_id', $cityList)->groupBy('category_id', 'category_name', 'category_name_uri')->orderBy('category_name_uri')->get();
 	}
 
 }

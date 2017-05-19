@@ -10,6 +10,11 @@
 | contains the 'web' middleware group. Now create something great!
 |
 */
+Route::get('/api/category', 'ApiController@subcategoryRecordList');
+Route::get('create', 'WebsiteController@edit');
+Route::post('create', 'WebsiteController@save');
+Route::get('edit/{adId}', 'WebsiteController@edit');
+Route::post('edit/{adId}', 'WebsiteController@save');
 Route::put('/api/ad/markFor', 'ApiController@adMarkFor');
 Route::get('/searching', function() {
     $recordsAd = \App\Models\Views\AdDataViewModel::where('city_name_uri', 'dois-irmaos')->get();

@@ -27,10 +27,14 @@
     bottom: -15px;
 }
 
-#search.page-wrapper #search-group-filter-section .search-filter-section .filter-tools {
+#search.page-wrapper .ad-tools {
     position: absolute;
     right: 0;
     top: 0;
+}
+#search.page-wrapper h1~ .ad-tools {
+    line-height: 6rem;
+    right: 25px !important;
 }
 
 #search.page-wrapper #search-group-filter-section .search-filter-section .filter-tools [data-toggle="tooltip"] {

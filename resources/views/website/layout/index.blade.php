@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="/website/css/home/search.css">
         <!--<link rel="stylesheet" href="/website/css/ads/image.css">-->
         <link rel="stylesheet" href="/website/css/ads/information.css">
+        <link rel="stylesheet" href="/website/css/ads/edit.css">
         <link rel="stylesheet" href="/website/css/search/filter.css">
         <link rel="stylesheet" href="/website/css/search/result.css">
     </head>
@@ -54,5 +55,6 @@
         <script type="text/javascript" src="/website/js/home/category.js"></script>
         <script type="text/javascript" src="/website/js/search/filter.js"></script>
         <script type="text/javascript" src="/website/js/search/result.js"></script>
+        <script type="text/javascript" src="/website/js/ads/edit.js"></script>
     </body>
 </html>

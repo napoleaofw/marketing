@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\Ad\AdRepositoryInterface;
+use App\Repositories\Category\CategoryRepository;
 use Response;
 
 class ApiController extends Controller {
@@ -39,6 +40,17 @@ class ApiController extends Controller {
         $dataResponse = $response->getOriginalContent();
         $dataResponse['html'] = view('website.layout.messages', $dataResponse)->render();
         return Response::json($dataResponse, $response->status());
+    }
+
+    public function subcategoryRecordList(
+        Request $request,
+        CategoryRepository $categoryRepository
+    ) {
+        $data = $request->all();
+        if(!$data['categoryId']) {
+            abort(404);
+        }
+        return Response::json($categoryRepository->recordsByCategory($data['categoryId']), 200);
     }
 
 }

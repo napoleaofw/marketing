@@ -70,14 +70,16 @@
             <section id="search-wrapper" class="col-xs-12 no-padding">
                 <div id="search-background"></div>
                 <div id="search-content">
-                    <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                         <h1 class="title">Nós te aproximamos do que há de melhor em sua cidade!<span class="typed"></span></h1>
+                    </div>
+                    <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
                         @include('website.layout.form-search')
                     </div>
                 </div>
             </section>
             <section id="category-wrapper" class="col-xs-12">
-                <h1 class="title title-margin">Categorias em Dois Irmãos</h1>
+                <h1 class="title title-margin">Categorias em {{$currentCity->name}}</h1>
                 <ul class="nav category-list">
                     @foreach($cityCategoryRecordList as $cityCategoryRecord)
                         <li class="category col-xs-12 col-sm-6 col-md-4 col-lg-2">

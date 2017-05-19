@@ -1,0 +1,27 @@
+#edit.page-wrapper #ads-edit section:not(:first-child),
+#edit.page-wrapper #ads-edit section label:not(:first-child) {
+    display: block;
+    margin-top: 10px;
+}
+
+#edit.page-wrapper #ads-edit .title:not(:first-child),
+#edit.page-wrapper #ads-edit input,
+#edit.page-wrapper #ads-edit select,
+#edit.page-wrapper #ads-edit textarea,
+#edit.page-wrapper #ads-edit button.btn {
+    width: 100%;
+}
+
+#edit.page-wrapper #ads-edit input,
+#edit.page-wrapper #ads-edit select {
+    height: 30px;
+}
+
+#edit.page-wrapper #ads-edit input[name="title"],
+#edit.page-wrapper #ads-edit textarea {
+    width: 100%;
+}
+
+#edit.page-wrapper #ads-edit textarea {
+    max-width: 100%;
+}

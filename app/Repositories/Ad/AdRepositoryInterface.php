@@ -14,4 +14,6 @@ interface AdRepositoryInterface extends BaseRepositoryInterface {
 
 	public function readByTitleUri($titleUri);
 
+	public function processRecord($data);
+
 }
